@@ -15,3 +15,45 @@
   margin-left: 10px;
   padding-bottom: 1.0em;
 }
+
+.item-details-button{
+  color: black;
+  background-color: white;
+  border-color: white;
+  margin-left: 15px;
+}
+
+.item-details-button:focus{
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+
+.card{
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 450px;
+}
+
+.media{
+  width: 300px;
+  margin-left: 0px;
+}
+
+.price-strike {
+  text-decoration-line : line-through;
+  color: grey; 
+}
+
+.promo-code-button{
+  color: black;
+  background-color: white;
+  border-color: white;
+  margin-left: 15px;
+}
+
+.apply-button{
+  background-color: rgb(51, 219, 79);
+  color: rgb(252, 248, 248);
+  border-color: white;
+}
