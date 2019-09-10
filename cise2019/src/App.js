@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Row} from 'react-bootstrap';
 import {Container} from 'react-bootstrap';
-import {Col} from 'react-bootstrap';
 import Subtotal from './components/Subtotal/Subtotal';
 import PickupSavings from './components/PickupSavings/PickupSavings'
 import TaxesFees from './components/TaxesFees/TaxesFees';
@@ -9,6 +8,8 @@ import EstimatedTotal from './components/EstimatedTotal/EstimatedTotal';
 import ItemDetails from './components/ItemDetails/ItemDetails';
 import PromoCode from './components/PromoCode/PromoCode'
 import './App.css';
+import {connect} from 'react-redux';
+import {handleChange} from './actions/promoCodeActions';
 
 class App extends Component{
 
@@ -32,6 +33,20 @@ componentDidMount = () => {
     estimatedTotal: this.state.total+this.state.PickupSavings+ this.state.taxes})
   });
 }
+
+giveDiscountHandler = () => {
+  if(this.props.promoCode === 'DISCOUNT') {
+    this.setState({
+      estimatedTotal : this.state.estimatedTotal*0.9
+    },
+    function() {
+      this.setState({
+        disablePromoButton:true
+      });
+    }
+    );
+  }
+};
 
   render() {
     return (
@@ -59,4 +74,8 @@ componentDidMount = () => {
     }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  promoCode: state.promoCode.value
+})
+
+export default connect(mapStateToProps, { handleChange}) (App);
