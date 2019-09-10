@@ -69,3 +69,17 @@
 .fa-arrow-right, .fa-arrow-left {
   color: #222
 }
+
+h2 {
+  text-align: center;
+}
+
+.navbar-nav li {
+  display: inline-block;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.navbar-nav {
+  margin-left: 39%;
+}

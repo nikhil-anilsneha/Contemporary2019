@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 /* import meandjo from "./images/meandjo.jpg"; */
-import banner from "./images/banner.jpg";
 import Carousel from './Carousel';
 
 export default class HomePage extends Component {
   render() {
     return (
       <div className="container">
-          <img src={banner} alt="banner" className="banner"></img>
           <br></br>
           <br></br>
           <Carousel></Carousel>  
