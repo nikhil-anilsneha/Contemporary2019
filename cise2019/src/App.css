@@ -1,7 +1,17 @@
-body {
-  background-color: #282c34;
-  color: white;
-  padding: 40px;
-  font-family: Arial;
-  text-align: center;
+.container {
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+.purchase {
+  margin-left: 20px;
+  width : 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1em;
+}
+
+.show-grid {
+  width: 2000px;
+  margin-left: 10px;
+  padding-bottom: 1.0em;
 }

@@ -1,29 +1,35 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {Row} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
+import Subtotal from './components/Subtotal/Subtotal';
+import PickupSavings from './components/PickupSavings/PickupSavings'
+import TaxesFees from './components/TaxesFees/TaxesFees';
 import './App.css';
-import Sidebar from './components/sidebar'
-import Introduction from './components/introduction'
-import About from './components/about'
-import Projects from './components/projects'
-import Blog from './components/blog'
-import Timeline from './components/timeline'
 
-class App extends Component {
+class App extends Component{
+
+  constructor(props)
+  {
+    super(props);
+    this.state={total:100,PickupSavings: -3.85,taxes: 0}
+  }
   render() {
     return (
-      <div id="colorlib-page">
-        <div id="container-wrap">
-		<Sidebar></Sidebar>
-		<div id="colorlib-main">
-			<Introduction></Introduction>
-			<About></About>
-			<Projects></Projects>
-			<Blog></Blog>
-			<Timeline></Timeline>
-          	</div>
-      	</div>
-      </div>
-    );
-  }
+    <div className="container">
+      <Container className="purchase">      
+        <Row classname="show-grid">
+         <Subtotal price={this.state.total.toFixed(2)}></Subtotal>
+      </Row>
+      <Row>
+      <PickupSavings price={this.state.PickupSavings}></PickupSavings>
+      </Row>
+      <Row><TaxesFees taxes={this.state.taxes.toFixed(2)}>
+        </TaxesFees></Row>
+      </Container>
+    </div>
+  );
+    }
 }
 
 export default App;
