@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 /* import meandjo from "./images/meandjo.jpg"; */
 import Carousel from './Carousel';
 
+
 export default class HomePage extends Component {
   render() {
     return (

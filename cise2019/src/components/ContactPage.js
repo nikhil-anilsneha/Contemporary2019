@@ -4,7 +4,7 @@ export default class ContactPage extends Component {
   render() {
     return (
         <div>
-          <h2>Contact Us!</h2>
+          <h3>Contact Us!</h3>
         </div>
     );
   }

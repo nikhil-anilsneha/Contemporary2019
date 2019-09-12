@@ -11,6 +11,7 @@
 .banner {
   width: 100%;
   height: 5vw;
+  position: relative;
 }
 
 .text {
@@ -71,7 +72,10 @@
 }
 
 h2 {
-  text-align: center;
+  position: absolute;
+  top: -1%;
+  margin-left: 37%;
+  color: white;
 }
 
 .navbar-nav li {
@@ -82,4 +86,5 @@ h2 {
 
 .navbar-nav {
   margin-left: 39%;
+  margin-top:1%;
 }

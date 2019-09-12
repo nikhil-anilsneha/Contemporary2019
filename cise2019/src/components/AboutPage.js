@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import SlideShow from './SlideShow';
+
 
 export default class AboutPage extends Component {
   render() {
     return (
         <div>
-          <h2>About</h2>
+          <h3>About</h3>
+          <SlideShow></SlideShow>
         </div>
     );
   }
