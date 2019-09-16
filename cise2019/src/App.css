@@ -1,18 +1,17 @@
 .container {
-  margin-top: 20px;
-  margin-left: 200px;
+  margin-top: 2vh;
 }
 
 .purchase {
-  margin-left: 20px;
-  width : 500px;
+  margin-left: 20vh;
+  width : 50vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1em;
 }
 
 .show-grid {
-  width: 2000px;
-  margin-left: 10px;
+  width: 60vh;
+  margin-left: 1vh;
   padding-bottom: 1.0em;
 }
 
@@ -20,7 +19,8 @@
   color: black;
   background-color: white;
   border-color: white;
-  margin-left: 15px;
+  margin-left: 2vh;
+  width: 22vh;
 }
 
 .item-details-button:focus{
@@ -30,14 +30,23 @@
 }
 
 .card{
-  margin-top: 10px;
-  margin-left: 20px;
-  width: 450px;
+  margin-top: 1vh;
+  margin-left: 2vh;
+  width: 46vh;
 }
 
+.card2{
+  margin-top: 1vh;
+  margin-left: 2vh;
+  width: 46vh;
+}
+
+.promoLabel{
+  margin-left: 2vh;
+}
 .media{
-  width: 300px;
-  margin-left: 0px;
+  width: 30vh;
+  margin-left: 0vh;
 }
 
 .price-strike {
@@ -49,7 +58,8 @@
   color: black;
   background-color: white;
   border-color: white;
-  margin-left: 15px;
+  margin-left: 2vh;
+  width: 24vh
 }
 
 .apply-button{

@@ -26,12 +26,12 @@ class PromoCode extends Component {
                 </Button>
                 <Collapse in={this.state.open}>
                     <div>
-                        <Card className="card">
+                        <Card className="card2">
                             <Row>
                                 <Col md={12}>
                                     <Form>
                                         <FormGroup controlId="formInlineName">
-                                            <FormLabel>Promo Code</FormLabel>
+                                            <FormLabel className="promoLabel">  Promo Code</FormLabel>
                                             <FormControl type="text" 
                                             placeholder="Enter Promo Code"
                                             value= { this.props.promoCode}

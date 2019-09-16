@@ -10,8 +10,6 @@ import PromoCode from './components/PromoCode/PromoCode'
 import './App.css';
 import {connect} from 'react-redux';
 import {handleChange} from './actions/promoCodeActions';
-import tree from "./components/tree.jpg"
-
 class App extends Component{
 
   constructor(props)
@@ -70,8 +68,6 @@ giveDiscountHandler = () => {
         isDisabled={this.state.disablePromoButton} />
       </Row>
       </Container>
-      <hr/>
-      <img src={tree} alt="tree"></img>
     </div>
   );
     }
