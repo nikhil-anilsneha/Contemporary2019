@@ -1,31 +1,25 @@
 import React, { Component } from 'react';
-/* import meandjo from "./images/meandjo.jpg"; */
 import Carousel from './Carousel';
 import LoginForm from './LoginForm.js';
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 export default class HomePage extends Component {
   render() {
     return (
       <div className="container">
-          <br></br>
-          <br></br>
-          <Carousel></Carousel>  
           <div className="text">
-          <h1>Sign Up</h1>
-          <button onClick={SignUpOnClick}>Sign Up</button>
+          <Router>
+            <Link to={'/LoginForm.js'} class="sign-up">Sign Up!</Link>
+            <Switch>
+              <Route path='/LoginForm.js' component={LoginForm}/>
+            </Switch>
+          </Router>
           </div> 
+          <Carousel></Carousel>  
+          <br></br>
+          <br></br>
+          <h3>I love PlantATree!!</h3>
       </div>
     )
   }
-}
-
-function SignUpOnClick() {
-
-    return (
-      <div className="container">
-        <LoginForm></LoginForm>
-      </div>
-    )
-  
 }
