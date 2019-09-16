@@ -11,10 +11,14 @@ export default class HomePage extends Component {
           <br></br>
           <Carousel></Carousel>  
           <div className="text">
-          <h1>Hello, my name is Sherin!</h1>
-          <h3>I am 20 years old</h3>
+          <h1>Sign Up</h1>
+          <button onClick={SignUpOnClick}>Sign Up</button>
           </div> 
       </div>
     )
   }
+}
+
+function SignUpOnClick() {
+  alert("Hello!");
 }
