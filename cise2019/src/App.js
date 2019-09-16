@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          why are you being difficult
+          why are you being difficult bitch
         </a>
       </header>
     </div>
