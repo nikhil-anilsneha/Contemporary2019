@@ -7,7 +7,6 @@ export default class AboutPage extends Component {
     return (
         <div>
           <h3>About</h3>
-          <SlideShow></SlideShow>
         </div>
     );
   }
