@@ -4,6 +4,7 @@ import LeftArrow from './LeftArrow.js';
 import RightArrow from './RightArrow.js';
 import Tomatoes from './images/Tomatoes.JPG';
 import Apples from './images/AppleTrees.JPG';
+import Strawberries from './images/StrawberryImage.JPG';
 
 export default class HomePage extends Component {
 constructor(props) {
@@ -12,7 +13,8 @@ constructor(props) {
   this.state = {
     images: [
       Tomatoes,
-      Apples
+      Apples,
+      Strawberries
     ],
     currentIndex: 0,
     translateValue: 0
