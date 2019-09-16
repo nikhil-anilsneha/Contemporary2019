@@ -3,6 +3,7 @@ import ImageSlide from './ImageSlide.js';
 import LeftArrow from './LeftArrow.js';
 import RightArrow from './RightArrow.js';
 import Tomatoes from './images/Tomatoes.JPG';
+import Apples from './images/AppleTrees.JPG';
 
 export default class HomePage extends Component {
 constructor(props) {
@@ -11,7 +12,7 @@ constructor(props) {
   this.state = {
     images: [
       Tomatoes,
-      "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg"
+      Apples
     ],
     currentIndex: 0,
     translateValue: 0
