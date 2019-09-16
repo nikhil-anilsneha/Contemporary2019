@@ -22,7 +22,7 @@
 .slider {
   position: relative;
   margin: 0 auto;
-  height: 500px;
+  height: 100vh;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -39,30 +39,17 @@
   width: 100%;
 }
 
-.arrow {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:green;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform ease-in .1s;
-}
-
 .nextArrow {
   position: absolute;
-  top: 50%;
-  right: 25px;
+  top: 40%;
+  right: -5%;
   z-index: 999;
-  color: #fff;
 }
 
 .backArrow {
   position: absolute;
-  top: 50%;
-  left: 25px;
+  top: 40%;
+  left: -5%;
   z-index: 999;
 }
 
@@ -84,10 +71,21 @@ h2 {
 }
 
 .navbar-nav {
-  margin-left: 39%;
+  margin-left: 37%;
   margin-top:1%;
 }
 
 .sign-up {
   font-size: 200%;
+}
+
+.arrow {
+  width: 22%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in .1s;
 }
