@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -21,6 +22,23 @@ function App() {
       </header>
     </div>
   );
+=======
+import React, {Component} from 'react';
+import './App.css';
+import banner from "./components/images/banner.jpg";
+import NavBar from './components/NavBar';
+
+
+class App extends Component {
+  render() {
+    return (
+        <div>
+          <img src={banner} alt="banner" className="banner"></img>
+          <NavBar></NavBar>
+        </div>
+    )
+  }
+>>>>>>> 5646403ca19074058c7f4655d669b44272bfd89c
 }
 
 export default App;
