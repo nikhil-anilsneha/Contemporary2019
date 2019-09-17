@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SlideShow from './SlideShow';
 
 
 export default class AboutPage extends Component {

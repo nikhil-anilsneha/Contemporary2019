@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 /* import meandjo from "./images/meandjo.jpg"; */
 import Carousel from './Carousel';
+import LoginForm from './LoginForm.js';
 
 
 export default class HomePage extends Component {
@@ -20,5 +21,11 @@ export default class HomePage extends Component {
 }
 
 function SignUpOnClick() {
-  alert("Hello!");
+
+    return (
+      <div className="container">
+        <LoginForm></LoginForm>
+      </div>
+    )
+  
 }
