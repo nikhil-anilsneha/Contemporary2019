@@ -21,6 +21,10 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
+const express = require('express');
+const express_app = express();
+const db = require('./db');
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -43,13 +47,7 @@ class App extends Component {
     e.preventDefault();
 
     if (formValid(this.state)) {
-      console.log(`
-        --SUBMITTING--
-        First Name: ${this.state.firstName}
-        Last Name: ${this.state.lastName}
-        Email: ${this.state.email}
-        Password: ${this.state.password}
-      `);
+      // db.pool.query("INSERT password into")
     } else {
       console.error("Error! check the error message below to fix this.");
     }
@@ -161,4 +159,3 @@ class App extends Component {
 }
 
 export default App;
-
