@@ -11,7 +11,7 @@ export default class NavBar extends Component {
       <div className="container">
           <Router>
             <div className="navigation">
-             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+             <nav className="navbar navbar-expand-lg navbar-light">
               <ul className="navbar-nav mr-auto">
                 <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
                 <li><Link to={'/AboutPage.js'} className="nav-link">Plants</Link></li>
