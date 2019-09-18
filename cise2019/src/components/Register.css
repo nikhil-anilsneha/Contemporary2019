@@ -102,7 +102,7 @@
   
   .errorMessage {
     color: red;
-    font-size: 0.75em;
+    font-size: 1em;
     display: relative;
   }
   
@@ -171,5 +171,52 @@
     color: #999;
     font-weight: lighter;
   }
+
+  .haveAccount {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .haveAccount button {
+    background-color: #A3C4BC;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 100%;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+  }
+
+  .cancel {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cancel button {
+    background-color: #A3C4BC;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 100%;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+  }
+
+
+
   
   

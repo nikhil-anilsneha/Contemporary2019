@@ -21,6 +21,9 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
+// const db = require('./db')
+// const express = require('express');
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -43,13 +46,14 @@ class App extends Component {
     e.preventDefault();
 
     if (formValid(this.state)) {
-      console.log(`
-        --SUBMITTING--
-        First Name: ${this.state.firstName}
-        Last Name: ${this.state.lastName}
-        Email: ${this.state.email}
-        Password: ${this.state.password}
-      `);
+      // const expressApp = express();
+      // expressApp.get('/register', function (req, res) {
+      //   const post = {email:this.email, firstname:this.firstName, lastname:this.lastName, password:this.password}
+      //   db.pool.query('INSERT INTO account SET ?', post, function(err, result) 
+      //   { // maybe just db.query
+      //     if (err) throw err;
+      //   });
+      // });
     } else {
       console.error("Error! check the error message below to fix this.");
     }
@@ -151,7 +155,12 @@ class App extends Component {
             </div>
             <div className="createAccount">
               <button type="submit">Create Account</button>
-              <small>Already Have an Account?</small>
+            </div>
+            <div className="haveAccount">
+              <button type="button">Already Have An Account</button>
+            </div>
+            <div className="cancel">
+              <button type="button">Cancel</button>
             </div>
           </form>
         </div>
