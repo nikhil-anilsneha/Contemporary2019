@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Register.css';
+import Login from './Login';
 
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -89,6 +90,14 @@ class App extends Component {
     this.setState({ formErrors, [name]: value }, () => console.log(this.state));
   };
 
+  goHome() {
+
+  }
+
+  goLogIn() {
+
+  }
+
   render() {
     const { formErrors } = this.state;
 
@@ -154,13 +163,13 @@ class App extends Component {
               )}
             </div>
             <div className="createAccount">
-              <button type="submit">Create Account</button>
+              <button type="submit"><b>Create Account</b></button>
             </div>
             <div className="haveAccount">
-              <button type="button">Already Have An Account</button>
+              <button type="button" onClick={document.getElementById(Login)}>Already Have An Account</button>
             </div>
             <div className="cancel">
-              <button type="button">Cancel</button>
+              <button type="button"onClick={this.goHome}>Cancel</button>
             </div>
           </form>
         </div>

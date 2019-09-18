@@ -86,6 +86,7 @@
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
+    font-size: 1.5em;
     flex-direction: column;
     align-items: center;
   }
@@ -115,11 +116,35 @@
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
+    font-size: 1.5em;
     flex-direction: column;
     align-items: center;
   }
 
   .clickCancel button {
+    background-color: #A3C4BC;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 100%;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+  }
+
+  .haveNoAccount {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    font-size: 1.5em;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .haveNoAccount button {
     background-color: #A3C4BC;
     color: #fff;
     border: 2px solid #fff;

@@ -69,6 +69,14 @@ class Login  extends Component {
         this.setState({ formErrors, [emailForLogin]: value }, () => console.log(this.state));
     };
 
+    goHome() {
+
+    }
+
+    goRegister() {
+
+    }
+
     render() { 
         const { formErrors } = this.state;
         const { isPasswordSeen } = this.state;
@@ -104,6 +112,9 @@ class Login  extends Component {
                     </div>
                     <div className="clickCancel">
                         <button>Cancel</button>
+                    </div>
+                    <div className="haveNoAccount">
+                        <button><b>Have no account?</b></button>
                     </div>
                 </div>
             </div>

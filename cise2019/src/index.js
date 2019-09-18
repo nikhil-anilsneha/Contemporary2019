@@ -9,5 +9,5 @@ import * as serviceWorker from './serviceWorker';
 // import Counter from './components/counter';
 import 'bootstrap/dist/css/bootstrap.css';
 
-ReactDOM.render(<Signup />, document.getElementById('root'));
+ReactDOM.render(<Login />, document.getElementById('root'));
 serviceWorker.unregister();
