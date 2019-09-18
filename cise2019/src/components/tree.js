@@ -31,7 +31,6 @@ class Tree extends Component {
 
                 <br></br>
 
-
                 {/* https://www.savatree.com/ash-tree.html */}
                 {/* https://www.weedbusters.org.nz/weed-information/weed-list/ash/ */}
 
@@ -61,12 +60,12 @@ class Tree extends Component {
                 Flowers lack petals, are very small and purple, appear in dense clusters (in September-October) before the leaves, and are followed by seeds (1.2-1.5 mm long) with a large wing (2.7-4 cm long) attached to one end. 
                 </p>
 
-                <p>
-                Relevant Facts Berries:
-                </p>
+                <p>Relevant Facts Berries: None</p>
 
                 {/* Add to cart button goes here */}
                 <button class="button">Add to Cart</button>
+
+                <br></br>
 
             </div>
             
