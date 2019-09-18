@@ -100,3 +100,13 @@ h2 {
   background-color: yellowgreen;
   height: 2vw;
 }
+
+.plants-tools {
+  display: inline-block;
+  text-align: center;
+}
+
+.plants-tools-images {
+  width: 30%;
+  padding: 1%;
+}

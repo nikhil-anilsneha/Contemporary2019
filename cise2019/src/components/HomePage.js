@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Carousel from './Carousel';
 import LoginForm from './LoginForm.js';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import PlantsImage from './images/PlantsImage.JPG';
+import ToolsImage from './images/ToolsImage.JPG';
 
 export default class HomePage extends Component {
   render() {
@@ -17,8 +19,10 @@ export default class HomePage extends Component {
           </div> 
           <Carousel></Carousel>  
           <br></br>
-          <br></br>
-          <h3>I love PlantATree!!</h3>
+          <div className="plants-tools">
+            <img src={PlantsImage} className="plants-tools-images"/>
+            <img src={ToolsImage} className="plants-tools-images"/>
+          </div>
       </div>
     )
   }
