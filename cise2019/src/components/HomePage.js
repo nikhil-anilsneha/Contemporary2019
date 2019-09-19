@@ -9,11 +9,6 @@ import Tools from './ToolsPage.js';
 import ContactImage from './images/ContactImage.JPG';
 
 export default class HomePage extends Component {
-  state = {
-    isPlantsVisible: false,
-    isToolsVisible: false,
-  }
-
   render() {
     return (
       <div className="container">
@@ -21,14 +16,13 @@ export default class HomePage extends Component {
           <Carousel></Carousel>  
           <br></br>
           <div className="plants-tools">
-            <img src={PlantsImage} className="plants-tools-images" alt="plants icon"
-              onClick={() => this.setState({ isPlantsVisible: true, isToolsVisible: false, isHomeVisible: false }) }/>
-            <img src={ToolsImage} className="plants-tools-images" alt="tools icon"
-              onClick={() => this.setState({ isToolsVisible: true, isPlantsVisible:false, isHomeVisible: false }) }/>
-            <img src={ContactImage} className="plants-tools-images" alt="contacts icon"  />
+            <a href="./AboutPage.js">
+              <img src={PlantsImage} className="plants-tools-images" alt="plants icon"/> </a>
+            <a href="./ToolsPage.js">  
+            <img src={ToolsImage} className="plants-tools-images" alt="tools icon"/></a>
+            <a href="./ContactPage.js">
+              <img src={ContactImage} className="plants-tools-images" alt="contacts icon"/></a>
           </div>
-          { this.state.isPlantsVisible ? <Plants /> : null }
-          { this.state.isToolsVisible ? <Tools /> : null } 
       </div>
     )
   }
