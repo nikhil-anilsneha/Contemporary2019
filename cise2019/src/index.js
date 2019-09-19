@@ -10,5 +10,5 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import Tree from './components/tree';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Tree />, document.getElementById('root'));
 serviceWorker.unregister();
