@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
 import './App.css';
-import Cart from './components/cart';
+import banner from "./components/images/banner.jpg";
+import NavBar from './components/NavBar';
 
-class App extends Component{
 
+class App extends Component {
   render() {
     return (
-        <Cart></Cart>
-  );
-    }
+        <div className="maindiv">
+          <img src={banner} alt="banner" className="banner"></img>
+          <NavBar></NavBar>
+        </div>
+    )
+  }
 }
+
 
 
 export default App;
