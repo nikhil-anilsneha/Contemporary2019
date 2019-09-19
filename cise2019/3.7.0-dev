@@ -1,0 +1,13 @@
++ bootstrap@4.3.1
++ ts-pnp@1.1.2
++ jquery@1.9.1
++ tsutils@3.17.1
++ eslint@5.0.0
++ eslint@5.0.0
++ typescript@3.6.3
++ typescript@3.6.3
++ @typescript-eslint/parser@1.13.0
++ @typescript-eslint/eslint-plugin@1.13.0
+added 31 packages from 27 contributors, updated 17 packages, moved 4 packages and audited 904175 packages in 17.76s
+found 2 vulnerabilities (1 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

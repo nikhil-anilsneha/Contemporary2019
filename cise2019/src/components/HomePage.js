@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from './Carousel';
-import LoginForm from './LoginForm.js';
+import LoginForm from './Register.js';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import PlantsImage from './images/PlantsImage.JPG';
 import ToolsImage from './images/ToolsImage.JPG';
