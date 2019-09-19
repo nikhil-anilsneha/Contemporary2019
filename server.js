@@ -40,5 +40,5 @@ app.get("/products", (req, res) => {
 });
 
 app.listen(3001, () => {
-  console.log("products server listening on port 4000");
+  console.log("products server listening on port 3001");
 });
