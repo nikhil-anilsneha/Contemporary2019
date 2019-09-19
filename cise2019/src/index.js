@@ -14,7 +14,7 @@ import Tree from './components/tree';
 import Cart from './components/cart.js';
 
 ReactDOM.render(
-<Provider store={store}><Cart /></Provider>, 
+<Provider store={store}><App /></Provider>, 
 document.getElementById('root'));
 
 /* ReactDOM.render(<Cart />, document.getElementById('root'));
