@@ -6,6 +6,7 @@ import PlantsImage from './images/PlantsImage.JPG';
 import ToolsImage from './images/ToolsImage.JPG';
 import Plants from './AboutPage.js';
 import Tools from './ToolsPage.js';
+import ContactImage from './images/ContactImage.JPG';
 
 export default class HomePage extends Component {
   state = {
@@ -16,14 +17,7 @@ export default class HomePage extends Component {
   render() {
     return (
       <div className="container">
-          <div className="text">
-          <Router>
-            <Link to={'/LoginForm.js'} class="sign-up">Sign Up!</Link>
-            <Switch>
-              <Route path='/LoginForm.js' component={LoginForm}/>
-            </Switch>
-          </Router>
-          </div> 
+        <br></br>
           <Carousel></Carousel>  
           <br></br>
           <div className="plants-tools">
@@ -31,6 +25,7 @@ export default class HomePage extends Component {
               onClick={() => this.setState({ isPlantsVisible: true, isToolsVisible: false, isHomeVisible: false }) }/>
             <img src={ToolsImage} className="plants-tools-images" alt="tools icon"
               onClick={() => this.setState({ isToolsVisible: true, isPlantsVisible:false, isHomeVisible: false }) }/>
+            <img src={ContactImage} className="plants-tools-images" alt="contacts icon"  />
           </div>
           { this.state.isPlantsVisible ? <Plants /> : null }
           { this.state.isToolsVisible ? <Tools /> : null } 

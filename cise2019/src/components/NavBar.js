@@ -4,6 +4,8 @@ import HomePage from './HomePage.js';
 import About from './AboutPage.js';
 import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
+import Login from './Login.js';
+import Cart from './cart.js';
 
 export default class NavBar extends Component {
   render() {
@@ -18,6 +20,10 @@ export default class NavBar extends Component {
                 <li><Link to={'/ToolsPage.js'} className="nav-link">Tools</Link></li>
                 <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
               </ul>
+              <ul className="navbar-right mr-auto">
+                <li><Link to={'/cart.js'} className="nav-link">View Cart</Link></li>
+                <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
+              </ul>
             </nav>
             <hr />
             <Switch>
@@ -26,6 +32,8 @@ export default class NavBar extends Component {
                 <Route path='/ContactPage.js' component={Contact} />
                 <Route path='/AboutPage.js' component={About} />
                 <Route path='/ToolsPage.js' component={Tools} />
+                <Route path="/cart.js" component={Cart}/>
+                <Route path = '/Login.js' component={Login}/>
             </Switch>
           </div>
           </Router>  
