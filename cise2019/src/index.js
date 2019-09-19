@@ -11,10 +11,11 @@ import store from'./store';
 // import Counter from './components/counter';
 import 'bootstrap/dist/css/bootstrap.css';
 import Tree from './components/tree';
+import Cart from './components/cart.js';
 
-/* ReactDOM.render(
-<Provider store={store}><App /></Provider>, 
-document.getElementById('root')); */
+ReactDOM.render(
+<Provider store={store}><Cart /></Provider>, 
+document.getElementById('root'));
 
-ReactDOM.render(<App />, document.getElementById('root'));
-serviceWorker.unregister();
+/* ReactDOM.render(<Cart />, document.getElementById('root'));
+serviceWorker.unregister(); */
