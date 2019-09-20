@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import './tree.css';
-// import tree from "./images/tree.jpg";
 import AshTreePic from "./images/AshTreePic.jpg";
 
 class AshTree extends Component {
@@ -13,61 +12,85 @@ class AshTree extends Component {
             // only need one row and two columns
 
             <div class = "AshTreePage">
+
                 <h1>Ash Tree</h1>
 
                 <br></br>
                 
-                {/* <img src={tree} alt="tree" className="tree"></img> */} {/* works now */}
                 <img src={AshTreePic} alt="AshTreePic" className="AshTreePic"></img>
 
-                {/* 
-                Tree Category - fruit tree (apple, tomato), hedge (leylandii (Green), laurel hedging), evergreen (Pine (Eastern White Pine), Cypress), NZ native (Pohutukawa, Kauri), gum tree (Blue Gum, Rainbow Gum), palm tree (Feather Leaf Palm (King Palm, Cascade Palm)), hardwood (ash, maple, oak)
-                Maintenance Requirements
-                Relevant Facts - Flowers
-                Relevant Facts - Berries
-                Maximum Height
-                Price
-                Conditions for Planting
-                Growth Rate
-                */}
-
                 <br></br>
-
-                {/* https://www.savatree.com/ash-tree.html */}
-                {/* https://www.weedbusters.org.nz/weed-information/weed-list/ash/ */}
-                {/* https://plantscientist.files.wordpress.com/2015/03/1200px-fraxinus_excelsior_002.jpg */}
 
                 <p>Tree Category: Hardwood</p>
 
                 <p>
-                Conditions of Place to be Planted: Most ash tree varieties grow best in moist, rich soil; require full sun and plenty of space.
+                Conditions of Place to be Planted:
                 <br></br>
-                Soil Drainage: Fast
+                {/* <br></br> */}
+                The ash tree must grow in a luminous and sunny spot. Before planting it in your garden, check that its growth won’t be impeded by any nearby wall, building, or even another tree.
                 <br></br>
-                Sun: Sunny
+                <br></br>
+                Soil Drainage (fast/med/slow/anything): Most ash tree varieties grow best in moist, rich soil.
+                <br></br>
+                <br></br>
+                Sun (sunny/med/shade/anything): Requires full sun and plenty of space.
                 </p>
 
                 <p>
-                Maintenance Requirements: Ash trees are susceptible to ash tree borers and other pests and disease. Keep ash trees as healthy as possible through regular monitoring, pruning, fertilizing and watering.
-                Mature and established ash trees benefit from ash tree fertilizer feedings of organic-based macro and micronutrients for the nutrition necessary to sustain their health.
+                Maintenance Requirements (high/med/low) - (feeding, watering, pruning): 
+                <br></br>
+                {/* <br></br> */}
+                Ash trees are susceptible to Ash tree borers and other pests and disease. Keep Ash trees as healthy as possible through regular monitoring, pruning, fertilizing and watering.
+                <br></br>
+                <br></br>
+                Mature and established Ash trees benefit from Ash tree fertilizer feedings or organic-based macro and micronutrients for the nutrition necessary to sustain their health.
+                <br></br>
+                <br></br>
+                Ash will grow quickly when supplied adequately with water. Ensure the young seedlings are kept moist. Reduce watering a little towards late summer.
+                <br></br>
+                <br></br>
+                Pruning is recommended to preserve or improve tree structure, vigor and life-span. Pruning can reduce specific defects or structural problems in an ash tree to greatly lessen the risk of failure.
+                <br></br>
+                <br></br>
+                Broken, diseased, or dead ash tree branches are typically removed in order to prevent decay-producing fungi from infecting other areas of the tree. Also, removal of live branches is occasionally necessary to allow increased exposure to sunlight and circulation of air within the canopy.
+                <br></br>
+                {/* <br></br> */}
                 </p>
 
-                <p>Maximum Height: 50 to 80 feet high / 50 to 90 foot spread (>3m)</p>
-                
-                <p>Growth Rate: Fast</p>
+                <p>Maximum Height of Mature Tree (Less than 1m, 1-2m, 2-3m, Greater than 3m):
+                <br></br>
+                {/* <br></br> */}
+                Greater than 3m – Approximately grows up to 30 or 40 meters in height.
+                </p>
 
+                <p>Growth Rate (fast/med/slow):
+                <br></br>
+                {/* <br></br> */}
+                Fast – The relatively fast growth rate of ash species makes them a common choice for use in home landscapes, especially for areas with new construction.
+                </p>
+                
                 <p>Price: $50</p>
 
                 <p>
-                Relevant Facts Flowers: Spring flowers are inconspicuous, but the fruit that follows is more noticeable, hanging in clusters of winged seeds which turn light brown and linger on the tree until early winter. 
-                Flowers lack petals, are very small and purple, appear in dense clusters (in September-October) before the leaves, and are followed by seeds (1.2-1.5 mm long) with a large wing (2.7-4 cm long) attached to one end. 
+                Relevant Facts Flowers:
+                <br></br>
+                {/* <br></br> */}
+                Ash tree produces miniature purple flowers arranged in clusters. Male and female flowers develop on separate plants (dioecious plant). Flowers are pollinated by wind.
                 </p>
 
-                <p>Relevant Facts Berries: None</p>
+                <p>Relevant Facts Berries:
+                <br></br>
+                {/* <br></br> */}
+                Fruit of ash tree is called samara. Samara is one to two inches long, flat and consists of thin membrane that protects miniature seeds.
+                </p>
+
+                <br></br>
 
                 {/* Add to cart button goes here */}
                 <button class="button">Add to Cart</button>
 
+                <br></br>
+                <br></br>
                 <br></br>
 
             </div>

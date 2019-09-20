@@ -12,7 +12,6 @@ class CascadePalmTree extends Component {
                 <br></br>
                 
                 <img src={CascadePalmTreePic} alt="CascadePalmTreePic" className="CascadePalmTreePic"></img>
-                {/* https://frasercoastnursery.com.au/wp-content/uploads/2019/07/cascade-palm.jpg */}
 
                 <br></br>
 
@@ -21,30 +20,65 @@ class CascadePalmTree extends Component {
                 <p>
                 Conditions of Place to be Planted:
                 <br></br>
-                Soil Drainage:
+                {/* <br></br> */}
+                {/* text goes here */}
                 <br></br>
-                Sun:
+                <br></br>
+                Soil Drainage (fast/med/slow/anything): 'text goes here'
+                <br></br>
+                <br></br>
+                Sun (sunny/med/shade/anything): 'text goes here'
                 </p>
 
                 <p>
-                Maintenance Requirements:
+                Maintenance Requirements (high/med/low) - (feeding, watering, pruning): 
+                <br></br>
+                {/* <br></br> */}
+                {/* text goes here */}
+                <br></br>
+                <br></br>
+                {/* text goes here */}
+                <br></br>
+                <br></br>
+                {/* text goes here */}
+                <br></br>
+                {/* <br></br> */}
                 </p>
 
-                <p>Maximum Height: </p>
-                
-                <p>Growth Rate: </p>
+                <p>Maximum Height of Mature Tree (Less than 1m, 1-2m, 2-3m, Greater than 3m):
+                <br></br>
+                {/* <br></br> */}
+                {/* text goes here */}
+                </p>
 
-                <p>Price: </p>
+                <p>Growth Rate (fast/med/slow):
+                <br></br>
+                {/* <br></br> */}
+                {/* text goes here */}
+                </p>
+                
+                <p>Price: 'text goes here'</p>
 
                 <p>
                 Relevant Facts Flowers:
+                <br></br>
+                {/* <br></br> */}
+                {/* text goes here */}
                 </p>
 
-                <p>Relevant Facts Berries: </p>
+                <p>Relevant Facts Berries:
+                <br></br>
+                {/* <br></br> */}
+                {/* text goes here */}
+                </p>
+
+                <br></br>
 
                 {/* Add to cart button goes here */}
                 <button class="button">Add to Cart</button>
 
+                <br></br>
+                <br></br>
                 <br></br>
 
             </div>
