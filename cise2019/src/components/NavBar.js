@@ -6,8 +6,7 @@ import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
 import CartHome from './CartHome.js';
 
-export default class NavBar extends Component {
-  render() {
+const Navbar = ()=>{
     return (
       <div className="container">
           <Router>
@@ -37,4 +36,5 @@ export default class NavBar extends Component {
       </div>
     )
   }
-}
+
+  export default Navbar;
