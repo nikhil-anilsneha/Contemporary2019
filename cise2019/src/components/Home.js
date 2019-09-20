@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
@@ -6,7 +5,6 @@ import { addToCart } from './actions/cartActions'
  class Home extends Component{
     
     handleClick = (id)=>{
-        alert("Working");
         this.props.addToCart(id); 
     }
 
@@ -17,7 +15,7 @@ import { addToCart } from './actions/cartActions'
                         <div className="card-image">
                             <img src={item.img} alt={item.title}/>
                             <span className="card-title">{item.title}</span>
-                            <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}>Add</button>
+                            <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
                         </div>
 
                         <div className="card-content">

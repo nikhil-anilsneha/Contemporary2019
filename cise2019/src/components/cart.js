@@ -1,79 +1,83 @@
-import React, {Component} from 'react';
-import {Row} from 'react-bootstrap';
-import {Container} from 'react-bootstrap';
-import Subtotal from './Subtotal/Subtotal';
-import PickupSavings from './PickupSavings/PickupSavings'
-import TaxesFees from './TaxesFees/TaxesFees';
-import EstimatedTotal from './EstimatedTotal/EstimatedTotal';
-import ItemDetails from './ItemDetails/ItemDetails';
-import PromoCode from './PromoCode/PromoCode'
-import {connect} from 'react-redux';
-import {handleChange} from '../actions/promoCodeActions';
-class cart extends Component{
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { removeItem,addQuantity,subtractQuantity} from './actions/cartActions'
+import Recipe from './Recipe'
+class Cart extends Component{
 
-  constructor(props)
-  {
-    super(props);
-    this.state={total:200,
-      PickupSavings: -3.85,
-      taxes: 0,
-      estimatedTotal:0,
-      disablePromoButton: false
+    //to remove the item completely
+    handleRemove = (id)=>{
+        this.props.removeItem(id);
     }
-  }
-
-componentDidMount = () => {
-  this.setState({
-    taxes: (this.state.total+ this.state.PickupSavings) * 0.18
-  },
-  function() {
-    this.setState({ 
-    estimatedTotal: this.state.total+this.state.PickupSavings+ this.state.taxes})
-  });
-}
-
-giveDiscountHandler = () => {
-  if(this.props.promoCode === 'DISCOUNT') {
-    this.setState({
-      estimatedTotal : this.state.estimatedTotal*0.9
-    },
-    function() {
-      this.setState({
-        disablePromoButton:true
-      });
+    //to add the quantity
+    handleAddQuantity = (id)=>{
+        this.props.addQuantity(id);
     }
-    );
-  }
-};
+    //to substruct from the quantity
+    handleSubtractQuantity = (id)=>{
+        this.props.subtractQuantity(id);
+    }
+    render(){
+              
+        let addedItems = this.props.items.length ?
+            (  
+                this.props.items.map(item=>{
+                    return(
+                       
+                        <li className="collection-item avatar" key={item.id}>
+                                    <div className="item-img"> 
+                                        <img src={item.img} alt={item.img} className=""/>
+                                    </div>
+                                
+                                    <div className="item-desc">
+                                        <span className="title">{item.title}</span>
+                                        <p>{item.desc}</p>
+                                        <p><b>Price: {item.price}$</b></p> 
+                                        <p>
+                                            <b>Quantity: {item.quantity}</b> 
+                                        </p>
+                                        <div className="add-remove">
+                                            <Link to="./Cart.js"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}>arrow_drop_up</i></Link>
+                                            <Link to="./Cart.js"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item.id)}}>arrow_drop_down</i></Link>
+                                        </div>
+                                        <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
+                                    </div>
+                                    
+                                </li>
+                         
+                    )
+                })
+            ):
 
-  render() {
-    return (
-    <div className="container">
-      <Container className="purchase">      
-        <Row classname>
-         <Subtotal price={this.state.total.toFixed(2)}></Subtotal>
-      </Row>
-      <Row>
-      <PickupSavings price={this.state.PickupSavings}></PickupSavings>
-      </Row>
-      <Row><TaxesFees taxes={this.state.taxes.toFixed(2)}>
-        </TaxesFees></Row>
-        <hr></hr>
-        <Row><EstimatedTotal price={this.state.estimatedTotal.toFixed(2)}></EstimatedTotal></Row>
-        <Row><ItemDetails price={this.state.estimatedTotal.toFixed(2)}></ItemDetails></Row>
-      <hr/>
-      <Row>
-        <PromoCode    giveDiscount={() => this.giveDiscountHandler()}
-        isDisabled={this.state.disablePromoButton} />
-      </Row>
-      </Container>
-    </div>
-  );
+             (
+                <p>Nothing.</p>
+             )
+       return(
+            <div className="container">
+                <div className="cart">
+                    <h5>You have ordered:</h5>
+                    <ul className="collection">
+                        {addedItems}
+                    </ul>
+                </div> 
+                <Recipe />          
+            </div>
+       )
     }
 }
 
-const mapStateToProps = state => ({
-  promoCode: state.promoCode.value
-})
 
-export default connect(mapStateToProps, { handleChange}) (cart);
+const mapStateToProps = (state)=>{
+    return{
+        items: state.addedItems,
+        //addedItems: state.addedItems
+    }
+}
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        removeItem: (id)=>{dispatch(removeItem(id))},
+        addQuantity: (id)=>{dispatch(addQuantity(id))},
+        subtractQuantity: (id)=>{dispatch(subtractQuantity(id))}
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Cart)

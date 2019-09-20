@@ -4,7 +4,8 @@ import HomePage from './HomePage.js';
 import About from './AboutPage.js';
 import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
-import CartHome from './CartHome.js';
+import Cart from './Cart.js';
+import Home from './Home.js';
 
 const Navbar = ()=>{
     return (
@@ -17,8 +18,8 @@ const Navbar = ()=>{
                 <li><Link to={'/AboutPage.js'} className="nav-link">Plants</Link></li>
                 <li><Link to={'/ToolsPage.js'} className="nav-link">Tools</Link></li>
                 <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
-                <li><Link to={'/CartHome.js'}className="nav-link">Shop</Link></li>
-                <li><Link to={'/mycart.js'} className="nav-link">My cart</Link></li>
+                <li><Link to={'/Home.js'}className="nav-link">Shop</Link></li>
+                <li><Link to={'/Cart.js'} className="nav-link">My cart</Link></li>
                
               </ul>
             </nav>
@@ -29,7 +30,8 @@ const Navbar = ()=>{
                 <Route path='/ContactPage.js' component={Contact} />
                 <Route path='/AboutPage.js' component={About} />
                 <Route path='/ToolsPage.js' component={Tools} />
-                <Route path = '/CartHome.js' component={CartHome} />
+                <Route path = '/Home.js' component={Home} />
+                <Route path = '/Cart.js' component={Cart} />
             </Switch>
           </div>
           </Router>  

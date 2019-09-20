@@ -3,8 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './App.css';
 import banner from "./components/images/banner.jpg";
 import NavBar from './components/NavBar';
-import Cart from './components/mycart.js';
-import CartHome from './components/CartHome.js';
+
 
 
 class App extends Component {
