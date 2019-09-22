@@ -141,8 +141,9 @@ table {
   margin-left: 8%;
 }
 
-p {
+.contact-details p {
   float: left;
+  padding: 3%;
 }
 
 @media only screen and (max-width: 600px) {
