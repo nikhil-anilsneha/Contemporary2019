@@ -136,6 +136,15 @@ table {
   padding: 2%;
 }
 
+.contact-details {
+  font-size: 150%;
+  margin-left: 8%;
+}
+
+p {
+  float: left;
+}
+
 @media only screen and (max-width: 600px) {
   .slider {
     display: none;

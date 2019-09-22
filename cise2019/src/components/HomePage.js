@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from './Carousel';
-import LoginForm from './Register.js';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import PlantsImage from './images/PlantsImage.JPG';
 import ToolsImage from './images/ToolsImage.JPG';
-import Plants from './AboutPage.js';
-import Tools from './ToolsPage.js';
 import ContactImage from './images/ContactImage.JPG';
 
 export default class HomePage extends Component {
@@ -13,13 +9,13 @@ export default class HomePage extends Component {
     return (
       <div className="container">
         <br></br>
-          <Carousel></Carousel>  
+          <Carousel></Carousel> 
           <br></br>
           <div className="carousel-links">
              <table>
               <tr>
-                <th><a href="./AboutPage.js">Just In: Spring Season Tomato Plants</a></th>
-                <th><a href="./AboutPage.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
+                <th><a href="./tree.js">Just In: Spring Season Tomato Plants</a></th>
+                <th><a href="./tree.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
                 <th><a href="./Tips.js">Strawberry Planting 101 - Click Here!</a></th>
               </tr>
             </table>
