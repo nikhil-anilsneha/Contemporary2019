@@ -7,35 +7,36 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
-  code {
+code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-  #siblings {
+  
+#siblings {
     transform: rotate(270deg);
     width: 25%;
     height: 25%;
   }
   
-  .container {
+.container {
     width: 100%;
   }
   
-  .banner {
+.banner {
     height: 7vw;
     position: relative;
   }
   
-  .maindiv {
+.maindiv {
     text-align: center;
   }
   
-  .text {
+.text {
     text-align: right;
     padding: 2%;
   }
   
-  .slider {
+.slider {
     position: relative;
     margin: 0 auto;
     height: 50vh;
@@ -43,63 +44,63 @@ body {
     white-space: nowrap;
   }
   
-  .slider-wrapper {
+.slider-wrapper {
     position: relative;
     height: 100%;
     width: 100%;
   }
   
-  .slide {
+.slide {
     display: inline-block;
     height: 100%;
     width: 100%;
   }
   
-  .nextArrow {
+.nextArrow {
     position: absolute;
     top: 40%;
     right: -7%;
     z-index: 999;
   }
   
-  .backArrow {
+.backArrow {
     position: absolute;
     top: 40%;
     left: -7%;
     z-index: 999;
   }
   
-  .fa-arrow-right, .fa-arrow-left {
+.fa-arrow-right, .fa-arrow-left {
     color: #222
   }
   
-  h2 {
+h2 {
     position: absolute;
     top: 3%;
     margin-left: 35%;
     color: white;
   }
   
-  .navbar-nav li,  .navbar-right li {
+.navbar-nav li,  .navbar-right li {
     display: inline-block;
     padding: 5px;
     font-size: 18px;
   }
   
-  .navbar-nav {
+.navbar-nav {
     margin-top:0vw;
   }
 
-  .navbar-right {
+.navbar-right {
     margin-left: 53%;
     margin-top: 1%;
   }
   
-  .sign-up {
+.sign-up {
     font-size: 200%;
   }
   
-  .arrow {
+.arrow {
     width: 20%;
     height: 35%;
     display: flex;
@@ -110,18 +111,33 @@ body {
     transition: transform ease-in .1s;
   }
   
-  .navbar {
+.navbar {
     margin-bottom: initial;
     background-color: yellowgreen;
     height: 2vw;
   }
   
-  .plants-tools {
+.plants-tools {
     display: flex;
     text-align: center;
   }
   
-  .plants-tools-images {
+.plants-tools-images {
     width: 90%;
     height: 95%;
   }
+
+table {
+  font-size: 150%;
+  margin-left: 12%;
+}
+
+.carousel-links th {
+  padding: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  .slider {
+    display: none;
+  }
+}

@@ -15,6 +15,16 @@ export default class HomePage extends Component {
         <br></br>
           <Carousel></Carousel>  
           <br></br>
+          <div className="carousel-links">
+             <table>
+              <tr>
+                <th><a href="./AboutPage.js">Just In: Spring Season Tomato Plants</a></th>
+                <th><a href="./AboutPage.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
+                <th><a href="./Tips.js">Strawberry Planting 101 - Click Here!</a></th>
+              </tr>
+            </table>
+          </div>
+          <br></br>
           <div className="plants-tools">
             <a href="./AboutPage.js">
               <img src={PlantsImage} className="plants-tools-images" alt="plants icon"/> </a>
