@@ -14,7 +14,7 @@ export default class HomePage extends Component {
           <div className="carousel-links">
              <table>
               <tr>
-                <th><a href="./ContactPage.js">Just In: Spring Season Tomato Plants</a></th>
+                <th><a href="./tree.js">Just In: Spring Season Tomato Plants</a></th>
                 <th><a href="./tree.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
                 <th><a href="./Tips.js">Strawberry Planting 101 - Click Here!</a></th>
               </tr>
