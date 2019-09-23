@@ -12,12 +12,7 @@ code {
       monospace;
   }
   
-#siblings {
-    transform: rotate(270deg);
-    width: 25%;
-    height: 25%;
-  }
-  
+
 .container {
     width: 100%;
   }
@@ -144,6 +139,10 @@ table {
 .contact-details p {
   float: left;
   padding: 3%;
+}
+
+.strawberries, .strawberries p {
+  text-align: left;
 }
 
 @media only screen and (max-width: 600px) {

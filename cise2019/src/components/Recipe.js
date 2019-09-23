@@ -34,7 +34,7 @@ class Recipe extends Component{
                         <b>Total: {this.props.total} $</b>
                     </div>
                     <div className="checkout">
-                        <button><a href="cise2019\src\components\Checkout.js">Checkout</a></button>
+                        <button><a href="./Checkout.js">Checkout</a></button>
                     </div>
                  </div>
         )

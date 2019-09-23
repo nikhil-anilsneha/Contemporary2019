@@ -8,6 +8,7 @@ import Cart from './C.js';
 import Home from './Home.js';
 import Tips from './GardenTips.js';
 import AshTree from './AshTree.js';
+import Checkout from './Checkout.js';
 
 export default class Navbar extends Component {
 render(){
@@ -38,6 +39,7 @@ render(){
                 <Route path = '/C.js' component={Cart} />
                 <Route path='/GardenTips.js' component={Tips}/>
                 <Route path='/AshTree.js' component={AshTree}/>
+                <Route path='/Checkout.js' component={Checkout}/>
             </Switch>
           </div>
           </Router>  
