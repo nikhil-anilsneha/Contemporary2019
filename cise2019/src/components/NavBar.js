@@ -4,7 +4,7 @@ import HomePage from './HomePage.js';
 import About from './AboutPage.js';
 import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
-import Cart from './Cart.js';
+import Cart from './C.js';
 import Home from './Home.js';
 
 export default class Navbar extends Component {
@@ -22,7 +22,7 @@ render(){
                
               </ul>
               <ul className="navbar-right mr-auto">
-                <li><Link to={'/Cart.js'} className="nav-link">View Cart</Link></li>
+                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
                 <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
               </ul>
             </nav>
@@ -34,7 +34,7 @@ render(){
                 <Route path='/AboutPage.js' component={About} />
                 <Route path='/ToolsPage.js' component={Tools} />
                 <Route path = '/Home.js' component={Home} />
-                <Route path = '/Cart.js' component={Cart} />
+                <Route path = '/C.js' component={Cart} />
             </Switch>
           </div>
           </Router>  
