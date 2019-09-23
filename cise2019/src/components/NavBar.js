@@ -6,6 +6,8 @@ import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
 import Cart from './C.js';
 import Home from './Home.js';
+import Tips from './GardenTips.js';
+import AshTree from './AshTree.js';
 
 export default class Navbar extends Component {
 render(){
@@ -19,7 +21,6 @@ render(){
                 <li><Link to={'/Home.js'} className="nav-link">Plants</Link></li>
                 <li><Link to={'/Home.js'} className="nav-link">Tools</Link></li>
                 <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
-               
               </ul>
               <ul className="navbar-right mr-auto">
                 <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
@@ -35,6 +36,8 @@ render(){
                 <Route path='/ToolsPage.js' component={Tools} />
                 <Route path = '/Home.js' component={Home} />
                 <Route path = '/C.js' component={Cart} />
+                <Route path='/GardenTips.js' component={Tips}/>
+                <Route path='/AshTree.js' component={AshTree}/>
             </Switch>
           </div>
           </Router>  

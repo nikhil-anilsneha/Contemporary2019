@@ -3,7 +3,8 @@ import Carousel from './Carousel';
 import PlantsImage from './images/PlantsImage.JPG';
 import ToolsImage from './images/ToolsImage.JPG';
 import ContactImage from './images/ContactImage.JPG';
-import {Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, withRouter } from 'react-router-dom';
+import Tree from "./AshTree.js";
 
 export default class HomePage extends Component {
   render() {
@@ -14,11 +15,13 @@ export default class HomePage extends Component {
           <br></br>
           <div className="carousel-links">
              <table>
+               <tbody>
               <tr>
-                <th><a href="./tree.js">Just In: Spring Season Tomato Plants</a></th>
-                <th><a href="./tree.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
-                <th><a href="./Tips.js">Strawberry Planting 101 - Click Here!</a></th>
+                <th><a href="./AshTree.js">Just In: Spring Season Tomato Plants</a></th>
+                <th><a href="./AshTree.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
+                <th><a href="./GardenTips.js">Strawberry Planting 101 - Click Here!</a></th>
               </tr>
+              </tbody>
             </table>
           </div>
           <br></br>

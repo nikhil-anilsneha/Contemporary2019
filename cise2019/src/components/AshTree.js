@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './tree.css';
 // import tree from "./images/tree.jpg";
-import AshTree from "./images/AshTree.jpg";
+import AshTreePic from "./images/AshTree.jpg";
 
-class Tree extends Component {
+class AshTree extends Component {
     // state = {  }
     render() { 
         return (
@@ -16,7 +16,7 @@ class Tree extends Component {
                 <br></br>
                 
                 {/* <img src={tree} alt="tree" className="tree"></img> */} {/* works now */}
-                <img src={AshTree} alt="AshTree" className="AshTree"></img>
+                <img src={AshTreePic} alt="AshTree" className="AshTree"></img>
 
                 {/* 
                 Tree Category - fruit tree (apple, tomato), hedge (leylandii (Green), laurel hedging), evergreen (Pine (Eastern White Pine), Cypress), NZ native (Pohutukawa, Kauri), gum tree (Blue Gum, Rainbow Gum), palm tree (Feather Leaf Palm (King Palm, Cascade Palm)), hardwood (ash, maple, oak)
@@ -73,4 +73,4 @@ class Tree extends Component {
     }
 }
  
-export default Tree;
+export default AshTree;
