@@ -7,19 +7,20 @@ import Tools from './ToolsPage.js';
 import Cart from './Cart.js';
 import Home from './Home.js';
 
-const Navbar = ()=>{
+export default class Navbar extends Component {
+render(){
     return (
       <div className="container">
           <Router>
             <div className="navigation">
              <nav className="navbar navbar-expand-lg navbar-light">
               <ul className="navbar-nav mr-auto">
-                <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
-                <li><Link to={'/AboutPage.js'} className="nav-link">Plants</Link></li>
-                <li><Link to={'/ToolsPage.js'} className="nav-link">Tools</Link></li>
-                <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
-                <li><Link to={'/Home.js'}className="nav-link">Shop</Link></li>
-                <li><Link to={'/Cart.js'} className="nav-link">My cart</Link></li>
+                <li><Link to={'/HomePage.js'} className="nav-link1">Home</Link></li>
+                <li><Link to={'/AboutPage.js'} className="nav-link2">Plants</Link></li>
+                <li><Link to={'/ToolsPage.js'} className="nav-link3">Tools</Link></li>
+                <li><Link to={'/ContactPage.js'} className="nav-link4">Contact</Link></li>
+                <li><Link to={'/Home.js'}className="nav-link5">Shop</Link></li>
+                <li><Link to={'/Cart.js'} className="nav-link6">My cart</Link></li>
                
               </ul>
             </nav>
@@ -37,6 +38,5 @@ const Navbar = ()=>{
           </Router>  
       </div>
     )
+}
   }
-
-  export default Navbar;

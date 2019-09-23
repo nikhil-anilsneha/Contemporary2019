@@ -11,29 +11,31 @@ import { addToCart } from './actions/cartActions'
     render(){
         let itemList = this.props.items.map(item=>{
             return(
-                <div className="card" key={item.id}>
+                <div className="recard" key={item.id}>
                         <div className="card-image">
                             <img src={item.img} alt={item.title}/>
+                        </div>
+                        <div>
                             <span className="card-title">{item.title}</span>
                             <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
                         </div>
-
                         <div className="card-content">
                             <p>{item.desc}</p>
                             <p><b>Price: {item.price}$</b></p>
                         </div>
                  </div>
-
+            
             )
         })
 
         return(
-            <div className="container">
+            <div className>
                 <h3 className="center">Our items</h3>
-                <div className="box">
+                <div className="center">
                     {itemList}
                 </div>
             </div>
+
         )
     }
 }

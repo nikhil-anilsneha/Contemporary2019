@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 //import { addShipping } from './actions/cartActions'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Checkout from './Checkout.js';
+
 class Recipe extends Component{
     
     componentWillUnmount() {
@@ -22,21 +25,22 @@ class Recipe extends Component{
         return(
             <div className="container">
                 <div className="collection">
-                    <li className="collection-item">
+                    
                             <label>
                                 <input type="checkbox" ref="shipping" onChange= {this.handleChecked} />
                                 <span>Shipping(+6$)</span>
                             </label>
-                        </li>
-                        <li className="collection-item"><b>Total: {this.props.total} $</b></li>
+                        
+                        <b>Total: {this.props.total} $</b>
                     </div>
                     <div className="checkout">
-                        <button className="waves-effect waves-light btn">Checkout</button>
+                        <button><a href="cise2019\src\components\Checkout.js">Checkout</a></button>
                     </div>
                  </div>
         )
     }
 }
+
 
 const mapStateToProps = (state)=>{
     return{
