@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class AboutPage extends Component {
+
+export default class Tips extends Component {
   render() {
     return (
         <div>
-          <h3>Plants</h3>
-
+          <h3>Gardening 101</h3>
         </div>
     );
   }
