@@ -4,11 +4,11 @@ import HomePage from './HomePage.js';
 import About from './AboutPage.js';
 import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
-import Login from './Login.js';
-import Cart from './cart.js';
+import Cart from './Cart.js';
+import Home from './Home.js';
 
-export default class NavBar extends Component {
-  render() {
+export default class Navbar extends Component {
+render(){
     return (
       <div className="container">
           <Router>
@@ -16,12 +16,13 @@ export default class NavBar extends Component {
              <nav className="navbar navbar-expand-lg navbar-light">
               <ul className="navbar-nav mr-auto">
                 <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
-                <li><Link to={'/AboutPage.js'} className="nav-link">Plants</Link></li>
-                <li><Link to={'/ToolsPage.js'} className="nav-link">Tools</Link></li>
+                <li><Link to={'/Home.js'} className="nav-link">Plants</Link></li>
+                <li><Link to={'/Home.js'} className="nav-link">Tools</Link></li>
                 <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
+               
               </ul>
               <ul className="navbar-right mr-auto">
-                <li><Link to={'/cart.js'} className="nav-link">View Cart</Link></li>
+                <li><Link to={'/Cart.js'} className="nav-link">View Cart</Link></li>
                 <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
               </ul>
             </nav>
@@ -32,12 +33,12 @@ export default class NavBar extends Component {
                 <Route path='/ContactPage.js' component={Contact} />
                 <Route path='/AboutPage.js' component={About} />
                 <Route path='/ToolsPage.js' component={Tools} />
-                <Route path="/cart.js" component={Cart}/>
-                <Route path = '/Login.js' component={Login}/>
+                <Route path = '/Home.js' component={Home} />
+                <Route path = '/Cart.js' component={Cart} />
             </Switch>
           </div>
           </Router>  
       </div>
     )
-  }
 }
+  }

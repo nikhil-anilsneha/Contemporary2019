@@ -67,6 +67,13 @@
   color: rgb(252, 248, 248);
   border-color: white;
 }
+
+.nav-link1{
+margin-left: -40vh
+}
+.nav-link2{
+  margin-left: -25vh;
+}
 /* Colors */
 /*
 dark blue: #476A6F
