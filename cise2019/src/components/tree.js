@@ -10,7 +10,7 @@ class Tree extends Component {
             // put this into a container with one column for picture and another for text
             // only need one row and two columns
 
-            <div class = "TreePage">
+            <div className = "container">
                 <h1>Ash Tree</h1>
 
                 <br></br>
