@@ -23,6 +23,10 @@ render(){
                 <li><Link to={'/Cart.js'} className="nav-link6">My cart</Link></li>
                
               </ul>
+              <ul className="navbar-right mr-auto">
+                <li><Link to={'/cart.js'} className="nav-link">View Cart</Link></li>
+                <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
+              </ul>
             </nav>
             <hr />
             <Switch>
