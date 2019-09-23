@@ -15,10 +15,10 @@ render(){
             <div className="navigation">
              <nav className="navbar navbar-expand-lg navbar-light">
               <ul className="navbar-nav mr-auto">
-                <li><Link to={'/HomePage.js'} className="nav-link1">Home</Link></li>
-                <li><Link to={'/Home.js'} className="nav-link2">Plants</Link></li>
-                <li><Link to={'/Home.js'} className="nav-link3">Tools</Link></li>
-                <li><Link to={'/ContactPage.js'} className="nav-link4">Contact</Link></li>
+                <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
+                <li><Link to={'/Home.js'} className="nav-link">Plants</Link></li>
+                <li><Link to={'/Home.js'} className="nav-link">Tools</Link></li>
+                <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
                
               </ul>
               <ul className="navbar-right mr-auto">
