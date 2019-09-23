@@ -9,6 +9,7 @@ import Home from './Home.js';
 import Tips from './GardenTips.js';
 import AshTree from './AshTree.js';
 import Checkout from './Checkout.js';
+import Login from './Login.js';
 
 export default class Navbar extends Component {
 render(){
@@ -40,6 +41,7 @@ render(){
                 <Route path='/GardenTips.js' component={Tips}/>
                 <Route path='/AshTree.js' component={AshTree}/>
                 <Route path='/Checkout.js' component={Checkout}/>
+                <Route path='/Login.js' component={Login}/>
             </Switch>
           </div>
           </Router>  

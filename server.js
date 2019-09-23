@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const mysql = require("mysql");
+const mysql = require('mysql');
+const bodyparser = require('body-parser');
 
 const app = express();
 
@@ -17,14 +18,17 @@ const pool = mysql.createPool({
   host: "us-cdbr-iron-east-02.cleardb.net",
   user: "b72f7916dad1ba",
   password: "bf43f260",
-  database: "heroku_25a635bc8a152af"
+  database: "heroku_25a635bc8a152af",
+  connectionLimit : 10
 });
 
 app.use(cors());
+app.use(bodyparser.json({type: 'application/json'}));
+app.use(bodyparser.urlencoded({extended: true}));
 
-app.get("/", (req, res) => {
-  res.send("go to /products"); 
-});
+/* app.get("/", (req, res) => {
+  res.send("go to /Products.js"); 
+});  */
 
 /* connection.connect(err => {
   if (!err) console.log("DB connection succeded");
@@ -34,19 +38,39 @@ app.get("/", (req, res) => {
     );
 }); */
 
-pool.getConnection(function(err, connection)
-{
-  connection.query(SELECT_ALL_PRODUCTS_QUERY, function(error, results, fields)
-  {
-    connection.release();
-    if (err) {
-      throw (error)
-    }
-  });
-});
+/* pool.getConnection(function (err, res, conn) {
+  if (err)
+      throw (err);
 
-/* app.get("/products", (req, res) => {
-  connection.query(SELECT_ALL_PRODUCTS_QUERY, (err, results) => {
+  // if you got a connection...
+  console.log("DB connection succeded")
+  conn.query(SELECT_ALL_PRODUCTS_QUERY, function(err, rows) {
+      if(err) {
+          conn.release();
+          return res.send(400, 'Couldnt get a connection');
+      }
+
+      // for simplicity, just send the rows
+      res.send(rows);
+
+      // CLOSE THE CONNECTION
+      conn.release();
+  })
+}); */
+
+app.get("/", function (req, res) {
+  pool.getConnection(function (err, pool) {
+    console.log("DB connection suceeded");
+    pool.query(SELECT_ALL_PRODUCTS_QUERY, function(error, results, fields) {
+      if (error)
+      {
+        throw (error)
+      }
+      res.send(results)
+    })
+  })
+});
+  /* connection.query(SELECT_ALL_PRODUCTS_QUERY, (err, results) => {
     if (err) {
       return res.send(err);
     } else {
@@ -55,7 +79,7 @@ pool.getConnection(function(err, connection)
       });
     }
   });
-}); */
+});  */
 
 app.listen(3001, () => {
   console.log("products server listening on port 3001");
