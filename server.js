@@ -20,7 +20,6 @@ const pool = mysql.createPool({
   database: "heroku_25a635bc8a152af"
 });
 
-
 app.use(cors());
 
 app.get("/", (req, res) => {
