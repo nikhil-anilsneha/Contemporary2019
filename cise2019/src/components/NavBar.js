@@ -4,8 +4,9 @@ import HomePage from './HomePage.js';
 import About from './AboutPage.js';
 import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
-import Cart from './Cart.js';
+import Cart from './C.js';
 import Home from './Home.js';
+import Checkout from './Checkout.js'
 
 export default class Navbar extends Component {
 render(){
@@ -18,12 +19,12 @@ render(){
                 <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
                 <li><Link to={'/Home.js'} className="nav-link">Plants</Link></li>
                 <li><Link to={'/Home.js'} className="nav-link">Tools</Link></li>
-                <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
+                <li><Link to={'/AboutPage.js'} className="nav-link">Contact</Link></li>
 
                
               </ul>
               <ul className="navbar-right mr-auto">
-                <li><Link to={'/Cart.js'} className="nav-link">View Cart</Link></li>
+                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
                 <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
               </ul>
             </nav>
@@ -35,7 +36,8 @@ render(){
                 <Route path='/AboutPage.js' component={About} />
                 <Route path='/ToolsPage.js' component={Tools} />
                 <Route path = '/Home.js' component={Home} />
-                <Route path = '/Cart.js' component={Cart} />
+                <Route path = '/C.js' component={Cart} />
+                <Route path = '/Checkout.js' component={Checkout}/>
             </Switch>
           </div>
           </Router>  

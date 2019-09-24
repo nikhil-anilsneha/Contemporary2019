@@ -37,7 +37,7 @@ class Cart extends Component{
                                             <b>Quantity: {item.quantity}</b> 
                                         </p>
                                         <div className="add-remove">
-                                            <Link to="./Cart.js"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}>arrow_drop_up</i></Link>
+                                            <Link to="./Cart.js"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}><b>^</b></i></Link>
                                             <Link to="./Cart.js"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item.id)}}>arrow_drop_down</i></Link>
                                         </div>
                                         <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
@@ -56,9 +56,9 @@ class Cart extends Component{
             <div className="container">
                 <div className="cart">
                     <h5>You have ordered:</h5>
-                    <ul className="collection">
+                    
                         {addedItems}
-                    </ul>
+                   
                 </div> 
                 <Recipe />          
             </div>
