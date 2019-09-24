@@ -7,7 +7,7 @@ import Tools from './ToolsPage.js';
 import Cart from './C.js';
 import Home from './Home.js';
 import Tips from './GardenTips.js';
-import AshTree from './AshTree.js';
+import Tree from './tree.js';
 import Checkout from './Checkout.js';
 import Login from './Login.js';
 
@@ -39,7 +39,7 @@ render(){
                 <Route path = '/Home.js' component={Home} />
                 <Route path = '/C.js' component={Cart} />
                 <Route path='/GardenTips.js' component={Tips}/>
-                <Route path='/AshTree.js' component={AshTree}/>
+                <Route path='/tree.js' component={Tree}/>
                 <Route path='/Checkout.js' component={Checkout}/>
                 <Route path='/Login.js' component={Login}/>
             </Switch>
