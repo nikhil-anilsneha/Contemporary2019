@@ -5,7 +5,7 @@ const bodyparser = require('body-parser');
 
 const app = express();
 
-const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM trees";
+const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree";
 
 /* const connection = mysql.createConnection({
   host: "us-cdbr-iron-east-02.cleardb.net",
@@ -58,8 +58,7 @@ app.use(bodyparser.urlencoded({extended: true}));
   })
 }); */
 
-app.get("/", function (req, res) {
-  pool.getConnection(function (err, pool) {
+  pool.connect(function (err, res, pool) {
     console.log("DB connection suceeded");
     pool.query(SELECT_ALL_PRODUCTS_QUERY, function(error, results, fields) {
       if (error)
@@ -68,8 +67,8 @@ app.get("/", function (req, res) {
       }
       res.send(results)
     })
-  })
-});
+  });
+
   /* connection.query(SELECT_ALL_PRODUCTS_QUERY, (err, results) => {
     if (err) {
       return res.send(err);
