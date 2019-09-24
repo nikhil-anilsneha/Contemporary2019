@@ -48,7 +48,8 @@ app.get("/tips", (req, res) => {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query("SELECT * FROM tips; SELECT * FROM tips WHERE tips_id=1", [1,2], function(err2, records, fields) {
+      conn.query("SELECT * FROM tips; SELECT * FROM tips WHERE tips_id=1; SELECT * FROM tips WHERE tips_id=2", 
+        [1,2,3], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records
