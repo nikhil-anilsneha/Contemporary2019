@@ -19,7 +19,7 @@ export default class HomePage extends Component {
               <tr>
                 <th><a href="./tree.js">Just In: Spring Season Tomato Plants</a></th>
                 <th><a href="./tree.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
-                <th><a href="./GardenTips.js">Strawberry Planting 101 - Click Here!</a></th>
+                <th><a href="./tips.js">Strawberry Planting 101 - Click Here!</a></th>
               </tr>
               </tbody>
             </table>

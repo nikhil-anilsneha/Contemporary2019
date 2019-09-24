@@ -9,6 +9,7 @@ const app=express();
 app.use(express.static(path.join(__dirname, "cise2019/build")));
 
 const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree";
+const SELECT_ALL_TIPS_QUERY = "SELECT * FROM tips";
 
 let pool = mysql.createPool({
   connectionLimit: 10,
@@ -40,6 +41,23 @@ app.get("/tree", (req, res) => {
     }
   });
 });
+
+app.get("/tips", (req, res) => {
+  pool.getConnection(function(err, conn) {
+    if (err) {
+      res.send("Error occured");
+    } else {
+      conn.query(SELECT_ALL_TIPS_QUERY, function(err2, records, fields) {
+        if (!err2) {
+          res.json({
+            data: records
+          });
+        }
+        conn.release();
+      });
+    }
+  });
+}); 
 
 app.get("*",(req,res)=>{
   res.sendFile(path.join(__dirname + "/cise2019/build/index.html"));

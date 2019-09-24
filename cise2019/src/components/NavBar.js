@@ -6,10 +6,12 @@ import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
 import Cart from './C.js';
 import Home from './Home.js';
-import Tips from './GardenTips.js';
+import Tips from './tips.js';
 import Tree from './tree.js';
 import Checkout from './Checkout.js';
 import Login from './Login.js';
+import ContactPage from './ContactPage.js';
+import SingleTip from './SingleTip';
 
 export default class Navbar extends Component {
 render(){
@@ -38,10 +40,11 @@ render(){
                 <Route path='/ToolsPage.js' component={Tools} />
                 <Route path = '/Home.js' component={Home} />
                 <Route path = '/C.js' component={Cart} />
-                <Route path='/GardenTips.js' component={Tips}/>
+                <Route path='/tips.js' component={Tips}/>
                 <Route path='/tree.js' component={Tree}/>
                 <Route path='/Checkout.js' component={Checkout}/>
                 <Route path='/Login.js' component={Login}/>
+                <Route path="/tips/:tipsId" component={ContactPage} />
             </Switch>
           </div>
           </Router>  
