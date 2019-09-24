@@ -1,53 +1,50 @@
-// Video Link
-// https://www.youtube.com/watch?v=XuLRKMqozwA
+const express = require("express");
+const cors = require("cors");
+const mysql = require("mysql");
+const path = require("path");
+const port = process.env.PORT || 3001;
 
 var mysql = require('mysql');
 
-var connection = mysql.createConnection({
+app.use(express.static(path.join(__dirname, "cise2019/build")));
+
+const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree";
+
+let pool = mysql.createPool({
+  connectionLimit: 10,
   host: "us-cdbr-iron-east-02.cleardb.net",
   user: "b72f7916dad1ba",
   password: "bf43f260",
   database: "heroku_25a635bc8a152af"
 });
 
-connection.connect();
+app.use(cors());
 
-// inserting
-// var trees = {
-//     ID: '4',
-//     Name: 'Strawberry',
-//     Type: 'Fruit',
-//     Price: '50'
-// };
-
-// var query = connection.query('insert into trees set ?', trees, function (err, result) {
-//     if (err)
-//     {
-//         console.error(err);
-//         return;
-//     }
-//     console.error(result);
-// });
-
-// retrieving all results
-connection.query('select * from tree', function (err, result) {
-    if (err)
-    {
-        console.error(err);
-        return;
-    }
-    console.error(result);
+app.get("/", (req, res) => {
+  res.send("go to /tree");
 });
 
-// retrieving with "where" clause
+app.get("/tree", (req, res) => {
+  pool.getConnection(function(err, conn) {
+    if (err) {
+      res.send("Error occured");
+    } else {
+      conn.query(SELECT_ALL_PRODUCTS_QUERY, function(err2, records, fields) {
+        if (!err2) {
+          res.json({
+            data: records
+          });
+        }
+        conn.release();
+      });
+    }
+  });
+});
 
-// var ID = '3';
+app.get("*",(req,res)=>{
+  res.sendFile(path.join(__dirname + "/cise2019/build/index.html"));
+})
 
-// connection.query('select * from trees where ID = ?', ID, function (err, result) {
-//     if (err)
-//     {
-//         console.error(err);
-//         return;
-//     }
-//     console.error(result);
-// });
+app.listen(3001, () => {
+  console.log("tree server listening on port 3001");
+});

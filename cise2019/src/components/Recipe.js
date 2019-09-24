@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 //import { addShipping } from './actions/cartActions'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Checkout from './Checkout.js';
 
 class Recipe extends Component{
+
     
+
     componentWillUnmount() {
          if(this.refs.shipping.checked)
               this.props.substractShipping()
@@ -24,12 +24,13 @@ class Recipe extends Component{
   
         return(
             <div className="container">
-                <div className="collection">
+                <div className="collection2">
                     
-                            <label>
-                                <input type="checkbox" ref="shipping" onChange= {this.handleChecked} />
-                                <span>Shipping(+6$)</span>
-                            </label>
+                            <form action="/action_page.php">
+                            <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} />Shipping(+$6)<hr/>
+                            <input type="radio" name="del" ref="Location 1"/>Pickup At Location 1(+$0)<br/>
+                            </form>
+
                         
                         <b>Total: {this.props.total} $</b>
                     </div>

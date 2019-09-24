@@ -1,12 +1,12 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
@@ -14,131 +14,135 @@ code {
   
 
 .container {
-    width: 100%;
-  }
-  
-.banner {
-    height: 7vw;
-    position: relative;
-  }
-  
-.maindiv {
-    text-align: center;
-  }
-  
-.text {
-    text-align: right;
-    padding: 2%;
-  }
-  
-.slider {
-    position: relative;
-    margin: 0 auto;
-    height: 50vh;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  
-.slider-wrapper {
-    position: relative;
-    height: 100%;
-    width: 100%;
-  }
-  
-.slide {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-  }
-  
-.nextArrow {
-    position: absolute;
-    top: 40%;
-    right: -7%;
-    z-index: 999;
-  }
-  
-.backArrow {
-    position: absolute;
-    top: 40%;
-    left: -7%;
-    z-index: 999;
-  }
-  
-.fa-arrow-right, .fa-arrow-left {
-    color: #222
-  }
-  
-h2 {
-    position: absolute;
-    top: 3%;
-    margin-left: 35%;
-    color: white;
-  }
-  
-.navbar-nav li,  .navbar-right li {
-    display: inline-block;
-    padding: 5px;
-    font-size: 18px;
-  }
-  
-.navbar-nav {
-    margin-top:0vw;
-  }
-
-.navbar-right {
-    margin-left: 53%;
-    margin-top: 1%;
-  }
-  
-.sign-up {
-    font-size: 200%;
-  }
-  
-.arrow {
-    width: 20%;
-    height: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform ease-in .1s;
-  }
-  
-.navbar {
-    margin-bottom: initial;
-    background-color: yellowgreen;
-    height: 2vw;
-  }
-  
-.plants-tools {
-    display: flex;
-    text-align: center;
-  }
-  
-.plants-tools-images {
-    width: 90%;
-    height: 95%;
-  }
-
-table {
-  font-size: 150%;
-  margin-left: 12%;
+  width: 100%;
 }
 
-.carousel-links th {
+.banner {
+  height: 7vw;
+  position: relative;
+}
+
+.maindiv {
+  text-align: center;
+}
+
+.text {
+  text-align: right;
   padding: 2%;
 }
 
+.slider {
+  position: relative;
+  margin: 0 auto;
+  height: 50vh;
+  width:150vh;
+  margin-left:-20vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+  width: 200%;
+}
+
+.slide {
+  display: inline-block;
+  height: 80%;
+  width: 50%;
+}
+
+.nextArrow {
+  position: absolute;
+  top: 40%;
+  right: -7%;
+  z-index: 999;
+}
+
+.backArrow {
+  position: absolute;
+  top: 40%;
+  left: -7%;
+  z-index: 999;
+}
+
+.fa-arrow-right, .fa-arrow-left {
+  color: #222
+}
+
+h2 {
+  position: absolute;
+  top: 3%;
+  margin-left: 35%;
+  color: white;
+}
+
+.navbar-nav li,  .navbar-right li {
+  display: inline-block;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.navbar-nav {
+  margin-top:0vw;
+}
+
+.navbar-right {
+  margin-left: 53%;
+  margin-top: 1%;
+}
+
+.sign-up {
+  font-size: 200%;
+}
+
+.arrow {
+  width: 20%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in .1s;
+}
+
+.navbar {
+  margin-bottom: initial;
+  background-color: yellowgreen;
+  height: 2vw;
+  width: 76vw;
+  margin-left:-9.5vw
+}
+
+.plants-tools {
+  display: flex;
+  text-align: center;
+}
+
+.plants-tools-images {
+  width: 90%;
+  height: 95%;
+}
+
+table {
+font-size: 150%;
+margin-left: 12%;
+}
+
+.carousel-links th {
+padding: 2%;
+}
+
 .contact-details {
-  font-size: 150%;
-  margin-left: 8%;
+font-size: 150%;
+margin-left: 8%;
 }
 
 .contact-details p {
-  float: left;
-  padding: 3%;
+float: left;
+padding: 3%;
 }
 
 .strawberries, .strawberries p {
@@ -146,7 +150,8 @@ table {
 }
 
 @media only screen and (max-width: 600px) {
-  .slider {
-    display: none;
-  }
+.slider {
+  display: none;
 }
+}
+
