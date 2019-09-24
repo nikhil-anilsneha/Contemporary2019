@@ -1,6 +1,5 @@
 .tree-name {
   width: 100%;
-  /* border-top: 0.0625em solid silver; */
   border-bottom: 0.0625em solid silver;
   padding-top: 0.95em; /* need this for spacing when you have an underline */
   padding-bottom: 2.95em; /* need this for spacing when you have an underline */
@@ -14,27 +13,20 @@
   margin: 0;
   font-weight: bold;
   text-align: center;
-  font-size: 8em; /* try 6em or 8em */
+  font-size: 5em; /* try 5em or 6em */
   text-decoration: underline;
   text-underline-position: under;
 }
 
-/* TODO: REMOVE THIS CSS AFTER */
 .tree-image {
-  /* padding: 0.95em; */
-  /* padding: 0.95%; */
-  /* width: 50%; */
-  /* height: 50%; */
-  /* display: block; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
+  padding: 0.95%;
 }
 
 img {
-  padding: 0.95%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: 0.0625em solid black; /* 1px = 0.0625em */
 }
 
 .category {
@@ -42,25 +34,25 @@ img {
   border-top: 0.0625em solid silver;
   border-bottom: 0.0625em solid silver;
   margin: 0%;
+  padding: 0.95em;
 }
 
 .category-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .category-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
 
 .conditions {
   width: 100%;
-  /* border-top: 0.0625em solid silver; */
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
 }
@@ -68,13 +60,13 @@ img {
 .conditions-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .conditions-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
@@ -82,20 +74,20 @@ img {
 .soil-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .soil-name-sub p {
   font-weight: bold;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 0;
 }
 
 .soil-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
@@ -103,27 +95,26 @@ img {
 .sun-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .sun-name-sub p {
   font-weight: bold;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 0;
 }
 
 .sun-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
 
 .maintenance {
   width: 100%;
-  /* border-top: 0.0625em solid silver; */
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
 }
@@ -131,13 +122,13 @@ img {
 .maintenance-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .maintenance-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
@@ -145,13 +136,13 @@ img {
 .maintenance-feeding-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .maintenance-feeding-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
@@ -159,13 +150,13 @@ img {
 .maintenance-watering-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .maintenance-watering-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
@@ -173,20 +164,19 @@ img {
 .maintenance-pruning-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .maintenance-pruning-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
 
 .height {
   width: 100%;
-  /* border-top: 0.0625em solid silver; */
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
 }
@@ -194,27 +184,26 @@ img {
 .height-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .height-name-sub p {
   font-weight: bold;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 0;
 }
 
 .height-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
 
 .growth {
   width: 100%;
-  /* border-top: 0.0625em solid silver; */
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
 }
@@ -222,27 +211,26 @@ img {
 .growth-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .growth-name-sub p {
   font-weight: bold;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 0;
 }
 
 .growth-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
 
 .price {
   width: 100%;
-  /* border-top: 0.0625em solid silver; */
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
 }
@@ -250,34 +238,32 @@ img {
 .price-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .price-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
 
 .facts {
   width: 100%;
-  /* border-top: 0.0625em solid silver; */
-  /* border-bottom: 0.0625em solid silver; */
   padding: 0.95em;
 }
 
 .facts-flowers-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .facts-flowers-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
@@ -285,13 +271,13 @@ img {
 .facts-berries-name p {
   font-weight: bold;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   margin-bottom: 0;
 }
 
 .facts-berries-content p {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
