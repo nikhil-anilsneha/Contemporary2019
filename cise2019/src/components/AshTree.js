@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 export default class tree extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       tree: []
     };
@@ -13,9 +13,9 @@ export default class tree extends Component {
   }
 
   getTrees = _ => {
-    fetch("http://localhost:3001/tree")
+    fetch("http://localhost:3001/tree/")
       .then(response => response.json())
-      .then(response => this.setState({ tree: response.data }))
+      .then(response => this.setState({ tree: response.data[this.props.match.treeId] }))
       .catch(err => console.error(err));
   };
 
@@ -27,6 +27,6 @@ export default class tree extends Component {
 
   render() {
     const { tree } = this.state;
-    return <div>{tree.map(this.renderProduct) }ol</div>;
+    return <div>{tree.map(this.renderProduct) }</div>;
   }
 }

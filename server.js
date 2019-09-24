@@ -8,10 +8,11 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "cise2019/build")));
 
-const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree";
+const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree WHERE tree_id=1";
 
 let pool = mysql.createPool({
   connectionLimit: 10,
+  multipleStatements: true,
   host: "us-cdbr-iron-east-02.cleardb.net",
   user: "b72f7916dad1ba",
   password: "bf43f260",
@@ -29,7 +30,7 @@ app.get("/tree", (req, res) => {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query(SELECT_ALL_PRODUCTS_QUERY, function(err2, records, fields) {
+      conn.query("SELECT * FROM tree WHERE tree_id=1;SELECT * FROM tree WHERE tree_id=2", [1,2], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records

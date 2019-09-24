@@ -1,6 +1,6 @@
 import React,{ Component } from "react";
 import './Checkout.css'
-import Tree from './tree.js'
+import AshTree from './AshTree.js'
 
 class Checkout extends Component {
     render(){
@@ -65,7 +65,6 @@ class Checkout extends Component {
   </div>
 
 </div>
-<div><Tree></Tree></div>
 </div>
 );
 }

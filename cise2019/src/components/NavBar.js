@@ -7,6 +7,7 @@ import Tools from './ToolsPage.js';
 import Cart from './C.js';
 import Home from './Home.js';
 import Checkout from './Checkout.js'
+import AshTree from './AshTree.js';
 
 export default class Navbar extends Component {
 render(){
@@ -38,6 +39,7 @@ render(){
                 <Route path = '/Home.js' component={Home} />
                 <Route path = '/C.js' component={Cart} />
                 <Route path = '/Checkout.js' component={Checkout}/>
+                <Route path ="/tree/:treeID" component={AshTree} />
             </Switch>
           </div>
           </Router>  
