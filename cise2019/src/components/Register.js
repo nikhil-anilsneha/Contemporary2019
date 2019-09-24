@@ -167,7 +167,7 @@ class App extends Component {
                     <span className="errorMessage">{formErrors.password}</span>
                   )}
                 </div>
-                <div className="createAccount">
+                <div className="clickLogin">
                   <button type="submit">
                     <b>Create Account</b>
                   </button>
