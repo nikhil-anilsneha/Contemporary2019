@@ -1,85 +1,53 @@
-const express = require("express");
-const cors = require("cors");
-const mysql = require('mysql');
-const bodyparser = require('body-parser');
+// Video Link
+// https://www.youtube.com/watch?v=XuLRKMqozwA
 
-const app = express();
+var mysql = require('mysql');
 
-const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree";
-
-/* const connection = mysql.createConnection({
+var connection = mysql.createConnection({
   host: "us-cdbr-iron-east-02.cleardb.net",
   user: "b72f7916dad1ba",
   password: "bf43f260",
   database: "heroku_25a635bc8a152af"
-}); */
-
-const pool = mysql.createPool({
-  host: "us-cdbr-iron-east-02.cleardb.net",
-  user: "b72f7916dad1ba",
-  password: "bf43f260",
-  database: "heroku_25a635bc8a152af",
-  connectionLimit : 10
 });
 
-app.use(cors());
-app.use(bodyparser.json({type: 'application/json'}));
-app.use(bodyparser.urlencoded({extended: true}));
+connection.connect();
 
-/* app.get("/", (req, res) => {
-  res.send("go to /Products.js"); 
-});  */
+// inserting
+// var trees = {
+//     ID: '4',
+//     Name: 'Strawberry',
+//     Type: 'Fruit',
+//     Price: '50'
+// };
 
-/* connection.connect(err => {
-  if (!err) console.log("DB connection succeded");
-  else
-    console.log(
-      "DB Connection failed \n Error : " + JSON.stringify(err, undefined, 2)
-    );
-}); */
+// var query = connection.query('insert into trees set ?', trees, function (err, result) {
+//     if (err)
+//     {
+//         console.error(err);
+//         return;
+//     }
+//     console.error(result);
+// });
 
-/* pool.getConnection(function (err, res, conn) {
-  if (err)
-      throw (err);
-
-  // if you got a connection...
-  console.log("DB connection succeded")
-  conn.query(SELECT_ALL_PRODUCTS_QUERY, function(err, rows) {
-      if(err) {
-          conn.release();
-          return res.send(400, 'Couldnt get a connection');
-      }
-
-      // for simplicity, just send the rows
-      res.send(rows);
-
-      // CLOSE THE CONNECTION
-      conn.release();
-  })
-}); */
-
-  pool.connect(function (err, res, pool) {
-    console.log("DB connection suceeded");
-    pool.query(SELECT_ALL_PRODUCTS_QUERY, function(error, results, fields) {
-      if (error)
-      {
-        throw (error)
-      }
-      res.send(results)
-    })
-  });
-
-  /* connection.query(SELECT_ALL_PRODUCTS_QUERY, (err, results) => {
-    if (err) {
-      return res.send(err);
-    } else {
-      return res.json({
-        data: results
-      });
+// retrieving all results
+connection.query('select * from tree', function (err, result) {
+    if (err)
+    {
+        console.error(err);
+        return;
     }
-  });
-});  */
-
-app.listen(3001, () => {
-  console.log("products server listening on port 3001");
+    console.error(result);
 });
+
+// retrieving with "where" clause
+
+// var ID = '3';
+
+// connection.query('select * from trees where ID = ?', ID, function (err, result) {
+//     if (err)
+//     {
+//         console.error(err);
+//         return;
+//     }
+//     console.error(result);
+// });
