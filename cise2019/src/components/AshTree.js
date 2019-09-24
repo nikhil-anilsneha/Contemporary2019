@@ -1,16 +1,10 @@
-// RENAMED THIS FILE FROM tree.js TO AshTree.js (19/9/19)
-
 import React, { Component } from 'react';
 import './tree.css';
 import AshTreePic from "./images/AshTreePic.jpg";
 
 class AshTree extends Component {
-    // state = {  }
     render() { 
         return (
-            // put this into a container with one column for picture and another for text
-            // only need one row and two columns
-
             <div class = "AshTreePage">
 
                 <div class = "tree-name">
