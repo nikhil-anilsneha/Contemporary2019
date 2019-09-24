@@ -24,7 +24,7 @@ class CascadePalmTree extends Component {
                 An excellent choice for planting near swimming pools, ponds or streams. If used as an indoor houseplant, the Cascade Palm will thrive in a room with plenty of bright light. Outdoors, this plant prefers to grow in a spot with shade to partial shade exposure.
                 <br></br>
                 <br></br>
-                Soil Drainage (fast/med/slow/anything): Cascade Palms enjoy well drained but moist, rich organic mix. Remember try to stay away from wet, mucky or arid soils.
+                Soil Drainage (fast/med/slow/anything): Cascade Palms enjoy well drained but moist, rich organic mix. Try to stay away from wet, mucky or arid soils.
                 <br></br>
                 <br></br>
                 Sun (sunny/med/shade/anything): Prefers shade, but will tolerate some sunlight.

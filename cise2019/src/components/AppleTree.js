@@ -24,10 +24,10 @@ class AppleTree extends Component {
                 Choose an open, sunny spot sheltered from strong winds for your apple tree. It is a good idea to find out how big the tree is going to grow to ensure it will have enough room.
                 <br></br>
                 <br></br>
-                Soil Drainage (fast/med/slow/anything): Good well-drained soil
+                Soil Drainage (fast/med/slow/anything): Good well-drained soil.
                 <br></br>
                 <br></br>
-                Sun (sunny/med/shade/anything): Open, sunny spot sheltered from strong winds
+                Sun (sunny/med/shade/anything): Open, sunny spot sheltered from strong winds.
                 </p>
 
                 <p>
