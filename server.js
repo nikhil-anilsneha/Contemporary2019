@@ -13,6 +13,7 @@ const SELECT_ALL_TIPS_QUERY = "SELECT * FROM tips";
 
 let pool = mysql.createPool({
   connectionLimit: 10,
+  multipleStatements: true,
   host: "us-cdbr-iron-east-02.cleardb.net",
   user: "b72f7916dad1ba",
   password: "bf43f260",
@@ -47,7 +48,24 @@ app.get("/tips", (req, res) => {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query(SELECT_ALL_TIPS_QUERY, function(err2, records, fields) {
+      conn.query("SELECT * FROM tips; SELECT * FROM tips WHERE tips_id=1", [1,2], function(err2, records, fields) {
+        if (!err2) {
+          res.json({
+            data: records
+          });
+        }
+        conn.release();
+      });
+    }
+  });
+}); 
+
+app.get("/tips/1", (req, res) => {
+  pool.getConnection(function(err, conn) {
+    if (err) {
+      res.send("Error occured");
+    } else {
+      conn.query("SELECT * FROM tips WHERE tips_id=1", function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records

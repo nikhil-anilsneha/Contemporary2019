@@ -44,7 +44,7 @@ render(){
                 <Route path='/tree.js' component={Tree}/>
                 <Route path='/Checkout.js' component={Checkout}/>
                 <Route path='/Login.js' component={Login}/>
-                <Route path="/tips/:tipsId" component={ContactPage} />
+                <Route path="/tips/:tipsId" component={SingleTip} />
             </Switch>
           </div>
           </Router>  
