@@ -1,54 +1,37 @@
-import React, { Component } from "react";
-import Carousel from "./Carousel";
-import { Login } from "./Login";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import PlantsImage from "./images/PlantsImage.JPG";
-import ToolsImage from "./images/ToolsImage.JPG";
-import Plants from "./AboutPage.js";
-import Tools from "./ToolsPage.js";
-import { Modal, Button, ButtonToolbar } from "react-bootstrap";
-import { register } from "../serviceWorker";
-export default class HomePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isPlantsVisible: false,
-      isToolsVisible: false,
-      addModal: false
-    };
-  }
+import React, { Component } from 'react';
+import Carousel from './Carousel';
+import PlantsImage from './images/PlantsImage.JPG';
+import ToolsImage from './images/ToolsImage.JPG';
+import ContactImage from './images/ContactImage.JPG';
+import { BrowserRouter as Router, Switch, Route, Link, withRouter } from 'react-router-dom';
 
+export default class HomePage extends Component {
   render() {
     return (
-      <div>
-        <div className="plants-tools">
-          <img
-            src={PlantsImage}
-            className="plants-tools-images"
-            alt="plants icon"
-            onClick={() =>
-              this.setState({
-                isPlantsVisible: true,
-                isToolsVisible: false,
-                isHomeVisible: false
-              })
-            }
-          />
-          <img
-            src={ToolsImage}
-            className="plants-tools-images"
-            alt="tools icon"
-            onClick={() =>
-              this.setState({
-                isToolsVisible: true,
-                isPlantsVisible: false,
-                isHomeVisible: false
-              })
-            }
-          />
-        </div>
-        {this.state.isPlantsVisible ? <Plants /> : null}
-        {this.state.isToolsVisible ? <Tools /> : null}
+      <div className="container">
+        <br></br>
+          <Carousel></Carousel> 
+          <br></br>
+          <div className="carousel-links">
+             <table>
+               <tbody>
+              <tr>
+                <th><a href="./Home.js">Just In: Spring Season Tomato Plants</a></th>
+                <th><a href="./Home.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
+                <th><a href="./tips.js">Strawberry Planting 101 - Click Here!</a></th>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <br></br>
+          <div className="plants-tools">
+            <a href="./AboutPage.js">
+              <img src={PlantsImage} className="plants-tools-images" alt="plants icon"/> </a>
+            <a href="./ToolsPage.js">  
+            <img src={ToolsImage} className="plants-tools-images" alt="tools icon"/></a>
+            <a href="./ContactPage.js">
+              <img src={ContactImage} className="plants-tools-images" alt="contacts icon"/></a>
+          </div>
       </div>
     );
   }
