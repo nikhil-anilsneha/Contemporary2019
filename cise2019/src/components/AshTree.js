@@ -19,6 +19,7 @@ export default class tree extends Component {
       .catch(err => console.error(err));
   };
 
+//   edit this part
   renderProduct = ({ tree_id , tree_name, tree_type, tree_description }) => (
     <div key={tree_id}>
       {tree_id} : {tree_name} <br/> {tree_type} <br/> {tree_description}<br/>
