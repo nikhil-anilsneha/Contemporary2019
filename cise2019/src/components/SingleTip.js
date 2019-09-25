@@ -14,7 +14,7 @@ export default class SingleTip extends Component {
       }
     
       getTips = _ => {
-        fetch("http://localhost:3001/tips/")
+        fetch("/tips/")
           .then(response => response.json())
           .then(response => this.setState({ tips: response.data[this.props.match.params.tipsId] }))
           .catch(err => console.error(err));

@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql");
 const path = require("path");
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 4000;
 
 const app=express();
 
@@ -66,6 +66,6 @@ app.get("*",(req,res)=>{
   res.sendFile(path.join(__dirname + "/cise2019/build/index.html"));
 })
 
-app.listen(3001, () => {
-  console.log("tree server listening on port 3001");
+app.listen(4000, () => {
+  console.log("tree server listening on port 4000");
 });

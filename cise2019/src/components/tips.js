@@ -14,7 +14,7 @@ export default class GardenTips extends Component {
   }
 
   getTips = _ => {
-    fetch("http://localhost:3001/tips")
+    fetch("/tips")
       .then(response => response.json())
       .then(response => this.setState({ tips: response.data[0] }))
       .catch(err => console.error(err));
