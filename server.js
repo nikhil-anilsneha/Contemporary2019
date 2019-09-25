@@ -31,7 +31,7 @@ app.get("/tree", (req, res) => {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query(SELECT_ALL_PRODUCTS_QUERY, function(err2, records, fields) {
+      conn.query("SELECT * FROM tree; SELECT * FROM tree WHERE tree_id=1;SELECT * FROM tree WHERE tree_id=2;SELECT * FROM tree WHERE tree_id=3;SELECT * FROM tree WHERE tree_id=4;SELECT * FROM tree WHERE tree_id=5", [1,2,3], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records

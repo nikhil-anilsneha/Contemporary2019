@@ -10,8 +10,10 @@ import Tips from './tips.js';
 import Tree from './tree.js';
 import Checkout from './Checkout.js';
 import Login from './Login.js';
-import ContactPage from './ContactPage.js';
 import SingleTip from './SingleTip';
+import Checkout from './Checkout.js'
+import AshTree from './AshTree.js';
+import TreeAll from './TreeAll.js';
 
 export default class Navbar extends Component {
 render(){
@@ -45,6 +47,9 @@ render(){
                 <Route path='/Checkout.js' component={Checkout}/>
                 <Route path='/Login.js' component={Login}/>
                 <Route path="/tips/:tipsId" component={SingleTip} />
+                <Route path = '/Checkout.js' component={Checkout}/>
+                <Route path ='/TreeAll.js' component ={TreeAll}/>
+                <Route path ="/tree/:treeId" component={AshTree} />
             </Switch>
           </div>
           </Router>  

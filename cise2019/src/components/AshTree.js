@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 export default class tree extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       tree: []
     };
@@ -11,11 +11,10 @@ export default class tree extends Component {
   componentDidMount() {
     this.getTrees();
   }
-
   getTrees = _ => {
-    fetch("http://localhost:3001/tree")
+    fetch("http://localhost:3001/tree/")
       .then(response => response.json())
-      .then(response => this.setState({ tree: response.data }))
+      .then(response => this.setState({ tree: response.data[this.props.match.params.treeId] }))
       .catch(err => console.error(err));
   };
 
