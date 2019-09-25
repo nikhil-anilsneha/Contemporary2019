@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { addToCart } from './actions/cartActions'
 
  class Home extends Component{
@@ -13,14 +14,13 @@ import { addToCart } from './actions/cartActions'
             return(
                 <div className="recard" key={item.id}>
                         <div className="card-image">
-                            <img src={item.img} alt={item.title}/>
+                        <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150"/></Link>
                         </div>
                         <div>
-                            <span className="card-title">{item.title}</span>
+                            <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
                             <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
                         </div>
                         <div className="card-content">
-                            <p>{item.desc}</p>
                             <p><b>Price: {item.price}$</b></p>
                         </div>
                  </div>
