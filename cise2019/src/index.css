@@ -8,15 +8,10 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-#siblings {
-  transform: rotate(270deg);
-  width: 25%;
-  height: 25%;
-}
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
 
 .container {
   width: 100%;
@@ -118,7 +113,7 @@ h2 {
   background-color: yellowgreen;
   height: 2vw;
   width: 76vw;
-  margin-left:-9.5vw
+  margin-left:-8%;
 }
 
 .plants-tools {
@@ -148,6 +143,10 @@ margin-left: 8%;
 .contact-details p {
 float: left;
 padding: 3%;
+}
+
+.strawberries, .strawberries p {
+  text-align: left;
 }
 
 @media only screen and (max-width: 600px) {

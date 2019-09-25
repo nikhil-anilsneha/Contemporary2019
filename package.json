@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "cd cise2019 && npm install && npm run build"
+    "heroku-postbuild": "cd cise2019 && npm install && npm run build",
+    "server": "node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,5 +35,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:3001/"
 }

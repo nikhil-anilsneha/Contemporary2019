@@ -11,6 +11,7 @@ export default class tree extends Component {
   componentDidMount() {
     this.getTrees();
   }
+  
   getTrees = _ => {
     fetch("http://localhost:3001/tree/")
       .then(response => response.json())
@@ -26,6 +27,6 @@ export default class tree extends Component {
 
   render() {
     const { tree } = this.state;
-    return <div>{tree.map(this.renderProduct) }</div>;
+    return <div>{tree.map(this.renderProduct)}</div>;
   }
 }
