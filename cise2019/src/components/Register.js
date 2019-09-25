@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import "./Register.css";
 import "../index.css";
 import Login from "./Login";
 import { Modal } from "react-bootstrap";
@@ -41,9 +40,28 @@ class App extends Component {
         firstName: "",
         lastName: "",
         email: "",
-        password: ""
-      }
-    };
+        password: ""}
+    }
+    this.updateStateFirstName=this.updateStateFirstName.bind(this);
+    this.updateStateLastName=this.updateStateLastName.bind(this);
+    this.updateStateEmail=this.updateStateEmail.bind(this);
+    this.updateStatePassword=this.updateStatePassword.bind(this);
+  }
+
+  updateStateFirstName(e) {
+    this.setState({firstName: e.target.value})
+  }
+
+  updateStateLastName(e) {
+    this.setState({lastName: e.target.value})
+  }
+
+  updateStateEmail(e) {
+    this.setState({email: e.target.value})
+  }
+
+  updateStatePassword(e) {
+    this.setState({password: e.target.value})
   }
 
   handleSubmit = e => {
@@ -71,20 +89,20 @@ class App extends Component {
     switch (name) {
       case "firstName":
         formErrors.firstName =
-          value.length < 2 ? "minimum 2 characaters required" : "";
+          value.length < 2 ? "minimum 2 characaters required" : this.updateStateFirstName;
         break;
       case "lastName":
         formErrors.lastName =
-          value.length < 2 ? "minimum 2 characaters required" : "";
+          value.length < 2 ? "minimum 2 characaters required" : this.updateStateLastName;
         break;
       case "email":
         formErrors.email = emailRegex.test(value)
-          ? ""
+          ? this.updateStateEmail
           : "invalid email address";
         break;
       case "password":
         formErrors.password =
-          value.length < 6 ? "minimum 6 characaters required" : "";
+          value.length < 6 ? "minimum 6 characaters required" : this.updateStatePassword;
         break;
       default:
         break;
@@ -93,9 +111,6 @@ class App extends Component {
     this.setState({ formErrors, [name]: value }, () => console.log(this.state));
   };
 
-  goHome() {}
-
-  goLogIn() {}
 
   render() {
     const { formErrors } = this.state;
@@ -108,7 +123,7 @@ class App extends Component {
             onHide={() => this.setState({ visible: false })}
             animation={false}
           >
-            <div className="form-wrapper">
+            <div>
               <h1>Create Account</h1>
               <form onSubmit={this.handleSubmit} noValidate>
                 <div className="firstName">
@@ -167,12 +182,12 @@ class App extends Component {
                     <span className="errorMessage">{formErrors.password}</span>
                   )}
                 </div>
-                <div className="clickLogin">
+                <div className="formButton">
                   <button type="submit">
                     <b>Create Account</b>
                   </button>
                 </div>
-                <div className="haveAccount">
+                <div className="formButton">
                   <button
                     type="button"
                     onClick={document.getElementById(Login)}
@@ -180,7 +195,7 @@ class App extends Component {
                     Already Have An Account
                   </button>
                 </div>
-                <div className="cancel">
+                <div className="formButton">
                   <button
                     type="button"
                     onClick={() => this.setState({ visible: false })}

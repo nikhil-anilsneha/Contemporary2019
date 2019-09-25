@@ -79,7 +79,7 @@ export class Login extends Component {
             onHide={() => this.setState({ addModal: false })}
             animation={false}
           >
-            <div className="form-wrapper">
+            <div>
               <h1>LOGIN</h1>
               <div className="emailForLogin">
                 <label htmlFor="EmailForLogin">Email</label>
@@ -107,15 +107,15 @@ export class Login extends Component {
                   show/hide password
                 </button>
               </div>
-              <div className="clickLogin">
+              <div className="formButton">
                 <button>Login</button>
               </div>
-              <div className="clickCancel">
+              <div className="formButton">
                 <button onClick={() => this.setState({ addModal: false })}>
                   Cancel
                 </button>
               </div>
-              <div className="haveNoAccount">
+              <div className="formButton">
                 <button onClick={() => this.setState({ addModal: false })}>
                   <b>Have no account?</b>
                 </button>
