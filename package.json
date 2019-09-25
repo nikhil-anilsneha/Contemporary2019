@@ -34,5 +34,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhil-anilsneha/Contemporary2019.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhil-anilsneha/Contemporary2019/issues"
+  },
+  "homepage": "https://github.com/nikhil-anilsneha/Contemporary2019#readme",
+  "description": ""
 }
