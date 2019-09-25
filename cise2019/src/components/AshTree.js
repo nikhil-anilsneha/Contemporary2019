@@ -1,7 +1,6 @@
-export default AshTree;
 import React, { Component } from "react";
 
-export default class tree extends Component {
+export default class AshTree extends Component {
   constructor(props) {
     super(props);
     this.state = {

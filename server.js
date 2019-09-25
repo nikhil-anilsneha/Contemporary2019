@@ -3,9 +3,7 @@ const cors = require("cors");
 const mysql = require("mysql");
 const path = require("path");
 const port = process.env.PORT || 3001;
-
-var mysql = require('mysql');
-
+const app= express();
 app.use(express.static(path.join(__dirname, "cise2019/build")));
 
 const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree";
