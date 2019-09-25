@@ -11,8 +11,9 @@ export default class AshTree extends Component {
   componentDidMount() {
     this.getTrees();
   }
+  
   getTrees = _ => {
-    fetch("http://localhost:3001/tree/")
+    fetch("/tree/")
       .then(response => response.json())
       .then(response => this.setState({ tree: response.data[this.props.match.params.treeId] }))
       .catch(err => console.error(err));
@@ -27,6 +28,6 @@ export default class AshTree extends Component {
 
   render() {
     const { tree } = this.state;
-    return <div>{tree.map(this.renderProduct) }</div>;
+    return <div>{tree.map(this.renderProduct)}</div>;
   }
 }

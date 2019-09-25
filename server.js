@@ -2,11 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql");
 const path = require("path");
-const port = process.env.PORT || 3001;
-const app= express();
-app.use(express.static(path.join(__dirname, "cise2019/build")));
+const port = process.env.PORT || 3000;
 
-const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree";
+const app=express();
+
+app.use(express.static(path.join(__dirname, "cise2019/build")));
 
 let pool = mysql.createPool({
   connectionLimit: 10,
@@ -28,7 +28,11 @@ app.get("/tree", (req, res) => {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query("SELECT * FROM tree; SELECT * FROM tree WHERE tree_id=1;SELECT * FROM tree WHERE tree_id=2;SELECT * FROM tree WHERE tree_id=3;SELECT * FROM tree WHERE tree_id=4;SELECT * FROM tree WHERE tree_id=5", [1,2,3], function(err2, records, fields) {
+      conn.query("SELECT * FROM tree; SELECT * FROM tree WHERE tree_id=1;SELECT * FROM tree WHERE tree_id=2;SELECT * FROM tree WHERE tree_id=3;"
+      +"SELECT * FROM tree WHERE tree_id=4;SELECT * FROM tree WHERE tree_id=5;"
+      + "SELECT * FROM tree WHERE tree_id=6; SELECT * FROM tree WHERE tree_id=7;" 
+      + "SELECT * FROM tree WHERE tree_id=8; SELECT * FROM tree WHERE tree_id=9", 
+        [1,2,3,4,5,6,7,8,9,10], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records
@@ -40,12 +44,13 @@ app.get("/tree", (req, res) => {
   });
 });
 
-app.get("/tree/1", (req, res) => {
+app.get("/tips", (req, res) => {
   pool.getConnection(function(err, conn) {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query("SELECT * FROM tree WHERE tree_id=1", function(err2, records, fields) {
+      conn.query("SELECT * FROM tips; SELECT * FROM tips WHERE tips_id=1; SELECT * FROM tips WHERE tips_id=2", 
+        [1,2,3], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records
@@ -55,29 +60,12 @@ app.get("/tree/1", (req, res) => {
       });
     }
   });
-});
-app.get("/tree/3", (req, res) => {
-  pool.getConnection(function(err, conn) {
-    if (err) {
-      res.send("Error occured");
-    } else {
-      conn.query("SELECT * FROM tree WHERE tree_id=3", function(err2, records, fields) {
-        if (!err2) {
-          res.json({
-            data: records
-          });
-        }
-        conn.release();
-      });
-    }
-  });
-});
-
+}); 
 
 app.get("*",(req,res)=>{
   res.sendFile(path.join(__dirname + "/cise2019/build/index.html"));
 })
 
-app.listen(3001, () => {
-  console.log("tree server listening on port 3001");
+app.listen(port, () => {
+  console.log("tree server listening on port 3000");
 });

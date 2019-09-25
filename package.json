@@ -17,7 +17,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "server": "node server.js",
     "heroku-postbuild": "cd cise2019 && npm install && npm run build"
   },
   "eslintConfig": {
@@ -34,19 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "main": "server.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nikhil-anilsneha/Contemporary2019.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nikhil-anilsneha/Contemporary2019/issues"
-  },
-  "homepage": "https://github.com/nikhil-anilsneha/Contemporary2019#readme",
-  "description": ""
+  }
 }

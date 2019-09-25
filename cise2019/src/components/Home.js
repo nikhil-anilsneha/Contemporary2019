@@ -14,14 +14,13 @@ import { addToCart } from './actions/cartActions'
             return(
                 <div className="recard" key={item.id}>
                         <div className="card-image">
-                        <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title}/></Link>
+                        <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150"/></Link>
                         </div>
                         <div>
                             <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
                             <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
                         </div>
                         <div className="card-content">
-                            <p>{item.desc}</p>
                             <p><b>Price: {item.price}$</b></p>
                         </div>
                  </div>

@@ -4,10 +4,10 @@ import AshTree from './AshTree.js'
 import { Link } from 'react-router-dom'
 
 class Checkout extends Component {
+  constructor(){
+    super();
+  }
 
-paid() {
-  alert("WOWOWOWOWOWOOWOW");
-}
     render(){
         return(
             <div>
@@ -64,8 +64,7 @@ paid() {
         <label >
         <h5 className="shipbill"><input type="checkbox"/>Shipping address same as billing</h5>
         </label>
-        <Link to ="/Home.js"><button className="paybtn">Submit</button></Link>
-        
+        <Link to ="/Home.js"><button className="paybtn"onClick={paid}>Submit</button></Link>
       </form>
     </div>
   </div>
@@ -73,6 +72,9 @@ paid() {
 </div>
 </div>
 );
+function paid() {
+  alert("Payement Successful! You will be redirected to the browsing page!");
+}
 }
 }
 
