@@ -17,7 +17,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "server": "node server.js",
     "heroku-postbuild": "cd cise2019 && npm install && npm run build",
   },
