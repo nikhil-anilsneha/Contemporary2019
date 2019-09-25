@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { removeItem,addQuantity,subtractQuantity} from './actions/cartActions'
 import Recipe from './Recipe'
+import './Checkout.css'
+
 class Cart extends Component{
 
     //to remove the item completely
@@ -24,7 +26,7 @@ class Cart extends Component{
                 this.props.items.map(item=>{
                     return(
                        
-                        <li className="collection-item avatar" key={item.id}>
+                       <div>
                                     <div className="item-img"> 
                                         <img src={item.img} alt={item.img} className=""/>
                                     </div>
@@ -37,13 +39,13 @@ class Cart extends Component{
                                             <b>Quantity: {item.quantity}</b> 
                                         </p>
                                         <div className="add-remove">
-                                            <Link to="./Cart.js"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}><b>^</b></i></Link>
-                                            <Link to="./Cart.js"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item.id)}}>arrow_drop_down</i></Link>
+                                            <Link to="./C.js"><i className="up" onClick={()=>{this.handleSubtractQuantity(item.id)}}><a href="#" class="previous"> -</a></i></Link>
+                                            <Link to="./C.js"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}><a href="#" class="next">+</a></i></Link>
                                         </div>
                                         <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
                                     </div>
                                     
-                                </li>
+                                </div>
                          
                     )
                 })

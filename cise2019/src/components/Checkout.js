@@ -1,8 +1,13 @@
 import React,{ Component } from "react";
 import './Checkout.css'
 import AshTree from './AshTree.js'
+import { Link } from 'react-router-dom'
 
 class Checkout extends Component {
+
+paid() {
+  alert("WOWOWOWOWOWOOWOW");
+}
     render(){
         return(
             <div>
@@ -46,20 +51,21 @@ class Checkout extends Component {
             <div className="row">
               <div className="col-50">
                 <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018"/>
+                <input type="text" id="expyear" name="expyear" placeholder="2019"/>
               </div>
               <div className="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352"/>
+                <input type="text" id="cvv" name="cvv" placeholder="420"/>
               </div>
             </div>
           </div>
           
         </div>
-        <label>
-          <input type="checkbox" name="sameadr"/> Shipping address same as billing
+        <label >
+        <h5 className="shipbill"><input type="checkbox"/>Shipping address same as billing</h5>
         </label>
-        <input type="submit" value="Pay Now" className="paybtn"/>
+        <Link to ="/Home.js"><button className="paybtn">Submit</button></Link>
+        
       </form>
     </div>
   </div>

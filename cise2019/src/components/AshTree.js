@@ -11,7 +11,6 @@ export default class tree extends Component {
   componentDidMount() {
     this.getTrees();
   }
-
   getTrees = _ => {
     fetch("http://localhost:3001/tree/")
       .then(response => response.json())
