@@ -13,7 +13,7 @@ export default class tree extends Component {
   }
   
   getTrees = _ => {
-    fetch("http://localhost:3001/tree/")
+    fetch("/tree/")
       .then(response => response.json())
       .then(response => this.setState({ tree: response.data[this.props.match.params.treeId] }))
       .catch(err => console.error(err));
