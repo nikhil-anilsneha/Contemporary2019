@@ -6,6 +6,9 @@ import Contact from './ContactPage.js';
 import Tools from './ToolsPage.js';
 import Cart from './C.js';
 import Home from './Home.js';
+import Checkout from './Checkout.js'
+import AshTree from './AshTree.js';
+import TreeAll from './TreeAll.js';
 
 export default class Navbar extends Component {
 render(){
@@ -35,6 +38,9 @@ render(){
                 <Route path='/ToolsPage.js' component={Tools} />
                 <Route path = '/Home.js' component={Home} />
                 <Route path = '/C.js' component={Cart} />
+                <Route path = '/Checkout.js' component={Checkout}/>
+                <Route path ='/TreeAll.js' component ={TreeAll}/>
+                <Route path ="/tree/:treeId" component={AshTree} />
             </Switch>
           </div>
           </Router>  
