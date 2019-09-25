@@ -1,14 +1,17 @@
-import Item1 from './tomato.jpg'
+import Item1 from '../images/AshTree.jpg';
 import Item2 from './tomato.jpg'
 import Item3 from './tomato.jpg'
 import Item4 from './tomato.jpg'
 import Item5 from './tomato.jpg'
 import Item6 from './tomato.jpg'
+import Item9 from '../images/Shovel.png';
+import Item10 from '../images/Rake.png';
+import Item11 from '../images/PottingMix.jpg';
 import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../actions/action-types/cart-actions'
 
 const initState = {
     items: [
-        {id:1,title:'Tomato', price:110,img:Item1},
+        {id:1,title:'Ash Tree', price:110,img:Item1},
         {id:2,title:'Tomato', price:80,img: Item2},
         {id:3,title:'Tomato', price:120,img: Item3},
         {id:4,title:'Tomato', price:260,img:Item4},
@@ -16,9 +19,9 @@ const initState = {
         {id:6,title:'Tomato', price:90,img: Item6},
         {id:7,title:'Tomato', price:90,img: Item6},
         {id:8,title:'Tomato', price:90,img: Item6},
-        {id:9,title:'Shovel', price:10,img:Item1},
-        {id:10,title:'Rake', price:10,img: Item2},
-        {id:11,title:'Potting Mix', price:15,img: Item3},
+        {id:9,title:'Shovel', price:10,img:Item9},
+        {id:10,title:'Rake', price:10,img: Item10},
+        {id:11,title:'Potting Mix', price:15,img: Item11},
     ],
     addedItems:[],
     total: 0

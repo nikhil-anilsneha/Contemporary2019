@@ -14,7 +14,7 @@ import { addToCart } from './actions/cartActions'
             return(
                 <div className="recard" key={item.id}>
                         <div className="card-image">
-                        <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title}/></Link>
+                        <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150"/></Link>
                         </div>
                         <div>
                             <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
