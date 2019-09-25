@@ -8,12 +8,17 @@ import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '
 
 const initState = {
     items: [
-        {id:1,title:'Tomato', desc: "Soup Material 100", price:110,img:Item1},
-        {id:2,title:'Tomato', desc: "You can make yummy curry", price:80,img: Item2},
-        {id:3,title:'Tomato', desc: "This is a special tomato, it's a vegetable, not a fruit",price:120,img: Item3},
-        {id:4,title:'Tomato', desc: "This one's for fruit salad", price:260,img:Item4},
-        {id:5,title:'Tomato', desc: "Extremely throwable", price:160,img: Item5},
-        {id:6,title:'Tomato', desc: "Plant this stuff",price:90,img: Item6}
+        {id:1,title:'Tomato', price:110,img:Item1},
+        {id:2,title:'Tomato', price:80,img: Item2},
+        {id:3,title:'Tomato', price:120,img: Item3},
+        {id:4,title:'Tomato', price:260,img:Item4},
+        {id:5,title:'Tomato', price:160,img: Item5},
+        {id:6,title:'Tomato', price:90,img: Item6},
+        {id:7,title:'Tomato', price:90,img: Item6},
+        {id:8,title:'Tomato', price:90,img: Item6},
+        {id:9,title:'Shovel', price:10,img:Item1},
+        {id:10,title:'Rake', price:10,img: Item2},
+        {id:11,title:'Potting Mix', price:15,img: Item3},
     ],
     addedItems:[],
     total: 0
