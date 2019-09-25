@@ -1,33 +1,54 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link, withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { addToCart } from './actions/cartActions'
 
-export default class ToolsPage extends Component {
-  constructor() {
-    super();
-    this.state = {
-      tools: []
-    };
-  }
+ class ToolsPage extends Component{
+    
+    handleClick = (id)=>{
+        this.props.addToCart(id); 
+    }
 
-  componentDidMount() {
-    this.getTools();
-  }
+    render(){
+        let itemList = this.props.items.map(item=>{
+            return(
+                <div className="recard" key={item.id}>
+                        <div className="card-image">
+                        <Link to={`/tools/${item.id}`}> <img src={item.img} alt={item.title}/></Link>
+                        </div>
+                        <div>
+                            <span className="card-title"><Link to={`/tools/${item.id}`}>{item.title}</Link></span>
+                            <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
+                        </div>
+                        <div className="card-content">
+                            <p>{item.desc}</p>
+                            <p><b>Price: {item.price}$</b></p>
+                        </div>
+                 </div>
+            )
+        })
 
-  getTips = _ => {
-    fetch("http://localhost:3001/tools")
-      .then(response => response.json())
-      .then(response => this.setState({ tips: response.data[0] }))
-      .catch(err => console.error(err));
-  };
+        return(
+            <div className>
+                <h1 className="center">Tools</h1>
+                <div className="center">
+                    {itemList}
+                </div>
+            </div>
 
-  renderProduct = ({ tools_id, tools_name, tools_description }) => (
-    <div key={tools_id}>
-      <Link to={`/tools/${tools_id}`}>{tools_name}</Link>
-    </div>
-  );
-
-  render() {
-    const { tools } = this.state;
-    return <div>{tools.map(this.renderProduct) }</div>;
-  }
+        )
+    }
 }
+const mapStateToProps = (state)=>{
+    return {
+      items: state.items
+    }
+  }
+const mapDispatchToProps= (dispatch)=>{
+    
+    return{
+        addToCart: (id)=>{dispatch(addToCart(id))}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(ToolsPage)

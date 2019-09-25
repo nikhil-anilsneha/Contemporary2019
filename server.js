@@ -8,9 +8,6 @@ const app=express();
 
 app.use(express.static(path.join(__dirname, "cise2019/build")));
 
-const SELECT_ALL_PRODUCTS_QUERY = "SELECT * FROM tree";
-const SELECT_ALL_TIPS_QUERY = "SELECT * FROM tips";
-
 let pool = mysql.createPool({
   connectionLimit: 10,
   multipleStatements: true,
@@ -31,7 +28,8 @@ app.get("/tree", (req, res) => {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query("SELECT * FROM tree; SELECT * FROM tree WHERE tree_id=1;SELECT * FROM tree WHERE tree_id=2;SELECT * FROM tree WHERE tree_id=3;SELECT * FROM tree WHERE tree_id=4;SELECT * FROM tree WHERE tree_id=5", [1,2,3], function(err2, records, fields) {
+      conn.query("SELECT * FROM tree; SELECT * FROM tree WHERE tree_id=1;SELECT * FROM tree WHERE tree_id=2;SELECT * FROM tree WHERE tree_id=3;SELECT * FROM tree WHERE tree_id=4;SELECT * FROM tree WHERE tree_id=5", 
+        [1,2,3,4,5,6], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records
@@ -61,12 +59,13 @@ app.get("/tips", (req, res) => {
   });
 }); 
 
-app.get("/tips/1", (req, res) => {
+app.get("/tools", (req, res) => {
   pool.getConnection(function(err, conn) {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query("SELECT * FROM tips WHERE tips_id=1", function(err2, records, fields) {
+      conn.query("SELECT * FROM tools; SELECT * FROM tools WHERE tools_id=1; SELECT * FROM tools WHERE tools_id=2; SELECT * FROM tools WHERE tools_id=3", 
+        [1,2,3,4], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records
