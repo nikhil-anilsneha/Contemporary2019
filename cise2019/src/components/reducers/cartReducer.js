@@ -1,9 +1,11 @@
-import Item1 from '../images/AshTree.jpg';
-import Item2 from './tomato.jpg'
-import Item3 from './tomato.jpg'
-import Item4 from './tomato.jpg'
-import Item5 from './tomato.jpg'
-import Item6 from './tomato.jpg'
+import Item1 from '../images/AshTreePic.jpg';
+import Item2 from '../images/OakTreePic.jpg'
+import Item3 from '../images/AppleTreePic.jpg'
+import Item4 from '../images/TomatoTreePic.jpg'
+import Item5 from '../images/CascadePalmTreePic.jpg'
+import Item6 from '../images/KingPalmTreePic.jpg'
+import Item7 from '../images/KauriTreePic.jpg'
+import Item8 from '../images/PohutukawaTreePic.jpg'
 import Item9 from '../images/Shovel.png';
 import Item10 from '../images/Rake.png';
 import Item11 from '../images/PottingMix.jpg';
@@ -12,13 +14,13 @@ import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '
 const initState = {
     items: [
         {id:1,title:'Ash Tree', price:110,img:Item1},
-        {id:2,title:'Tomato', price:80,img: Item2},
-        {id:3,title:'Tomato', price:120,img: Item3},
+        {id:2,title:'Oak Tree', price:80,img: Item2},
+        {id:3,title:'Apple Tree', price:120,img: Item3},
         {id:4,title:'Tomato', price:260,img:Item4},
-        {id:5,title:'Tomato', price:160,img: Item5},
-        {id:6,title:'Tomato', price:90,img: Item6},
-        {id:7,title:'Tomato', price:90,img: Item6},
-        {id:8,title:'Tomato', price:90,img: Item6},
+        {id:5,title:'Cascade Palm', price:160,img: Item5},
+        {id:6,title:'King Palm', price:90,img: Item6},
+        {id:7,title:'Kauri Tree', price:90,img: Item7},
+        {id:8,title:'Pohutukawa', price:90,img: Item8},
         {id:9,title:'Shovel', price:10,img:Item9},
         {id:10,title:'Rake', price:10,img: Item10},
         {id:11,title:'Potting Mix', price:15,img: Item11},
