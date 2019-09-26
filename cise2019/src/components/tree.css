@@ -294,3 +294,25 @@ img {
   display: block;
   font-size: 2em;
 } */
+
+.description {
+  width: 100%;
+  border-top: 0.0625em solid silver;
+  border-bottom: 0.0625em solid silver;
+  margin: 0%;
+  padding: 0.95em;
+}
+
+.description-name p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.description-content p {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 1%;
+  margin-bottom: 0;
+}
