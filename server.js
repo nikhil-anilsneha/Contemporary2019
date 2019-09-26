@@ -14,7 +14,7 @@ let pool = mysql.createPool({
   host: "us-cdbr-iron-east-02.cleardb.net",
   user: "b72f7916dad1ba",
   password: "bf43f260",
-  database: "heroku_25a635bc8a152af"
+  database: "heroku_25a635bc8a152af",
 });
 
 app.use(cors());

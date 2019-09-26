@@ -3,6 +3,15 @@ import "../index.css";
 import Login from "./Login";
 import { Modal } from "react-bootstrap";
 
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "us-cdbr-iron-east-02.cleardb.net",
+  user: "b72f7916dad1ba",
+  password: "bf43f260",
+  database: "heroku_25a635bc8a152af",
+});
+
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
@@ -23,7 +32,7 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
-// const db = require('./db')
+const db = require('./db')
 // const express = require('express');
 
 class App extends Component {
@@ -76,8 +85,22 @@ class App extends Component {
       //     if (err) throw err;
       //   });
       // });
+      con.connect(function(err) {
+        if (err) throw err;
+        console.log("Connected!");
+        var fname = this.firstName;
+        var lname = this.lastName;
+        var mail = this.email;
+        var pass = this.password;
+        var sql = "INSERT INTO customers (first_name, last_name, email, password) VALUES ?";
+        var values = [[fname,lname,mail,pass]];
+        con.query(sql, [values], function (err) {
+          if (err) throw err;
+          console.log("inserted");
+        });
+      });
     } else {
-      console.error("Error! check the error message below to fix this.");
+      console.error("Error!");
     }
   };
 
@@ -183,14 +206,16 @@ class App extends Component {
                   )}
                 </div>
                 <div className="formButton">
-                  <button type="submit">
+                  <button type="submit"
+                  onClick={this.handleSubmit}
+                  >
                     <b>Create Account</b>
                   </button>
                 </div>
                 <div className="formButton">
                   <button
                     type="button"
-                    onClick={document.getElementById(Login)}
+                    onClick={() => this.setState({ visible: false })}
                   >
                     Already Have An Account
                   </button>

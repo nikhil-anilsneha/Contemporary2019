@@ -24,9 +24,6 @@ render(){
                 <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
                 <li><Link to={'/Home.js'} className="nav-link">Browse</Link></li>
                 <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
-              </ul>
-              <ul className="navbar-right mr-auto">
-                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
                 <li>
                   <Link to={"/Login.js"} className="nav-link">
                     <Login></Login>
@@ -37,7 +34,11 @@ render(){
                     <Register></Register>
                   </Link>
                 </li>
+                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
               </ul>
+              {/* <ul className="navbar-right mr-auto">
+                
+              </ul> */}
             </nav>
             <hr />
             <Switch>
@@ -49,7 +50,7 @@ render(){
                 <Route path = '/C.js' component={Cart} />
                 <Route path='/tips.js' component={Tips}/>
                 <Route path='/Checkout.js' component={Checkout}/>
-                <Route path='/Login.js' component={Login}/>
+                {/* <Route path='/Login.js' component={Login}/> */}
                 <Route path="/tips/:tipsId" component={SingleTip} />
                 <Route path = '/Checkout.js' component={Checkout}/>
                 <Route path ='/TreeAll.js' component ={TreeAll}/>
