@@ -1,4 +1,4 @@
-import Item1 from '../images/AshTree.jpg';
+import Item1 from '../images/AshTreePic.jpg';
 import Item2 from './tomato.jpg'
 import Item3 from './tomato.jpg'
 import Item4 from './tomato.jpg'
