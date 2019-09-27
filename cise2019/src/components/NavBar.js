@@ -11,6 +11,7 @@ import Login from './Login.js';
 import SingleTip from './SingleTip';
 import AshTree from './AshTree.js';
 import TreeAll from './TreeAll.js';
+import '../index.css';
 
 export default class Navbar extends Component {
 render(){
@@ -29,7 +30,7 @@ render(){
                 <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
               </ul>
             </nav>
-            <hr />
+            <br/>
             <Switch>
                 <Route exact path='/' component={HomePage} />
                 <Route path='/HomePage.js' component={HomePage}/>

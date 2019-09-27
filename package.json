@@ -14,7 +14,9 @@
     "react-redux": "^7.1.1",
     "react-scripts": "3.1.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.19.1",
+    "webpack-dev-server": "^3.8.1"
   },
   "scripts": {
     "server": "node server.js",

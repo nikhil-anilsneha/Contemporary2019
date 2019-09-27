@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import './cartHome.css'
 //import { addShipping } from './actions/cartActions'
 
 class Recipe extends Component{
 
-    
-
     componentWillUnmount() {
          if(this.refs.shipping.checked)
-              this.props.substractShipping()
+              this.props.subtractShipping()
     }
 
     handleChecked = (e)=>{
-        if(e.target.checked){
-            this.props.addShipping();
+        if(this.props.check===0){
+       this.props.addShipping();
         }
-        else{
-            this.props.substractShipping();
+    }
+    handleChecked2 = (e)=>{
+        if(this.props.check === 1)
+        {
+        this.props.subtractShipping();
         }
     }
 
@@ -27,15 +29,17 @@ class Recipe extends Component{
                 <div className="collection2">
                     
                             <form action="/action_page.php">
-                            <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} />Shipping(+$6)<hr/>
-                            <input type="radio" name="del" ref="Location 1"/>Pickup At Location 1(+$0)<br/>
+                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} /> Shipping(+$6)<br/></h5>
+                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2} /> Pickup at Mt Eden(+$0)<br/></h5>
+                           <h5 className="radButton"><input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2}/> Pickup at East Tamaki(+$0)<br/></h5>
+                           <h5 className="radButton"><input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2}/> Pickup at Albany(+$0)<br/> </h5>
                             </form>
 
                         
-                        <b>Total: {this.props.total} $</b>
+                        <h5><b>Total: ${this.props.total} </b></h5>
                     </div>
                     <div className="checkout">
-                        <button><a href="./Checkout.js">Checkout</a></button>
+                        <button><a href="./Checkout.js"><h5>Checkout</h5></a></button>
                     </div>
                  </div>
         )
@@ -46,14 +50,15 @@ class Recipe extends Component{
 const mapStateToProps = (state)=>{
     return{
         addedItems: state.addedItems,
-        total: state.total
+        total: state.total,
+        check: state.check
     }
 }
 
 const mapDispatchToProps = (dispatch)=>{
     return{
         addShipping: ()=>{dispatch({type: 'ADD_SHIPPING'})},
-        substractShipping: ()=>{dispatch({type: 'SUB_SHIPPING'})}
+        subtractShipping: ()=>{dispatch({type: 'SUB_SHIPPING'})}
     }
 }
 

@@ -15,15 +15,26 @@ code {
 
 .container {
   width: 100%;
+ 
+}
+.navcontainer {
+  margin-left: 12%
+}
+
+.navigation{
+  margin-left: -16%;
 }
 
 .banner {
-  height: 7vw;
+  height: 100%;
   position: relative;
+  
 }
 
 .maindiv {
   text-align: center;
+  float: center;
+  background-color: white;
 }
 
 .text {
@@ -36,7 +47,7 @@ code {
   margin: 0 auto;
   height: 50vh;
   width:150vh;
-  margin-left:-20vh;
+  margin-left:-7.7%;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -86,6 +97,7 @@ h2 {
 
 .navbar-nav {
   margin-top:0vw;
+
 }
 
 .navbar-right {
@@ -113,12 +125,13 @@ h2 {
   background-color: yellowgreen;
   height: 2vw;
   width: 76vw;
-  margin-left:-8%;
+  margin-left: 15%;
 }
 
 .plants-tools {
   display: flex;
   text-align: center;
+  margin-left: 12%;
 }
 
 .plants-tools-images {
@@ -131,13 +144,22 @@ font-size: 150%;
 margin-left: 12%;
 }
 
-.carousel-links th {
+.carousel-links th{
 padding: 2%;
+margin-left: 0%;
 }
 
 .contact-details {
 font-size: 150%;
-margin-left: 8%;
+margin-left: 13%;
+}
+
+.cus{
+  margin-left: 7%;
+  margin-bottom: -2.5%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4em;
 }
 
 .contact-details p {

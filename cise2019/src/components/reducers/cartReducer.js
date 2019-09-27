@@ -1,11 +1,11 @@
 import Item1 from '../images/AshTreePic.jpg';
-import Item2 from '../images/OakTreePic.jpg'
-import Item3 from '../images/AppleTreePic.jpg'
-import Item4 from '../images/TomatoTreePic.jpg'
-import Item5 from '../images/CascadePalmTreePic.jpg'
-import Item6 from '../images/KingPalmTreePic.jpg'
-import Item7 from '../images/KauriTreePic.jpg'
-import Item8 from '../images/PohutukawaTreePic.jpg'
+import Item2 from "../images/OakTreePic.jpg";
+import Item3 from "../images/AppleTreePic.jpg";
+import Item4 from "../images/TomatoTreePic.jpg";
+import Item5 from "../images/CascadePalmTreePic.jpg";
+import Item6 from "../images/KingPalmTreePic.jpg";
+import Item7 from "../images/KauriTreePic.jpg";
+import Item8 from "../images/PohutukawaTreePic.jpg";
 import Item9 from '../images/Shovel.png';
 import Item10 from '../images/Rake.png';
 import Item11 from '../images/PottingMix.jpg';
@@ -26,8 +26,8 @@ const initState = {
         {id:11,title:'Potting Mix', price:15,img: Item11},
     ],
     addedItems:[],
-    total: 0
-
+    total: 0,
+    check: 0
 }
 const cartReducer= (state = initState,action)=>{
    
@@ -106,14 +106,17 @@ const cartReducer= (state = initState,action)=>{
     if(action.type=== ADD_SHIPPING){
           return{
               ...state,
-              total: state.total + 6
+              total: state.total + 6,
+              check: 1
+              
           }
     }
 
     if(action.type=== 'SUB_SHIPPING'){
         return{
             ...state,
-            total: state.total - 6
+            total: state.total - 6,
+            check: 0
         }
   }
     
