@@ -47,7 +47,7 @@ code {
   margin: 0 auto;
   height: 50vh;
   width:150vh;
-  margin-left:-7.7%;
+  margin-left:15%;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -101,8 +101,9 @@ h2 {
 }
 
 .navbar-right {
-  margin-left: 53%;
+  margin-left: 40%;
   margin-top: 1%;
+  width:25vw;
 }
 
 .sign-up {
