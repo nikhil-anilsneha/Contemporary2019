@@ -33,7 +33,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={AshTreePic} alt="AshTreePic" className="AshTreePic"></img>
+          <img src={AshTreePic} alt="AshTreePic" className="AshTreePic" width="200" height="200" ></img>
         </div>
       );
     }
@@ -103,8 +103,7 @@ export default class AshTree extends Component {
         <h1>{tree_name} Tree</h1>
       </div>
 
-      <script>getImage({tree_id})</script>
-
+    {this.getImage(tree_id)}
       <div class = "category">
         <div class = "category-name">
           <p>Tree Category</p>

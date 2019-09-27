@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { addToCart } from './actions/cartActions'
+import './cartHome.css';
 
  class Home extends Component{
     
@@ -12,7 +13,8 @@ import { addToCart } from './actions/cartActions'
     render(){
         let itemList = this.props.items.map(item=>{
             return(
-                <div className="recard" key={item.id}>
+                <div className="gridcontainer" key={item.id}>
+                    <div>
                         <div className="card-image">
                         <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150"/></Link>
                         </div>
@@ -22,6 +24,7 @@ import { addToCart } from './actions/cartActions'
                         </div>
                         <div className="card-content">
                             <p><b>Price: {item.price}$</b></p>
+                        </div>
                         </div>
                  </div>
             
