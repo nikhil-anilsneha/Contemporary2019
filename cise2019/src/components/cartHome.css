@@ -4,7 +4,7 @@
     height: 0%;
     padding: 1%;
     border: 1px solid black;
-    background-color: yellowgreen;
+    background-color: lightgray;
     margin-left:  10%;
     margin-top:10%;
     float: center;
@@ -14,4 +14,13 @@
 }
 .browseCard {
     margin-top: 10%;
+}
+
+.ourItems{
+    margin-left:5%;
+    margin-bottom: -5%;
+}
+
+.checkout{
+    margin-top:2%; 
 }

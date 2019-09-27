@@ -55,7 +55,7 @@ class Cart extends Component{
                 <p><h5>Nothing.</h5></p>
              )
        return(
-            <div className="container">
+            <div className="cartcontainer">
                 <div className="cart">
                     <h4>You have ordered:</h4>
                     

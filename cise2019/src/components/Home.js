@@ -33,7 +33,7 @@ import './cartHome.css';
 
         return(
             <div className>
-                <h1 >Our items</h1>
+                <h1 className="ourItems">Our items</h1>
                 <div className="center">
                     {itemList}
                 </div>

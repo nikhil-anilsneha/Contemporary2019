@@ -16,7 +16,7 @@ import '../index.css';
 export default class Navbar extends Component {
 render(){
     return (
-      <div className="navcontainer">
+      <div className="container">
           <Router>
             <div className="navigation">
              <nav className="navbar navbar-expand-lg navbar-light">

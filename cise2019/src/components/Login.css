@@ -1,6 +1,7 @@
 .wrapper {
     height: 100vh;
     width: 100%;
+    margin-left: 7y%;
     display: flex;
     flex-direction: column;
     justify-content: center;
