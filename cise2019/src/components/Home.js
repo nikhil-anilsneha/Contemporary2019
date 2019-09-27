@@ -14,7 +14,7 @@ import './cartHome.css';
         let itemList = this.props.items.map(item=>{
             return(
                 <div className="gridcontainer" key={item.id}>
-                    <div>
+                    <div className="browseCard">
                         <div className="card-image">
                         <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150"/></Link>
                         </div>
@@ -33,7 +33,7 @@ import './cartHome.css';
 
         return(
             <div className>
-                <h3 className="center">Our items</h3>
+                <h1 >Our items</h1>
                 <div className="center">
                     {itemList}
                 </div>

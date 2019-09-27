@@ -32,11 +32,11 @@ class Cart extends Component{
                                     </div>
                                 
                                     <div className="item-desc">
-                                        <span className="title">{item.title}</span>
+                                        <span className="title"><h4>{item.title}</h4></span>
                                         <p>{item.desc}</p>
-                                        <p><b>Price:$ {item.price}</b></p> 
+                                        <p><b><h5>Price:$ {item.price}</h5></b></p> 
                                         <p>
-                                            <b>Quantity: {item.quantity}</b> 
+                                            <b><h5>Quantity: {item.quantity}</h5></b> 
                                         </p>
                                         <div className="add-remove">
                                             <Link to="./C.js"><i className="up" onClick={()=>{this.handleSubtractQuantity(item.id)}}><a href="#" class="previous"> -</a></i></Link>
@@ -52,12 +52,12 @@ class Cart extends Component{
             ):
 
              (
-                <p>Nothing.</p>
+                <p><h5>Nothing.</h5></p>
              )
        return(
             <div className="container">
                 <div className="cart">
-                    <h5>You have ordered:</h5>
+                    <h4>You have ordered:</h4>
                     
                         {addedItems}
                    

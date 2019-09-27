@@ -33,7 +33,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={AshTreePic} alt="AshTreePic" className="AshTreePic" width="200" height="200" ></img>
+          <img src={AshTreePic} alt="AshTreePic" className="AshTreePic" width="400" height="400" ></img>
         </div>
       );
     }
@@ -41,7 +41,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={OakTreePic} alt="OakTreePic" className="OakTreePic"></img>
+          <img src={OakTreePic} alt="OakTreePic" className="OakTreePic" width="400" height="400"></img>
         </div>
       );
     }
@@ -49,7 +49,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={AppleTreePic} alt="AppleTreePic" className="AppleTreePic"></img>
+          <img src={AppleTreePic} alt="AppleTreePic" className="AppleTreePic" width="400" height="400"></img>
         </div>
       );
     }
@@ -57,7 +57,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={TomatoTreePic} alt="TomatoTreePic" className="TomatoTreePic"></img>
+          <img src={TomatoTreePic} alt="TomatoTreePic" className="TomatoTreePic" width="400" height="400"></img>
         </div>
       );
     }
@@ -65,7 +65,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={CascadePalmTreePic} alt="CascadePalmTreePic" className="CascadePalmTreePic"></img>
+          <img src={CascadePalmTreePic} alt="CascadePalmTreePic" className="CascadePalmTreePic" width="400" height="400"></img>
         </div>
       );
     }
@@ -73,7 +73,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={KingPalmTreePic} alt="KingPalmTreePic" className="KingPalmTreePic"></img>
+          <img src={KingPalmTreePic} alt="KingPalmTreePic" className="KingPalmTreePic" width="400" height="400"></img>
         </div>
       );
     }
@@ -81,7 +81,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={KauriTreePic} alt="KauriTreePic" className="KauriTreePic"></img>
+          <img src={KauriTreePic} alt="KauriTreePic" className="KauriTreePic" width="400" height="400"></img>
         </div>
       );
     }
@@ -89,7 +89,7 @@ export default class AshTree extends Component {
     {
       return (
         <div class = "tree-image">
-          <img src={PohutukawaTreePic} alt="PohutukawaTreePic" className="PohutukawaTreePic"></img>
+          <img src={PohutukawaTreePic} alt="PohutukawaTreePic" className="PohutukawaTreePic" width="400" height="400"></img>
         </div>
       );
     }
