@@ -2,6 +2,9 @@
   "name": "Contemporary2019",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.11.3"
+  },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
