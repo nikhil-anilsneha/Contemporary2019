@@ -19,7 +19,7 @@
   },
   "scripts": {
     "server": "node server.js",
-    "heroku-postbuild": "cd cise2019 && npm install && npm run build"
+    "heroku-postbuild": "cd cise2019 && npm install && npm run build && npm install express"
   },
   "eslintConfig": {
     "extends": "react-app"
