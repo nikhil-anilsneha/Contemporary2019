@@ -103,7 +103,10 @@ export default class AshTree extends Component {
         <h1>{tree_name} Tree</h1>
       </div>
 
-    {this.getImage(tree_id)}
+      <br></br>
+      {this.getImage(tree_id)}
+      <br></br>
+
       <div class = "category">
         <div class = "category-name">
           <p>Tree Category</p>

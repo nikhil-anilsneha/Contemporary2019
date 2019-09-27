@@ -3,23 +3,25 @@
   border-bottom: 0.0625em solid silver;
   /* padding-top: 0.95em; */ /* need this for spacing when you have an underline */
   /* padding-bottom: 2.95em; */ /* need this for spacing when you have an underline */
-  /*padding: 0.95em; /* if no underline, uncomment this line */
+  padding: 0.95em; /* if no underline, uncomment this line */
+  margin-left: 5%;
 }
 
 .tree-name h1 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  margin: 0;
+  /* margin: 0; */
   font-weight: bold;
   text-align: center;
-  font-size: 5em; /* try 5em or 6em */
-  text-decoration: underline;
-  text-underline-position: under;
+  font-size: 4em; /* try 5em or 6em */
+  /* text-decoration: underline; */
+  /* text-underline-position: under; */
 }
 
 .tree-image {
   padding: 0.95%;
+  margin-left: 10%;
 }
 
 img {
@@ -33,7 +35,7 @@ img {
   width: 100%;
   border-top: 0.0625em solid silver;
   border-bottom: 0.0625em solid silver;
-  margin: 0%;
+  margin-left: 5%;
   padding: 0.95em;
 }
 
@@ -297,10 +299,11 @@ img {
 
 .description {
   width: 100%;
-  border-top: 0.0625em solid silver;
-  border-bottom: 0.0625em solid silver;
-  margin: 0%;
+  /* border-top: 0.0625em solid silver; */
+  /* border-bottom: 0.0625em solid silver; */
+  /* margin: 0%; */
   padding: 0.95em;
+  margin-left: 5%;
 }
 
 .description-name p {
