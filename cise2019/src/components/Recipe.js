@@ -29,17 +29,17 @@ class Recipe extends Component{
                 <div className="collection2">
                     
                             <form action="/action_page.php">
-                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} />Shipping(+$6)<br/></h5>
-                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2} />Pickup At Mt Eden(+$0)<br/></h5>
-                           <h5 className="radButton"><input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2}/>Pickup At East Tamaki(+$0)<br/></h5>
-                           <h5 className="radButton"><input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2}/>Pickup At Albany(+$0)<br/> </h5>
+                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} /> Shipping(+$6)<br/></h5>
+                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2} /> Pickup at Mt Eden(+$0)<br/></h5>
+                           <h5 className="radButton"><input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2}/> Pickup at East Tamaki(+$0)<br/></h5>
+                           <h5 className="radButton"><input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2}/> Pickup at Albany(+$0)<br/> </h5>
                             </form>
 
                         
-                        <h5><b>Total:$ {this.props.total} </b></h5>
+                        <h5><b>Total: ${this.props.total} </b></h5>
                     </div>
                     <div className="checkout">
-                        <button><a href="./Checkout.js">Checkout</a></button>
+                        <button><a href="./Checkout.js"><h5>Checkout</h5></a></button>
                     </div>
                  </div>
         )

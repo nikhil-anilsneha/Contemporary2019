@@ -23,7 +23,7 @@ import './cartHome.css';
                             <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
                         </div>
                         <div className="card-content">
-                            <p><b>Price: {item.price}$</b></p>
+                            <p><b>Price: ${item.price}</b></p>
                         </div>
                         </div>
                  </div>
@@ -33,7 +33,7 @@ import './cartHome.css';
 
         return(
             <div className>
-                <h1 className="ourItems">Our items</h1>
+                <h1 className="ourItems">Our Items</h1>
                 <div className="center">
                     {itemList}
                 </div>

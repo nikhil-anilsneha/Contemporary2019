@@ -34,7 +34,7 @@ class Cart extends Component{
                                     <div className="item-desc">
                                         <span className="title"><h4>{item.title}</h4></span>
                                         <p>{item.desc}</p>
-                                        <p><b><h5>Price:$ {item.price}</h5></b></p> 
+                                        <p><b><h5>Price: ${item.price}</h5></b></p> 
                                         <p>
                                             <b><h5>Quantity: {item.quantity}</h5></b> 
                                         </p>
@@ -42,7 +42,7 @@ class Cart extends Component{
                                             <Link to="./C.js"><i className="up" onClick={()=>{this.handleSubtractQuantity(item.id)}}><a href="#" class="previous"> -</a></i></Link>
                                             <Link to="./C.js"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}><a href="#" class="next">+</a></i></Link>
                                         </div>
-                                        <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
+                                        <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}><h5>Remove</h5></button>
                                     </div>
                                     
                                 </div>
@@ -52,12 +52,12 @@ class Cart extends Component{
             ):
 
              (
-                <p><h5>Nothing.</h5></p>
+                <p><h5>Nothing</h5></p>
              )
        return(
             <div className="cartcontainer">
                 <div className="cart">
-                    <h4>You have ordered:</h4>
+                    <h4>You have ordered</h4><br/>
                     
                         {addedItems}
                    

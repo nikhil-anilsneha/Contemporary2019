@@ -1,9 +1,9 @@
 .tree-name {
   width: 100%;
   border-bottom: 0.0625em solid silver;
-  padding-top: 0.95em; /* need this for spacing when you have an underline */
-  padding-bottom: 2.95em; /* need this for spacing when you have an underline */
-  /* padding: 0.95em; */ /* if no underline, uncomment this line */
+  /* padding-top: 0.95em; */ /* need this for spacing when you have an underline */
+  /* padding-bottom: 2.95em; */ /* need this for spacing when you have an underline */
+  /*padding: 0.95em; /* if no underline, uncomment this line */
 }
 
 .tree-name h1 {

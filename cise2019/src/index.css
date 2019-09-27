@@ -125,7 +125,7 @@ h2 {
   background-color: yellowgreen;
   height: 2vw;
   width: 76vw;
-  margin-left:0%;
+  margin-left: 15%;
 }
 
 .plants-tools {
@@ -151,11 +151,15 @@ margin-left: 0%;
 
 .contact-details {
 font-size: 150%;
-margin-left: 16%;
+margin-left: 13%;
 }
 
 .cus{
   margin-left: 7%;
+  margin-bottom: -2.5%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4em;
 }
 
 .contact-details p {

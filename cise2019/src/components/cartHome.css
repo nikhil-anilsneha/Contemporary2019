@@ -17,10 +17,14 @@
 }
 
 .ourItems{
-    margin-left:5%;
-    margin-bottom: -5%;
+    margin-left: 5%;
+    margin-bottom: -7.5%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 4em;
 }
 
 .checkout{
-    margin-top:2%; 
+    margin-top: 2%;
+    text-align: center;
 }
