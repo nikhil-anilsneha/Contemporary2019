@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-eslint": "^10.0.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "domain": "0.0.1",
     "eslint": "^6.4.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
