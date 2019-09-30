@@ -315,11 +315,7 @@ img {
 
 .description-content p {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
-}
-
-.description-content{
-  margin-left: 2.5%;
 }
