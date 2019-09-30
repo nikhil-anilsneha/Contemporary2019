@@ -57,6 +57,7 @@ img {
   width: 100%;
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
+  margin-left: 5%;
 }
 
 .conditions-name p {
@@ -119,6 +120,7 @@ img {
   width: 100%;
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
+  margin-left: 5%;
 }
 
 .maintenance-name p {
@@ -181,6 +183,7 @@ img {
   width: 100%;
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
+  margin-left: 5%;
 }
 
 .height-name p {
@@ -208,6 +211,7 @@ img {
   width: 100%;
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
+  margin-left: 5%;
 }
 
 .growth-name p {
@@ -235,6 +239,7 @@ img {
   width: 100%;
   border-bottom: 0.0625em solid silver;
   padding: 0.95em;
+  margin-left: 5%;
 }
 
 .price-name p {
@@ -254,6 +259,7 @@ img {
 .facts {
   width: 100%;
   padding: 0.95em;
+  margin-left: 5%;
 }
 
 .facts-flowers-name p {
