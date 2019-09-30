@@ -26,8 +26,8 @@ render(){
                 <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
               </ul>
               <ul className="navbar-right mr-auto">
-                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
-                <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
+                <li class="right-link"><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
+                <li class="right-link"><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
               </ul>
             </nav>
             <br/>
