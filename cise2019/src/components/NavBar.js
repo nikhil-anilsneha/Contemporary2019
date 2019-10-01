@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import HomePage from './HomePage.js';
-import About from './AboutPage.js';
 import Contact from './ContactPage.js';
 import Cart from './C.js';
 import Home from './Home.js';
@@ -35,7 +34,6 @@ render(){
                 <Route exact path='/' component={HomePage} />
                 <Route path='/HomePage.js' component={HomePage}/>
                 <Route path='/ContactPage.js' component={Contact} />
-                <Route path='/AboutPage.js' component={About} />
                 <Route path = '/Home.js' component={Home} />
                 <Route path = '/C.js' component={Cart} />
                 <Route path='/tips.js' component={Tips}/>
