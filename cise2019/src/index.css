@@ -46,8 +46,8 @@ code {
   position: relative;
   margin: 0 auto;
   height: 50vh;
-  width:150vh;
-  margin-left:-7.7%;
+  width:159vh; /* was 150vh */
+  margin-left:9.5%; /* was -7.7*/
   overflow: hidden;
   white-space: nowrap;
 }

@@ -62,7 +62,7 @@ class Checkout extends Component {
           
         </div>
         <label >
-        <h5 className="shipbill"><input type="checkbox"/>Shipping address same as billing</h5>
+        <h5 className="shipbill"><input type="checkbox"/> Shipping address same as billing</h5>
         </label>
         <Link to ="/Home.js"><button className="paybtn"onClick={paid}>Submit</button></Link>
       </form>
