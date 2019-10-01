@@ -12,13 +12,13 @@ class Recipe extends Component{
     }
 
     handleChecked = (e)=>{
-        if(e.target.checked){
             this.props.addShipping();
-        }
-        else{
-            this.props.substractShipping();
-        }
+
     }
+    handleChecked2 = (e)=>{
+        this.props.substractShipping();
+
+}
 
     render(){
   
@@ -28,11 +28,13 @@ class Recipe extends Component{
                     
                             <form action="/action_page.php">
                             <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} />Shipping(+$6)<hr/>
-                            <input type="radio" name="del" ref="Location 1"/>Pickup At Location 1(+$0)<br/>
+                            <input type="radio" name="del" ref="Location 1" onChange={this.handleChecked2}/>Pickup At Location 1(+$0)<br/>
+                            <input type="radio" name="del" ref="Location 1" onChange={this.handleChecked2}/>Pickup At Location 2(+$0)<br/>
+                            <input type="radio" name="del" ref="Location 1" onChange={this.handleChecked2}/>Pickup At Location 3(+$0)<br/>
                             </form>
 
                         
-                        <b>Total: {this.props.total} $</b>
+                        <b>Total:$ {this.props.total} </b>
                     </div>
                     <div className="checkout">
                         <button><a href="./Checkout.js">Checkout</a></button>

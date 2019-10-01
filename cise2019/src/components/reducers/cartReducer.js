@@ -26,8 +26,8 @@ const initState = {
         {id:11,title:'Potting Mix', price:15,img: Item11},
     ],
     addedItems:[],
-    total: 0
-
+    total: 0,
+    checked: 0
 }
 const cartReducer= (state = initState,action)=>{
    
@@ -104,16 +104,19 @@ const cartReducer= (state = initState,action)=>{
     }
 
     if(action.type=== ADD_SHIPPING){
+        if(state.checked === 0)
           return{
               ...state,
               total: state.total + 6
           }
     }
 
-    if(action.type=== 'SUB_SHIPPING'){
+    if(action.type=== 'SUB_SHIPPING')
+    {
         return{
             ...state,
             total: state.total - 6
+            
         }
   }
     
