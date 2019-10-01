@@ -9,7 +9,7 @@ import Item8 from '../images/PohutukawaTreePic.jpg'
 import Item9 from '../images/Shovel.png';
 import Item10 from '../images/Rake.png';
 import Item11 from '../images/PottingMix.jpg';
-import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../actions/action-types/cart-actions'
+import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING, SUB_SHIPPING } from '../actions/action-types/cart-actions'
 
 const initState = {
     items: [
@@ -111,7 +111,7 @@ const cartReducer= (state = initState,action)=>{
           }
     }
 
-    if(action.type=== 'SUB_SHIPPING')
+    if(action.type=== SUB_SHIPPING)
     {
         return{
             ...state,
@@ -119,6 +119,38 @@ const cartReducer= (state = initState,action)=>{
             checked : 0
         }
   }
+  if(action.type=== 'EXP_SHIPPINGA')
+    {
+        return{
+            ...state,
+            total: state.total + 69,
+            checked : 3
+        }
+  }
+  if(action.type=== 'EXP_SHIPPINGA2')
+  {
+      return{
+          ...state,
+          total: state.total + 63,
+          checked : 3
+      }
+}
+  if(action.type=== 'EXP_SHIPPINGS')
+    {
+        return{
+            ...state,
+            total: state.total - 69,
+            checked : 0
+        }
+  }
+  if(action.type=== 'EXP_SHIPPINGS2')
+  {
+      return{
+          ...state,
+          total: state.total - 63,
+          checked : 1
+      }
+}
     
   else{
     return state
