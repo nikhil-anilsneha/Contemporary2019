@@ -4,7 +4,7 @@
   /* padding-top: 0.95em; / / need this for spacing when you have an underline */
   /* padding-bottom: 2.95em; / / need this for spacing when you have an underline */
   padding: 0.95em; /* if no underline, uncomment this line */
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 
 .tree-name h1 {
@@ -21,7 +21,7 @@
 
 .tree-image {
   padding: 0.95%;
-  margin-left: 10%;
+  /* margin-left: 10%; */
 }
 
 img {
@@ -35,7 +35,7 @@ img {
   width: 100%;
   border-top: 0.0625em solid silver;
   border-bottom: 0.0625em solid silver;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   padding: 0.95em;
 }
 

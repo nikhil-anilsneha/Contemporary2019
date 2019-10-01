@@ -73,7 +73,7 @@ class Checkout extends Component {
 </div>
 );
 function paid() {
-  alert("Payement Successful! You will be redirected to the browsing page!");
+  alert("Payment Successful! You will be redirected to the browsing page!");
 }
 }
 }

@@ -1,0 +1,30 @@
+.gridcontainer {
+    display:inline-block;
+    width: 20%;
+    height: 0%;
+    padding: 1%;
+    border: 1px solid black;
+    background-color: lightgray;
+    margin-left:  10%;
+    margin-top:10%;
+    float: center;
+}
+.radButton{
+    margin-left:10%
+}
+.browseCard {
+    margin-top: 10%;
+}
+
+.ourItems{
+    margin-left: 5%;
+    margin-bottom: -7.5%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 4em;
+}
+
+.checkout{
+    margin-top: 2%;
+    text-align: center;
+}
