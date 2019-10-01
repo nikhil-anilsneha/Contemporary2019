@@ -27,11 +27,6 @@ export default class SingleTip extends Component {
             <h1>{tips_title}</h1>
           </div>
 
-            <div class = "category-content">
-              <p>{tips_description}</p>
-              </div>
-          
-
           <div class = "category">
             <div class = "category-name">
               <p>Sunlight Requirements</p>
