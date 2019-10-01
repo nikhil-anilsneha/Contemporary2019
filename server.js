@@ -49,8 +49,10 @@ app.get("/tips", (req, res) => {
     if (err) {
       res.send("Error occured");
     } else {
-      conn.query("SELECT * FROM tips; SELECT * FROM tips WHERE tips_id=1; SELECT * FROM tips WHERE tips_id=2", 
-        [1,2,3], function(err2, records, fields) {
+      conn.query("SELECT * FROM tips; SELECT * FROM tips WHERE tips_id=1; SELECT * FROM tips WHERE tips_id=2; SELECT * FROM tips WHERE tips_id=3;"
+      + "SELECT * FROM tips WHERE tips_id=4; SELECT * FROM tips WHERE tips_id=5;"
+      + "SELECT * FROM tips WHERE tips_id=6; SELECT * FROM tips WHERE tips_id=7; SELECT * FROM tips WHERE tips_id=8; SELECT * FROM tips WHERE tips_id=9;", 
+        [1,2,3,4,5,6,7,8,9,10], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records

@@ -74,7 +74,7 @@ class Checkout extends Component {
     );
     function paid() {
       alert("Payment Successful! You will be redirected to the Gardening Tips page for information on" +
-        "how to maintain your purchased plants!");
+        " how to maintain your purchased plants!");
     }
   }
 }
