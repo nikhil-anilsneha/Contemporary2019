@@ -104,10 +104,10 @@ const cartReducer= (state = initState,action)=>{
     }
 
     if(action.type=== ADD_SHIPPING){
-        if(state.checked === 0)
           return{
               ...state,
-              total: state.total + 6
+              total: state.total + 6,
+              checked: 1
           }
     }
 
@@ -115,8 +115,8 @@ const cartReducer= (state = initState,action)=>{
     {
         return{
             ...state,
-            total: state.total - 6
-            
+            total: state.total - 6,
+            checked : 0
         }
   }
     
