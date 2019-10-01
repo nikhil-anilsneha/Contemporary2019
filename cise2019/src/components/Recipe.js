@@ -12,6 +12,12 @@ class Recipe extends Component{
     }
 
     handleChecked = (e)=>{
+        if(this.props.totalItem>=10)
+        {
+            alert("As you have more than 10 items, delivery is free! (Does not apply to express delivery)")
+        }
+        else
+        {
         if(this.props.checked===0)
         {
             this.props.addShipping();
@@ -20,6 +26,7 @@ class Recipe extends Component{
         {
             this.props.subExpress2();
         }
+    }
     }
     handleChecked2 = (e)=>{
         if(this.props.checked===1)
@@ -49,7 +56,7 @@ handleChecked3 = (e)=>{
                 <div className="collection2">
                     
                             <form action="/action_page.php">
-                            <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} />Shipping(+$6)<hr/>
+                            <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} />Shipping(+$6)
                             <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked3} />Express Shipping(+$69)
                             <input type="radio" name="del" ref="shipping" onChange={this.handleChecked2}/>Pickup At Location 1(+$0)<br/>
                             <input type="radio" name="del" ref="shipping" onChange={this.handleChecked2}/>Pickup At Location 2(+$0)<br/>
@@ -72,7 +79,8 @@ const mapStateToProps = (state)=>{
     return{
         addedItems: state.addedItems,
         total: state.total,
-        checked : state.checked
+        checked : state.checked,
+        totalItem : state.totalItem
     }
 }
 
