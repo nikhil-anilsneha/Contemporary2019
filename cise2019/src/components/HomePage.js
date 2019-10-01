@@ -25,9 +25,9 @@ export default class HomePage extends Component {
           </div>
           <br></br>
           <div className="plants-tools">
-            <a href="./AboutPage.js">
+            <a href="./Home.js">
               <img src={PlantsImage} className="plants-tools-images" alt="plants icon"/> </a>
-            <a href="./ToolsPage.js">  
+            <a href="./Home.js">  
             <img src={ToolsImage} className="plants-tools-images" alt="tools icon"/></a>
             <a href="./ContactPage.js">
               <img src={ContactImage} className="plants-tools-images" alt="contacts icon"/></a>
