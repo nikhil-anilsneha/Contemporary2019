@@ -24,6 +24,10 @@
     font-size: 4em;
 }
 
+.center {
+    margin-left: 5%;
+}
+
 .checkout{
     margin-top: 2%;
     text-align: center;
