@@ -4,7 +4,7 @@
   /* padding-top: 0.95em; / / need this for spacing when you have an underline */
   /* padding-bottom: 2.95em; / / need this for spacing when you have an underline */
   padding: 0.95em; /* if no underline, uncomment this line */
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 
 .tree-name h1 {
@@ -21,7 +21,7 @@
 
 .tree-image {
   padding: 0.95%;
-  margin-left: 10%;
+  /* margin-left: 10%; */
 }
 
 img {
@@ -35,7 +35,7 @@ img {
   width: 100%;
   border-top: 0.0625em solid silver;
   border-bottom: 0.0625em solid silver;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   padding: 0.95em;
 }
 
@@ -53,269 +53,9 @@ img {
   margin-bottom: 0;
 }
 
-.conditions {
-  width: 100%;
-  border-bottom: 0.0625em solid silver;
-  padding: 0.95em;
-}
-
-.conditions-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.conditions-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.soil-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
 .soil-name-sub p {
   font-weight: bold;
   text-align: center;
   font-size: 2em;
-  margin-bottom: 0;
-}
-
-.soil-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.sun-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.sun-name-sub p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 0;
-}
-
-.sun-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.maintenance {
-  width: 100%;
-  border-bottom: 0.0625em solid silver;
-  padding: 0.95em;
-}
-
-.maintenance-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.maintenance-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.maintenance-feeding-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.maintenance-feeding-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.maintenance-watering-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.maintenance-watering-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.maintenance-pruning-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.maintenance-pruning-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.height {
-  width: 100%;
-  border-bottom: 0.0625em solid silver;
-  padding: 0.95em;
-}
-
-.height-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.height-name-sub p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 0;
-}
-
-.height-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.growth {
-  width: 100%;
-  border-bottom: 0.0625em solid silver;
-  padding: 0.95em;
-}
-
-.growth-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.growth-name-sub p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 0;
-}
-
-.growth-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.price {
-  width: 100%;
-  border-bottom: 0.0625em solid silver;
-  padding: 0.95em;
-}
-
-.price-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.price-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.facts {
-  width: 100%;
-  padding: 0.95em;
-}
-
-.facts-flowers-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.facts-flowers-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-.facts-berries-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.facts-berries-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
-  margin-bottom: 0;
-}
-
-/* .cart { */
-  /* width: 100%; */
-  /* border-top: 0.0625em solid silver; / / only this line was commented */
-  /* border-bottom: 0.0625em solid silver; */
-  /* padding: 0.95em; */
-/* } */
-
-/* .button {
-  margin: auto;
-  display: block;
-  font-size: 2em;
-} */
-
-.description {
-  width: 100%;
-  /* border-top: 0.0625em solid silver; */
-  /* border-bottom: 0.0625em solid silver; */
-  /* margin: 0%; */
-  padding: 0.95em;
-  margin-left: 5%;
-}
-
-.description-name p {
-  font-weight: bold;
-  text-align: center;
-  font-size: 3em;
-  margin-bottom: 0;
-}
-
-.description-content p {
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1%;
   margin-bottom: 0;
 }

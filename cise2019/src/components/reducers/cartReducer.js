@@ -9,7 +9,7 @@ import Item8 from '../images/PohutukawaTreePic.jpg'
 import Item9 from '../images/Shovel.png';
 import Item10 from '../images/Rake.png';
 import Item11 from '../images/PottingMix.jpg';
-import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from '../actions/action-types/cart-actions'
+import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING, SUB_SHIPPING } from '../actions/action-types/cart-actions'
 
 const initState = {
     items: [
@@ -26,33 +26,39 @@ const initState = {
         {id:11,title:'Potting Mix', price:15,img: Item11},
     ],
     addedItems:[],
-    total: 0
-
+    totalItem: 0,
+    total: 0,
+    checked: 0
 }
 const cartReducer= (state = initState,action)=>{
    
     //INSIDE HOME COMPONENT
     if(action.type === ADD_TO_CART){
           let addedItem = state.items.find(item=> item.id === action.id)
+          let tItem =0;
           //check if the action id exists in the addedItems
          let existed_item= state.addedItems.find(item=> action.id === item.id)
          if(existed_item)
          {
             addedItem.quantity += 1 
+            tItem = tItem +1;
              return{
                 ...state,
-                 total: state.total + addedItem.price 
+                 total: state.total + addedItem.price ,
+                 totalItem : state.totalItem + tItem
                   }
         }
          else{
             addedItem.quantity = 1;
+            tItem = tItem +1;
             //calculating the total
             let newTotal = state.total + addedItem.price 
             
             return{
                 ...state,
                 addedItems: [...state.addedItems, addedItem],
-                total : newTotal
+                total : newTotal,
+                totalItem : state.totalItem + tItem
             }
             
         }
@@ -73,15 +79,19 @@ const cartReducer= (state = initState,action)=>{
     //INSIDE CART COMPONENT
     if(action.type=== ADD_QUANTITY){
         let addedItem = state.items.find(item=> item.id === action.id)
+        let tItem =0;
           addedItem.quantity += 1 
+          tItem++;
           let newTotal = state.total + addedItem.price
           return{
               ...state,
-              total: newTotal
+              total: newTotal,
+              totalItem : state.totalItem + tItem
           }
     }
     if(action.type=== SUB_QUANTITY){  
         let addedItem = state.items.find(item=> item.id === action.id) 
+        let tItem = 0;
         //if the qt == 0 then it should be removed
         if(addedItem.quantity === 1){
             let new_items = state.addedItems.filter(item=>item.id !== action.id)
@@ -89,15 +99,18 @@ const cartReducer= (state = initState,action)=>{
             return{
                 ...state,
                 addedItems: new_items,
-                total: newTotal
+                total: newTotal,
+                totalItem: state.totalItem -1
             }
         }
         else {
             addedItem.quantity -= 1
+            tItem++;
             let newTotal = state.total - addedItem.price
             return{
                 ...state,
-                total: newTotal
+                total: newTotal,
+                totalItem : state.totalItem - tItem
             }
         }
         
@@ -106,16 +119,51 @@ const cartReducer= (state = initState,action)=>{
     if(action.type=== ADD_SHIPPING){
           return{
               ...state,
-              total: state.total + 6
+              total: state.total + 6,
+              checked: 1
           }
     }
 
-    if(action.type=== 'SUB_SHIPPING'){
+    if(action.type=== SUB_SHIPPING)
+    {
         return{
             ...state,
-            total: state.total - 6
+            total: state.total - 6,
+            checked : 0
         }
   }
+  if(action.type=== 'EXP_SHIPPINGA')
+    {
+        return{
+            ...state,
+            total: state.total + 69,
+            checked : 3
+        }
+  }
+  if(action.type=== 'EXP_SHIPPINGA2')
+  {
+      return{
+          ...state,
+          total: state.total + 63,
+          checked : 3
+      }
+}
+  if(action.type=== 'EXP_SHIPPINGS')
+    {
+        return{
+            ...state,
+            total: state.total - 69,
+            checked : 0
+        }
+  }
+  if(action.type=== 'EXP_SHIPPINGS2')
+  {
+      return{
+          ...state,
+          total: state.total - 63,
+          checked : 1
+      }
+}
     
   else{
     return state
