@@ -117,12 +117,12 @@ export default class AshTree extends Component {
         </div>        
       </div>
 
-      <div class = "price">
-        <div class = "price-name">
+      <div class = "category">
+        <div class = "category-name">
           <p>Price</p>
         </div>
         
-        <div class = "price-content">
+        <div class = "category-content">
           <p>${tree_price}</p>
           </div>
       </div>
@@ -137,116 +137,108 @@ export default class AshTree extends Component {
         </div>        
       </div> */}
 
-      <div class = "conditions">
-        <div class = "conditions-name">
+      <div class = "category">
+        <div class = "category-name">
           <p>Conditions of Place to be Planted</p>
         </div>
 
-        <div class = "conditions-content">
+        <div class = "category-content">
           <p>{tree_condition}</p>
         </div>
 
-        <div class = "soil-name">
+        <div class = "category-name">
           <p>Soil Drainage</p>
           <div class = "soil-name-sub">
             <p>(Slow/Medium/Fast/Anything)</p>
           </div>
         </div>
 
-        <div class = "soil-content">
+        <div class = "category-content">
           <p>{tree_soil}</p>
         </div>
 
-        <div class = "sun-name">
+        <div class = "category-name">
           <p>Sun</p>
-          <div class = "sun-name-sub">
+          <div class = "soil-name-sub">
             <p>(Shade/Medium/Sunny/Anything)</p>
           </div>
         </div>
 
-        <div class = "sun-content">
+        <div class = "category-content">
           <p>{tree_sun}</p>
         </div>
       </div>
 
-      <div class = "maintenance">
-        <div class = "maintenance-name">
+      <div class = "category">
+        <div class = "category-name">
           <p>Maintenance Requirements</p>
         </div>
 
-        <div class = "maintenance-content"></div>
-
-        <div class = "maintenance-feeding">
-          <div class = "maintenance-feeding-name">
+          <div class = "category-name">
             <p>Feeding</p>
           </div>
 
-          <div class = "maintenance-feeding-content">
+          <div class = "category-content">
             <p>{tree_feeding}</p>
           </div>
-        </div>
 
-        <div class = "maintenance-watering">
-          <div class = "maintenance-watering-name">
+          <div class = "category-name">
             <p>Watering</p>
           </div>
 
-          <div class = "maintenance-watering-content">
+          <div class = "category-content">
             <p>{tree_watering}</p>
           </div>
-        </div>
 
-        <div class = "maintenance-pruning">
-          <div class = "maintenance-pruning-name">
+          <div class = "category-name">
             <p>Pruning</p>
           </div>
 
-          <div class = "maintenance-pruning-content">
+          <div class = "category-content">
             <p>{tree_pruning}</p>
           </div>
-        </div>
       </div>
 
-      <div class = "height">
-        <div class = "height-name">
+      <div class = "category">
+        <div class = "category-name">
           <p>Maximum Height of Mature Tree</p>
-          <div class = "height-name-sub">
+          <div class = "soil-name-sub">
             <p>(Less than 1m, 1-2m, 2-3m, Greater than 3m)</p>
           </div>
         </div>
 
-        <div class = "height-content">
+        <div class = "category-content">
           <p>{tree_height}</p>
         </div>
       </div>
 
-      <div class = "growth">
-        <div class = "growth-name">
+      <div class = "category">
+        <div class = "category-name">
           <p>Growth Rate</p>
-          <div class = "growth-name-sub">
+          <div class = "soil-name-sub">
             <p>(Slow/Medium/Fast)</p>
           </div>
         </div>
 
-        <div class = "growth-content">
+        <div class = "category-content">
           <p>{tree_growth}</p>
         </div>
       </div>
 
-      <div class = "facts">
-        <div class = "facts-flowers-name">
+      <div class = "category">
+        <div class = "category-name">
           <p>Relevant Facts Flowers</p>
         </div>
 
-        <div class = "facts-flowers-content">
+        <div class = "category-content">
           <p>{tree_flowers}</p>
         </div>
 
-        <div class = "facts-berries-name">
+        <div class = "category-name">
           <p>Relevant Facts Berries</p>
         </div>
 
-        <div class = "facts-berries-content">
+        <div class = "category-content">
           <p>{tree_berries}</p>
         </div>
       </div>
