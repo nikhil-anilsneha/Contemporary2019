@@ -28,6 +28,8 @@ export default class GardenTips extends Component {
 
   render() {
     const { tips } = this.state;
-    return <div>{tips.map(this.renderProduct) }</div>;
+    return <div>
+    <h1>Gardening Tips</h1>
+    {tips.map(this.renderProduct) }</div>;
   }
 }
