@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Carousel from './Carousel';
 import PlantsImage from './images/PlantsImage.JPG';
 import ToolsImage from './images/ToolsImage.JPG';
-import ContactImage from './images/ContactImage.JPG';
+import TipsImage from './images/Tips.JPG';
 import { BrowserRouter as Router, Switch, Route, Link, withRouter } from 'react-router-dom';
 
 export default class HomePage extends Component {
@@ -29,8 +29,8 @@ export default class HomePage extends Component {
               <img src={PlantsImage} className="plants-tools-images" alt="plants icon"/> </a>
             <a href="./Home.js">  
             <img src={ToolsImage} className="plants-tools-images" alt="tools icon"/></a>
-            <a href="./ContactPage.js">
-              <img src={ContactImage} className="plants-tools-images" alt="contacts icon"/></a>
+            <a href="./tips.js">
+              <img src={TipsImage} className="plants-tools-images" alt="contacts icon"/></a>
           </div>
       </div>
     )
