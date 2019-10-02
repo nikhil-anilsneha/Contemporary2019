@@ -11,14 +11,30 @@ class Recipe extends Component{
     }
 
     handleChecked = (e)=>{
-        if(this.props.check===0){
-       this.props.addShipping();
+        if(this.props.totalItem>=10)
+        {
+            alert("As you have more than 10 items, delivery is free! (Does not apply to express delivery)")
+        }
+        else
+        {
+        if(this.props.checked===0)
+        {
+            this.props.addShipping();
+        }
+        if(this.props.checked===3)
+        {
+            this.props.subExpress2();
         }
     }
+    }
     handleChecked2 = (e)=>{
-        if(this.props.check === 1)
+        if(this.props.checked===1)
         {
-        this.props.subtractShipping();
+        this.props.substractShipping();
+        }
+        if(this.props.checked===3)
+        {
+            this.props.subExpress();
         }
 }
 handleChecked3 = (e)=>{
@@ -39,15 +55,15 @@ handleChecked3 = (e)=>{
                 <div className="collection2">
                     
                             <form action="/action_page.php">
-                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} /> Shipping(+$6)<br/></h5>
-                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked3} /> Express Shipping(+$6)<br/></h5>
-                           <h5 className="radButton"> <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2} /> Pickup at Mt Eden(+$0)<br/></h5>
-                           <h5 className="radButton"><input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2}/> Pickup at East Tamaki(+$0)<br/></h5>
-                           <h5 className="radButton"><input type="radio" name="del" ref="shipping" onChange= {this.handleChecked2}/> Pickup at Albany(+$0)<br/> </h5>
+                            <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked} />Shipping(+$6)
+                            <input type="radio" name="del" ref="shipping" onChange= {this.handleChecked3} />Express Shipping(+$69)
+                            <input type="radio" name="del" ref="shipping" onChange={this.handleChecked2}/>Pickup At Location 1(+$0)<br/>
+                            <input type="radio" name="del" ref="shipping" onChange={this.handleChecked2}/>Pickup At Location 2(+$0)<br/>
+                            <input type="radio" name="del" ref="shipping" onChange={this.handleChecked2}/>Pickup At Location 3(+$0)<br/>
                             </form>
 
                         
-                        <h5><b>Total: ${this.props.total} </b></h5>
+                        <b>Total:$ {this.props.total} </b>
                     </div>
                     <div className="checkout">
                         <button><a href="./Checkout.js"><h5>Checkout</h5></a></button>
