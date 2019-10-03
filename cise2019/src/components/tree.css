@@ -31,29 +31,29 @@ img {
   border: 0.0625em solid black; /* 1px = 0.0625em */
 }
 
-.category {
+.header {
   width: 100%;
   border-top: 0.0625em solid silver;
-  border-bottom: 0.0625em solid silver;
+  /* border-bottom: 0.0625em solid silver; */
   /* margin-left: 5%; */
   padding: 0.95em;
 }
 
-.category-name p {
+.header-name p {
   font-weight: bold;
   text-align: center;
   font-size: 3em;
   margin-bottom: 0;
 }
 
-.category-content p {
+.header-content p {
   text-align: center;
   font-size: 1.5em;
   padding-bottom: 1%;
   margin-bottom: 0;
 }
 
-.soil-name-sub p {
+.header-name-sub p {
   font-weight: bold;
   text-align: center;
   font-size: 2em;
