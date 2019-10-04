@@ -17,7 +17,7 @@ export default class PostTreeOrigin extends Component {
       getTrees = _ => {
         fetch("/tree/")
           .then(response => response.json())
-          .then(response => this.setState({ tree: response.data[this.props.match.params.treeId] }))
+          .then(response => this.setState({ tree: response.data[0] }))
           .catch(err => console.error(err));
       };
     
