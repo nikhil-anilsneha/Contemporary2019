@@ -14,27 +14,27 @@ import './cartHome.css';
         let itemList = this.props.items.map(item=>{
             return(
                 <div className="gridcontainer" key={item.id}>
-                    <div className="browseCard">
-                        <div className="card-image">
+                    <div className="col-sm-12">
+                        <div className="img-responsive">
                         <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150"/></Link>
                         </div>
                         <div>
                             <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
-                            <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
-                        </div>
-                        <div className="card-content">
+                            <button to="/" className="btn-success btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
+                            <div className="card-content">
                             <p><b>Price: ${item.price}</b></p>
+                            </div>
                         </div>
-                        </div>
+                    </div>
                  </div>
             
             )
         })
 
         return(
-            <div className>
-                <h1 className="ourItems">Our Items</h1>
-                <div className="center">
+            <div className="container-fluid">
+                <h1>Our Items</h1>
+                <div className="row">
                     {itemList}
                 </div>
             </div>
