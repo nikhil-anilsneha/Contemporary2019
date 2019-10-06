@@ -5,13 +5,24 @@ import { addToCart } from './actions/cartActions'
 import './cartHome.css';
 
  class Home extends Component{
+     constructor(props){
+         super(props)
+         this.state = {
+             filter: 0            
+         }
+         var itemList;
+         this.change0.bind(this);
+         this.change1.bind(this);
+     }
     
     handleClick = (id)=>{
         this.props.addToCart(id); 
     }
 
+
     render(){
-        let itemList = this.props.items.map(item=>{
+        if(this.state.filter===0){
+        this.itemList = this.props.items.map(item=>{
             return(
                 <div className="gridcontainer" key={item.id}>
                     <div className="browseCard">
@@ -20,7 +31,7 @@ import './cartHome.css';
                         </div>
                         <div>
                             <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
-                            <button to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
+                            <button to="/" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
                         </div>
                         <div className="card-content">
                             <p><b>Price: ${item.price}</b></p>
@@ -29,22 +40,54 @@ import './cartHome.css';
                  </div>
             
             )
-        })
+        })}
+        if(this.state.filter===1){
+            this.itemList = this.props.hardWoodItems.map(item=>{
+                return(
+                    <div className="gridcontainer" key={item.id}>
+                        <div className="browseCard">
+                            <div className="card-image">
+                            <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150"/></Link>
+                            </div>
+                            <div>
+                                <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
+                                <button to="/" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></button>
+                            </div>
+                            <div className="card-content">
+                                <p><b>Price: ${item.price}</b></p>
+                            </div>
+                            </div>
+                     </div>
+                
+                )
+            })}
 
         return(
             <div className>
+                 <form action="/action_page.php">
+                            <input type="radio" name="filter" ref="filter"  onChange={() => this.change0()}/>All<br/>
+                            <input type="radio" name="filter" ref="filter" onChange={() => this.change1()}/>Hardwood)<br/>
+                            </form>
                 <h1 className="ourItems">Our Items</h1>
                 <div className="center">
-                    {itemList}
+                    {this.itemList}
                 </div>
             </div>
 
         )
     }
+    change0(){
+     this.setState({filter: 0})       
+    }
+    change1(){
+        this.setState({filter: 1})       
+       }
 }
+  
 const mapStateToProps = (state)=>{
     return {
-      items: state.items
+      items: state.items,
+      hardWoodItems : state.hardWoodItems
     }
   }
 const mapDispatchToProps= (dispatch)=>{
