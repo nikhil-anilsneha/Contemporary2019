@@ -64,13 +64,13 @@ import './cartHome.css';
 
         return(
             <div className="container-fluid">
+                <h1>Our Items</h1>
                  <form action="/action_page.php">
                             <input type="radio" name="filter" ref="filter"  onChange={() => this.change0()}/>All<br/>
                             <input type="radio" name="filter" ref="filter" onChange={() => this.change1()}/>Hardwood)<br/>
                             </form>
-                <h1>Our Items</h1>
                 <div className="row">
-                    {itemList}
+                    {this.itemList}
                 </div>
             </div>
 
