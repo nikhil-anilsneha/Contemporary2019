@@ -21,7 +21,7 @@ export default class SingleTip extends Component {
           .catch(err => console.error(err));
       };
     
-      renderProduct = ({ tips_id, tips_title, tips_description, tips_sun, tips_soil }) => (
+      renderProduct = ({ tips_id, tips_title, tips_description, tips_sun, tips_soil, tips_maintenance }) => (
         <div key={tips_id}>
           <div class = "tree-name">
             <h1>{tips_title}</h1>
@@ -44,6 +44,16 @@ export default class SingleTip extends Component {
 
             <div class = "category-content">
               <p>{tips_soil}</p>
+            </div>        
+          </div>
+
+          <div class = "category">
+            <div class = "category-name">
+              <p>Maintenance Tips</p>
+            </div>
+
+            <div class = "category-content">
+              <p>{tips_maintenance}</p>
             </div>        
           </div>
         </div>

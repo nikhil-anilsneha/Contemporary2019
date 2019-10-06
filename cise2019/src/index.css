@@ -91,14 +91,8 @@ h2 {
   font-size: 18px;
 }
 
-.navbar-nav {
-  margin-top:0vw;
-
-}
-
 .navbar-right {
-  margin-left: 53%;
-  margin-top: 1%;
+  margin-left: 78%; 
 }
 
 .sign-up {
@@ -120,11 +114,6 @@ h2 {
   margin-bottom: initial;
   background-color: yellowgreen;
   height: 2vw;
-}
-
-.plants-tools {
-  display: flex;
-  text-align: center;
 }
 
 .plants-tools-images {

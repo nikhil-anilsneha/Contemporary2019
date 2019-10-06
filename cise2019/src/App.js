@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
         <div className="maindiv">
-          <img src={banner} alt="banner" className="banner"></img>
+          <img src={banner} alt="banner" className="banner img-responsive"></img>
           <NavBar></NavBar>
           
         </div>
