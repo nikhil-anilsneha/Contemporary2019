@@ -8,7 +8,6 @@ class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            filter: 0,
             myList: this.props.items
         }
         var itemList;
@@ -45,18 +44,18 @@ class Home extends Component {
                 <h1>Our Items</h1>
                 <form action="/action_page.php">
                     <div className="btn-group">
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(0, this.props.items)}>All</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(1, this.props.hardWoodItems)}>Hardwood</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(2, this.props.FruitItems)}>Fruit</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(3, this.props.PalmItems)}>Palm</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(4, this.props.NZNativeItems)}>NZ Native</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(5, this.props.ToolItems)}>Tools</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.items)}>All</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.hardWoodItems)}>Hardwood</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.FruitItems)}>Fruit</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.PalmItems)}>Palm</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.NZNativeItems)}>NZ Native</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.ToolItems)}>Tools</button>
                     </div>
                 </form>
                 <br></br>
                 <form action="/action_page.php">
                     <div className="btn-group">
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(2)}>$50 and Less</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.CheapItems)}>$50 and Less</button>
                     </div>
                 </form>
                 <div className="row">
@@ -66,8 +65,7 @@ class Home extends Component {
 
         )
     }
-    change(filterNo, listToRender) {
-        this.setState({ filter: filterNo })
+    change(listToRender) {
         this.setState({myList: listToRender})
     }
 }
@@ -79,7 +77,8 @@ const mapStateToProps = (state) => {
         FruitItems: state.FruitItems,
         PalmItems: state.PalmItems,
         NZNativeItems: state.NZNativeItems,
-        ToolItems: state.ToolItems
+        ToolItems: state.ToolItems,
+        CheapItems: state.CheapItems
     }
 }
 const mapDispatchToProps = (dispatch) => {
