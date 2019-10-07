@@ -11,7 +11,7 @@ import SingleTip from './SingleTip';
 import AshTree from './AshTree.js';
 import TreeAll from './TreeAll.js';
 // import Register from './Register';
-import Register from './RegisterTest';
+import RegisterTest from './RegisterTest';
 import '../index.css';
 
 export default class Navbar extends Component {
@@ -41,8 +41,8 @@ export default class Navbar extends Component {
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/Register.js"} className="nav-link">
-                    <Register></Register>
+                  <Link to={"/RegisterTest.js"} className="nav-link">
+                    <RegisterTest></RegisterTest>
                   </Link>
                 </li>
             </ul>
@@ -61,6 +61,7 @@ export default class Navbar extends Component {
             <Route path='/Checkout.js' component={Checkout} />
             <Route path='/TreeAll.js' component={TreeAll} />
             <Route path="/tree/:treeId" component={AshTree} />
+            <Route path="./RegisterTest.js" component={RegisterTest}/>
           </Switch>
         </Router>
       </div>
