@@ -31,8 +31,9 @@ app.get("/tree", (req, res) => {
       conn.query("SELECT * FROM tree; SELECT * FROM tree WHERE tree_id=1;SELECT * FROM tree WHERE tree_id=2;SELECT * FROM tree WHERE tree_id=3;"
       +"SELECT * FROM tree WHERE tree_id=4;SELECT * FROM tree WHERE tree_id=5;"
       + "SELECT * FROM tree WHERE tree_id=6; SELECT * FROM tree WHERE tree_id=7;" 
-      + "SELECT * FROM tree WHERE tree_id=8; SELECT * FROM tree WHERE tree_id=9", 
-        [1,2,3,4,5,6,7,8,9,10], function(err2, records, fields) {
+      + "SELECT * FROM tree WHERE tree_id=8; SELECT * FROM tree WHERE tree_id=9;" 
+      + "SELECT * FROM tree WHERE tree_id=10; SELECT * FROM tree WHERE tree_id=11", 
+        [1,2,3,4,5,6,7,8,9,10,11,12], function(err2, records, fields) {
         if (!err2) {
           res.json({
             data: records
