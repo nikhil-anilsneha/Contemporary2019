@@ -11,6 +11,8 @@ import SingleTip from './SingleTip';
 import AshTree from './AshTree.js';
 import TreeAll from './TreeAll.js';
 import SpecialCheckout from './specialCheckout.js';
+// import Register from './Register';
+import RegisterTest from './RegisterTest';
 import '../index.css';
 
 export default class Navbar extends Component {
@@ -45,6 +47,7 @@ export default class Navbar extends Component {
                 <Route path ='/TreeAll.js' component ={TreeAll}/>
                 <Route path ='/specialCheckout.js' component ={SpecialCheckout}/>
                 <Route path ="/tree/:treeId" component={AshTree} />
+                <Route path="./RegisterTest.js" component={RegisterTest}/>
             </Switch>
           </div>
           </Router>  
