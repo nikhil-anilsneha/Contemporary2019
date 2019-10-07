@@ -45,12 +45,12 @@ class Home extends Component {
                 <h1>Our Items</h1>
                 <form action="/action_page.php">
                     <div className="btn-group">
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(0)}>All</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(1)}>Hardwood</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(2)}>Fruit</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(3)}>Palm</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(4)}>NZ Native</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(5)}>Tools</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(0, this.props.items)}>All</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(1, this.props.hardWoodItems)}>Hardwood</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(2, this.props.FruitItems)}>Fruit</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(3, this.props.PalmItems)}>Palm</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(4, this.props.NZNativeItems)}>NZ Native</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(5, this.props.ToolItems)}>Tools</button>
                     </div>
                 </form>
                 <br></br>
@@ -66,26 +66,9 @@ class Home extends Component {
 
         )
     }
-    change(filterNo) {
+    change(filterNo, listToRender) {
         this.setState({ filter: filterNo })
-        if (filterNo === 0) {
-            this.setState({ myList: this.props.items })
-        }
-        if (filterNo === 1) {
-            this.setState({ myList: this.props.hardWoodItems })
-        }
-        if (filterNo === 2) {
-            this.setState({ myList: this.props.FruitItems })
-        }
-        if (filterNo === 3) {
-            this.setState({ myList: this.props.PalmItems })
-        }
-        if (filterNo === 4) {
-            this.setState({ myList: this.props.NZNativeItems })
-        }
-        if (filterNo === 5) {
-            this.setState({ myList: this.props.ToolItems })
-        }
+        this.setState({myList: listToRender})
     }
 }
 
