@@ -29,7 +29,16 @@ export default class Navbar extends Component {
               </ul>
               <ul className="navbar-right mr-auto">
                 <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
-                <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
+                <li>
+                  <Link to={"/Login.js"} className="nav-link">
+                    <Login></Login>
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/RegisterTest.js"} className="nav-link">
+                    <RegisterTest></RegisterTest>
+                  </Link>
+                </li>
               </ul>
             </nav>
             <br/>

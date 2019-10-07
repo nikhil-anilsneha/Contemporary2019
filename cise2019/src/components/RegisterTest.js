@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./Register.css";
 import Login from "./Login";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Modal, PopoverTitle } from "react-bootstrap";
 import axios from "axios";
-import { domainToASCII } from "url";
 
 
 
@@ -41,7 +39,6 @@ class App extends Component {
     this.inputlastName.value = "";
     this.inputemail.value = "";
     this.inputpassword.value = "";
-    this.setState=({visible:false})
   }
 
   userGet(e) {
@@ -67,8 +64,8 @@ class App extends Component {
       <>
         {this.state.visible === true ? (
           <Modal
-            show={() => this.setState({ visible: false })}
-            //onHide={() => this.setState({ visible: true })}
+            show={() => this.setState({ visible: true })}
+            onHide={() => this.setState({ visible: false })}
             animation={false}
           >
             <div>
@@ -147,7 +144,7 @@ class App extends Component {
                 <div className="formButton">
                   <button
                     type="button"
-                    //onClick={() => this.setState({ visible: false })}
+                    onClick={() => this.setState({ visible: false })}
                   >
                     Already Have An Account
                   </button>
@@ -155,7 +152,7 @@ class App extends Component {
                 <div className="formButton">
                   <button
                     type="button"
-                    //onClick={() => this.setState({ visible: false })}
+                    onClick={() => this.setState({ visible: false })}
                   >
                     Cancel
                   </button>
