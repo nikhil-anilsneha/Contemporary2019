@@ -18,14 +18,6 @@ export default class Navbar extends Component {
       <div className="container-fluid">
         <Router>
           <nav className="navbar navbar-expand-lg navbar-light">
-            <div className="navbar-header">
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </button>
-            </div>
-            <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="nav navbar-nav">
               <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
               <li><Link to={'/Home.js'} className="nav-link">Browse</Link></li>
@@ -35,7 +27,6 @@ export default class Navbar extends Component {
               <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
               <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
             </ul>
-            </div>
           </nav>
           <br />
           <Switch>
