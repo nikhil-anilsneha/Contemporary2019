@@ -8,19 +8,23 @@ import CascadePalmTreePic from "./images/CascadePalmTreePic.jpg";
 import KingPalmTreePic from "./images/KingPalmTreePic.jpg";
 import KauriTreePic from "./images/KauriTreePic.jpg";
 import PohutukawaTreePic from "./images/PohutukawaTreePic.jpg";
+import Shovel from './images/Shovel.png';
+import Rake from './images/Rake.png';
+import PottingMix from './images/PottingMix.jpg';
 
 export default class AshTree extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tree: []
+      tree: [],
+      tree_id: this.props.match.params.treeId
     };
   }
 
   componentDidMount() {
     this.getTrees();
   }
-  
+
   getTrees = _ => {
     fetch("/tree/")
       .then(response => response.json())
@@ -29,77 +33,122 @@ export default class AshTree extends Component {
   };
 
   getImage(tree_id) {
-    if(tree_id === 1)
-    {
+    if (tree_id === 1) {
       return (
-        <div class = "tree-image">
-          <img src={AshTreePic} alt="AshTreePic" className="AshTreePic" width="400" height="400" ></img>
+        <div class="img-responsive">
+          <img src={AshTreePic} alt="AshTreePic" className="img-responsive" width="400" height="400" ></img>
         </div>
       );
     }
-    else if(tree_id === 2)
-    {
+    else if (tree_id === 2) {
       return (
-        <div class = "tree-image">
-          <img src={OakTreePic} alt="OakTreePic" className="OakTreePic" width="400" height="400"></img>
+        <div class="img-responsive">
+          <img src={OakTreePic} alt="OakTreePic" className="img-responsive" width="400" height="400"></img>
         </div>
       );
     }
-    else if(tree_id === 3)
-    {
+    else if (tree_id === 3) {
       return (
-        <div class = "tree-image">
-          <img src={AppleTreePic} alt="AppleTreePic" className="AppleTreePic" width="400" height="400"></img>
+        <div class="img-responsive">
+          <img src={AppleTreePic} alt="AppleTreePic" className="img-responsive" width="400" height="400"></img>
         </div>
       );
     }
-    else if(tree_id === 4)
-    {
+    else if (tree_id === 4) {
       return (
-        <div class = "tree-image">
-          <img src={TomatoTreePic} alt="TomatoTreePic" className="TomatoTreePic" width="400" height="400"></img>
+        <div class="img-responsive">
+          <img src={TomatoTreePic} alt="TomatoTreePic" className="img-responsive" width="400" height="400"></img>
         </div>
       );
     }
-    else if(tree_id === 5)
-    {
+    else if (tree_id === 5) {
       return (
-        <div class = "tree-image">
-          <img src={CascadePalmTreePic} alt="CascadePalmTreePic" className="CascadePalmTreePic" width="400" height="400"></img>
+        <div class="img-responsive">
+          <img src={CascadePalmTreePic} alt="CascadePalmTreePic" className="img-responsive" width="400" height="400"></img>
         </div>
       );
     }
-    else if(tree_id === 6)
-    {
+    else if (tree_id === 6) {
       return (
-        <div class = "tree-image">
-          <img src={KingPalmTreePic} alt="KingPalmTreePic" className="KingPalmTreePic" width="400" height="400"></img>
+        <div class="img-responsive">
+          <img src={KingPalmTreePic} alt="KingPalmTreePic" className="img-responsive" width="400" height="400"></img>
         </div>
       );
     }
-    else if(tree_id === 7)
-    {
+    else if (tree_id === 7) {
       return (
-        <div class = "tree-image">
-          <img src={KauriTreePic} alt="KauriTreePic" className="KauriTreePic" width="400" height="400"></img>
+        <div class="img-responsive">
+          <img src={KauriTreePic} alt="KauriTreePic" className="img-responsive" width="400" height="400"></img>
         </div>
       );
     }
-    else if(tree_id === 8)
-    {
+    else if (tree_id === 8) {
       return (
-        <div class = "tree-image">
-          <img src={PohutukawaTreePic} alt="PohutukawaTreePic" className="PohutukawaTreePic" width="400" height="400"></img>
+        <div class="img-responsive">
+          <img src={PohutukawaTreePic} alt="PohutukawaTreePic" className="img-responsive" width="400" height="400"></img>
+        </div>
+      );
+    }
+    else if (tree_id === 9) {
+      return (
+        <div class="img-responsive">
+          <img src={Shovel} alt="ShovelPic" className="img-responsive" width="400" height="400"></img>
+        </div>
+      );
+    }
+    else if (tree_id === 10) {
+      return (
+        <div class="img-responsive">
+          <img src={Rake} alt="RakePic" className="img-responsive" width="400" height="400"></img>
+        </div>
+      );
+    }
+    else if (tree_id === 11) {
+      return (
+        <div class="img-responsive">
+          <img src={PottingMix} alt="PottingMixPic" className="img-responsive" width="400" height="400"></img>
         </div>
       );
     }
     return tree_id
   }
 
+  renderTool = ({ tree_id, tree_name, tree_price, tree_description }) => (
+    <div key={tree_id}>
+      <div class="tree-name">
+        <h1>{tree_name}</h1>
+      </div>
+
+      <br></br>
+      {this.getImage(tree_id)}
+      <br></br>
+
+      <div class="category">
+        <div class="category-name">
+          <p>Price</p>
+        </div>
+
+        <div class="category-content">
+          <p>${tree_price}</p>
+        </div>
+      </div>
+
+      <div class = "category">
+        <div class = "category-name">
+          <p>Tool Description</p>
+        </div>
+
+        <div class = "category-content">
+          <p>{tree_description}</p>
+        </div>        
+      </div>
+    </div>
+  );
+
+
   renderProduct = ({ tree_id, tree_name, tree_type, tree_price, tree_description, tree_condition, tree_soil, tree_sun, tree_feeding, tree_watering, tree_pruning, tree_height, tree_growth, tree_flowers, tree_berries }) => (
     <div key={tree_id}>
-
-      <div class = "tree-name">
+      <div class="tree-name">
         <h1>{tree_name} Tree</h1>
       </div>
 
@@ -107,138 +156,128 @@ export default class AshTree extends Component {
       {this.getImage(tree_id)}
       <br></br>
 
-      <div class = "category">
-        <div class = "category-name">
+      <div class="category">
+        <div class="category-name">
           <p>Tree Category</p>
         </div>
 
-        <div class = "category-content">
+        <div class="category-content">
           <p>{tree_type}</p>
-        </div>        
+        </div>
       </div>
 
-      <div class = "category">
-        <div class = "category-name">
+      <div class="category">
+        <div class="category-name">
           <p>Price</p>
         </div>
-        
-        <div class = "category-content">
+
+        <div class="category-content">
           <p>${tree_price}</p>
-          </div>
+        </div>
       </div>
 
-      {/* <div class = "description">
-        <div class = "description-name">
-          <p>Tree Description</p>
-        </div>
-
-        <div class = "description-content">
-          <p>{tree_description}</p>
-        </div>        
-      </div> */}
-
-      <div class = "category">
-        <div class = "category-name">
+      <div class="category">
+        <div class="category-name">
           <p>Conditions of Place to be Planted</p>
         </div>
 
-        <div class = "category-content">
+        <div class="category-content">
           <p>{tree_condition}</p>
         </div>
 
-        <div class = "category-name">
+        <div class="category-name">
           <p>Soil Drainage</p>
-          <div class = "soil-name-sub">
+          <div class="soil-name-sub">
             <p>(Slow/Medium/Fast/Anything)</p>
           </div>
         </div>
 
-        <div class = "category-content">
+        <div class="category-content">
           <p>{tree_soil}</p>
         </div>
 
-        <div class = "category-name">
+        <div class="category-name">
           <p>Sun</p>
-          <div class = "soil-name-sub">
+          <div class="soil-name-sub">
             <p>(Shade/Medium/Sunny/Anything)</p>
           </div>
         </div>
 
-        <div class = "category-content">
+        <div class="category-content">
           <p>{tree_sun}</p>
         </div>
       </div>
 
-      <div class = "category">
-        <div class = "category-name">
+      <div class="category">
+        <div class="category-name">
           <p>Maintenance Requirements</p>
         </div>
 
-          <div class = "category-name">
-            <p>Feeding</p>
-          </div>
+        <div class="category-name">
+          <p>Feeding</p>
+        </div>
 
-          <div class = "category-content">
-            <p>{tree_feeding}</p>
-          </div>
+        <div class="category-content">
+          <p>{tree_feeding}</p>
+        </div>
 
-          <div class = "category-name">
-            <p>Watering</p>
-          </div>
+        <div class="category-name">
+          <p>Watering</p>
+        </div>
 
-          <div class = "category-content">
-            <p>{tree_watering}</p>
-          </div>
+        <div class="category-content">
+          <p>{tree_watering}</p>
+        </div>
 
-          <div class = "category-name">
-            <p>Pruning</p>
-          </div>
+        <div class="category-name">
+          <p>Pruning</p>
+        </div>
 
-          <div class = "category-content">
-            <p>{tree_pruning}</p>
-          </div>
+        <div class="category-content">
+          <p>{tree_pruning}</p>
+        </div>
       </div>
 
-      <div class = "category">
-        <div class = "category-name">
+      <div class="category">
+        <div class="category-name">
           <p>Maximum Height of Mature Tree</p>
-          <div class = "soil-name-sub">
+          <div class="soil-name-sub">
             <p>(Less than 1m, 1-2m, 2-3m, Greater than 3m)</p>
           </div>
         </div>
 
-        <div class = "category-content">
+        <div class="category-content">
           <p>{tree_height}</p>
         </div>
       </div>
 
-      <div class = "category">
-        <div class = "category-name">
+      <div class="category">
+        <div class="category-name">
           <p>Growth Rate</p>
-          <div class = "soil-name-sub">
+          <div class="soil-name-sub">
             <p>(Slow/Medium/Fast)</p>
           </div>
         </div>
 
-        <div class = "category-content">
+        <div class="category-content">
           <p>{tree_growth}</p>
         </div>
       </div>
 
-      <div class = "category">
-        <div class = "category-name">
+      <div class="category">
+        <div class="category-name">
           <p>Relevant Facts Flowers</p>
         </div>
 
-        <div class = "category-content">
+        <div class="category-content">
           <p>{tree_flowers}</p>
         </div>
 
-        <div class = "category-name">
+        <div class="category-name">
           <p>Relevant Facts Berries</p>
         </div>
 
-        <div class = "category-content">
+        <div class="category-content">
           <p>{tree_berries}</p>
         </div>
       </div>
@@ -247,6 +286,11 @@ export default class AshTree extends Component {
 
   render() {
     const { tree } = this.state;
-    return <div>{tree.map(this.renderProduct)}</div>;
+    if (this.state.tree_id < 9) {
+      return <div>{tree.map(this.renderProduct)}</div>;
+    }
+    else {
+      return <div>{tree.map(this.renderTool)}</div>
+    }
   }
 }
