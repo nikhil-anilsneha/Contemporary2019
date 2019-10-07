@@ -10,6 +10,8 @@ import Login from './Login.js';
 import SingleTip from './SingleTip';
 import AshTree from './AshTree.js';
 import TreeAll from './TreeAll.js';
+// import Register from './Register';
+import Register from './RegisterTest';
 import '../index.css';
 
 export default class Navbar extends Component {
@@ -26,7 +28,16 @@ render(){
               </ul>
               <ul className="navbar-right mr-auto">
                 <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
-                <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
+                <li>
+                  <Link to={"/Login.js"} className="nav-link">
+                    <Login></Login>
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/Register.js"} className="nav-link">
+                    <Register></Register>
+                  </Link>
+                </li>
               </ul>
             </nav>
             <br/>
@@ -38,7 +49,7 @@ render(){
                 <Route path = '/C.js' component={Cart} />
                 <Route path='/tips.js' component={Tips}/>
                 <Route path='/Checkout.js' component={Checkout}/>
-                <Route path='/Login.js' component={Login}/>
+                {/* <Route path='/Login.js' component={Login}/> */}
                 <Route path="/tips/:tipsId" component={SingleTip} />
                 <Route path = '/Checkout.js' component={Checkout}/>
                 <Route path ='/TreeAll.js' component ={TreeAll}/>
