@@ -25,6 +25,28 @@ const initState = {
         {id:10,title:'Rake', price:10,img: Item10,type:'Tool'},
         {id:11,title:'Potting Mix', price:15,img: Item11,type:'Tool'},
     ],
+    MediumCostItems : [
+        {id:2,title:'Oak Tree', price:60,img: Item2,type:'Hardwood'},
+        {id:6,title:'King Palm', price:100,img: Item6,type:'Palm'},
+    ],
+    HighCostItems : [
+        {id:7,title:'Kauri Tree', price:120,img: Item7,type:'NZ Native'},
+        {id:8,title:'Pohutukawa', price:150,img: Item8,type:'NZ Native'},
+    ],
+    PartialShadeItems : [
+        {id:2,title:'Oak Tree', price:60,img: Item2,type:'Hardwood'},
+        {id:4,title:'Tomato', price:30,img:Item4,type:'Fruit'},
+        {id:5,title:'Cascade Palm', price:50,img: Item5,type:'Palm'},
+    ],
+    HighSunItems : [
+        {id:1,title:'Ash Tree', price:50,img:Item1,type:'Hardwood'},
+        {id:2,title:'Oak Tree', price:60,img: Item2,type:'Hardwood'},
+        {id:3,title:'Apple Tree', price:25,img: Item3,type:'Fruit'},
+        {id:4,title:'Tomato', price:30,img:Item4,type:'Fruit'},
+        {id:6,title:'King Palm', price:100,img: Item6,type:'Palm'},
+        {id:7,title:'Kauri Tree', price:120,img: Item7,type:'NZ Native'},
+        {id:8,title:'Pohutukawa', price:150,img: Item8,type:'NZ Native'}
+    ],
     hardWoodItems: [
         {id:1,title:'Ash Tree', price:50,img:Item1,type:'Hardwood'},
         {id:2,title:'Oak Tree', price:60,img: Item2,type:'Hardwood'}
@@ -52,6 +74,18 @@ const initState = {
         {id:9,title:'Shovel', price:10,img:Item9,type:'Tool'},
         {id:10,title:'Rake', price:10,img: Item10,type:'Tool'},
         {id:11,title:'Potting Mix', price:15,img: Item11,type:'Tool'}
+    ],
+    OneToTwoItems : [
+        {id:5,title:'Cascade Palm', price:50,img: Item5,type:'Palm'}
+    ],
+    ThreePlusItems : [
+        {id:1,title:'Ash Tree', price:50,img:Item1,type:'Hardwood'},
+        {id:2,title:'Oak Tree', price:60,img: Item2,type:'Hardwood'},
+        {id:3,title:'Apple Tree', price:25,img: Item3,type:'Fruit'},
+        {id:4,title:'Tomato', price:30,img:Item4,type:'Fruit'},
+        {id:6,title:'King Palm', price:100,img: Item6,type:'Palm'},
+        {id:7,title:'Kauri Tree', price:120,img: Item7,type:'NZ Native'},
+        {id:8,title:'Pohutukawa', price:150,img: Item8,type:'NZ Native'}
     ],
     addedItems:[],
     totalItem: 0,

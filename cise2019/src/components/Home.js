@@ -50,12 +50,30 @@ class Home extends Component {
                         <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.PalmItems)}>Palm</button>
                         <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.NZNativeItems)}>NZ Native</button>
                         <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.ToolItems)}>Tools</button>
+
                     </div>
                 </form>
                 <br></br>
                 <form action="/action_page.php">
                     <div className="btn-group">
                         <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.CheapItems)}>$50 and Less</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.MediumCostItems)}>$51-$100</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.HighCostItems)}>$100 and more</button>
+
+                    </div>
+                </form>
+                <br></br>
+                <form action="/action_page.php">
+                    <div className="btn-group">
+                    <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.ThreePlusItems)}>3m+ Trees</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.OneToTwoItems)}>1-2m Trees</button>
+                    </div>
+                </form>
+                <br></br>
+                <form action="/action_page.php">
+                    <div className="btn-group">
+                    <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.HighSunItems)}>High Sunlight Requirement</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.PartialShadeItems)}>Partial Sunlight Requirement</button>
                     </div>
                 </form>
                 <div className="row">
@@ -78,7 +96,13 @@ const mapStateToProps = (state) => {
         PalmItems: state.PalmItems,
         NZNativeItems: state.NZNativeItems,
         ToolItems: state.ToolItems,
-        CheapItems: state.CheapItems
+        CheapItems: state.CheapItems,
+        ThreePlusItems : state.ThreePlusItems,
+        OneToTwoItems : state.OneToTwoItems,
+        HighSunItems : state.HighSunItems,
+        PartialShadeItems : state.PartialShadeItems,
+        MediumCostItems : state.MediumCostItems,
+        HighCostItems : state.HighCostItems
     }
 }
 const mapDispatchToProps = (dispatch) => {
