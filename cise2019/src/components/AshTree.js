@@ -100,7 +100,7 @@ export default class AshTree extends Component {
     <div key={tree_id}>
 
       <div class = "tree-name">
-        <h1>{tree_name} Tree</h1>
+        <h1>{tree_name}</h1>
       </div>
 
       <br></br>
