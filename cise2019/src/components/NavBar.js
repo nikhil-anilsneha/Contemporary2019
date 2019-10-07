@@ -10,10 +10,13 @@ import Login from './Login.js';
 import SingleTip from './SingleTip';
 import AshTree from './AshTree.js';
 import TreeAll from './TreeAll.js';
+import SpecialCheckout from './specialCheckout.js';
+// import Register from './Register';
+import RegisterTest from './RegisterTest';
 import '../index.css';
 
 export default class Navbar extends Component {
-render(){
+  render() {
     return (
       <div className="container">
           <Router>
@@ -26,7 +29,16 @@ render(){
               </ul>
               <ul className="navbar-right mr-auto">
                 <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
-                <li><Link to={'/Login.js'} className="nav-link">Log In</Link></li>
+                <li>
+                  <Link to={"/Login.js"} className="nav-link">
+                    <Login></Login>
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/RegisterTest.js"} className="nav-link">
+                    <RegisterTest></RegisterTest>
+                  </Link>
+                </li>
               </ul>
             </nav>
             <br/>
@@ -42,11 +54,13 @@ render(){
                 <Route path="/tips/:tipsId" component={SingleTip} />
                 <Route path = '/Checkout.js' component={Checkout}/>
                 <Route path ='/TreeAll.js' component ={TreeAll}/>
+                <Route path ='/specialCheckout.js' component ={SpecialCheckout}/>
                 <Route path ="/tree/:treeId" component={AshTree} />
+                <Route path="./RegisterTest.js" component={RegisterTest}/>
             </Switch>
           </div>
           </Router>  
       </div>
     )
-}
   }
+}
