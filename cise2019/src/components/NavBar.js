@@ -14,7 +14,7 @@ import SpecialCheckout from './specialCheckout.js';
 import '../index.css';
 
 export default class Navbar extends Component {
-render(){
+  render() {
     return (
       <div className="container">
           <Router>
@@ -50,5 +50,5 @@ render(){
           </Router>  
       </div>
     )
-}
   }
+}
