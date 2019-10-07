@@ -96,7 +96,7 @@ export default class AshTree extends Component {
     return tree_id
   }
 
-  renderProduct = ({ tree_id, tree_name, tree_type, tree_price, tree_description, tree_condition, tree_soil, tree_sun, tree_feeding, tree_watering, tree_pruning, tree_height, tree_growth, tree_origin, tree_flowers, tree_berries, tree_uses, tree_type_info }) => (
+  renderProduct = ({ tree_id, tree_name, tree_type, tree_price, tree_condition, tree_soil, tree_sun, tree_feeding, tree_watering, tree_pruning, tree_height, tree_growth, tree_origin, tree_flowers, tree_berries, tree_uses, tree_type_info }) => (
     <div key={tree_id}>
 
       <div class = "tree-name">
@@ -126,16 +126,6 @@ export default class AshTree extends Component {
           <p>${tree_price}</p>
           </div>
       </div>
-
-      {/* <div class = "description">
-        <div class = "description-name">
-          <p>Tree Description</p>
-        </div>
-
-        <div class = "description-content">
-          <p>{tree_description}</p>
-        </div>        
-      </div> */}
 
       <div class = "header">
         <div class = "header-name">
