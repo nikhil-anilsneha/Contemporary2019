@@ -46,6 +46,13 @@ const initState = {
         {id:10,title:'Rake', price:10,img: Item10,type:'Tool'},
         {id:11,title:'Potting Mix', price:15,img: Item11,type:'Tool'}
     ],
+    CheapItems: [
+        {id:3,title:'Apple Tree', price:25,img: Item3,type:'Fruit'},
+        {id:4,title:'Tomato', price:30,img:Item4,type:'Fruit'},
+        {id:9,title:'Shovel', price:10,img:Item9,type:'Tool'},
+        {id:10,title:'Rake', price:10,img: Item10,type:'Tool'},
+        {id:11,title:'Potting Mix', price:15,img: Item11,type:'Tool'}
+    ],
     addedItems:[],
     totalItem: 0,
     total: 0,

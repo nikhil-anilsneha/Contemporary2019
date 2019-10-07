@@ -153,6 +153,9 @@ class Home extends Component {
                         <button type="button" className="btn btn-primary" onClick={() => this.change(4)}>NZ Native</button>
                         <button type="button" className="btn btn-primary" onClick={() => this.change(5)}>Tools</button>
                     </div>
+                    <div className="btn-group">
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(2)}>50 and Less</button>
+                    </div>
                 </form>
                 <div className="row">
                     {this.itemList}
