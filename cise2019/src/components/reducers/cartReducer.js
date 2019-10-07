@@ -13,13 +13,13 @@ import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING, SUB_SHI
 
 const initState = {
     items: [
-        {id:1,title:'Ash Tree', price:50,img:Item1,type:'Hardwood'},
-        {id:2,title:'Oak Tree', price:60,img: Item2,type:'Hardwood'},
-        {id:3,title:'Apple Tree', price:25,img: Item3,type:'Fruit'},
+        {id:1,title:'Ash', price:50,img:Item1,type:'Hardwood'},
+        {id:2,title:'Oak', price:60,img: Item2,type:'Hardwood'},
+        {id:3,title:'Apple', price:25,img: Item3,type:'Fruit'},
         {id:4,title:'Tomato', price:30,img:Item4,type:'Fruit'},
         {id:5,title:'Cascade Palm', price:50,img: Item5,type:'Palm'},
         {id:6,title:'King Palm', price:100,img: Item6,type:'Palm'},
-        {id:7,title:'Kauri Tree', price:120,img: Item7,type:'NZ Native'},
+        {id:7,title:'Kauri', price:120,img: Item7,type:'NZ Native'},
         {id:8,title:'Pohutukawa', price:150,img: Item8,type:'NZ Native'},
         {id:9,title:'Shovel', price:10,img:Item9,type:'Tool'},
         {id:10,title:'Rake', price:10,img: Item10,type:'Tool'},
