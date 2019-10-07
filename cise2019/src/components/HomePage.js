@@ -16,8 +16,8 @@ export default class HomePage extends Component {
              <table>
                <tbody>
               <tr>
-                <th><a href="./Home.js">Just In: Spring Season Tomato Plants</a></th>
-                <th><a href="./Home.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
+                <th><a href="./specialCheckout.js">Just In: Spring Season Tomato Plants</a></th>
+                <th><a href="./specialCheckout.js">3 for $15 Royal Gala Apple Trees - Shop Now!</a></th>
                 <th><a href="./tips.js">Strawberry Planting 101 - Click Here!</a></th>
               </tr>
               </tbody>
