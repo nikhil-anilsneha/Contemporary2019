@@ -45,6 +45,7 @@ export default class Navbar extends Component {
             <Switch>
                 <Route exact path='/' component={HomePage} />
                 <Route path='/HomePage.js' component={HomePage}/>
+                <Route path='/Home.js' component={Home}/>
                 <Route path='/ContactPage.js' component={Contact} />
                 <Route path = '/Home.js' component={Home} />
                 <Route path = '/C.js' component={Cart} />
@@ -52,6 +53,7 @@ export default class Navbar extends Component {
                 <Route path='/Checkout.js' component={Checkout}/>
                 <Route path='/Login.js' component={Login}/>
                 <Route path="/tips/:tipsId" component={SingleTip} />
+                <Route path="/tips.js" component={Tips}/>
                 <Route path = '/Checkout.js' component={Checkout}/>
                 <Route path ='/TreeAll.js' component ={TreeAll}/>
                 <Route path ='/specialCheckout.js' component ={SpecialCheckout}/>
