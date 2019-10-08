@@ -11,7 +11,7 @@ var app=express();
 app.use(express.static(path.join(__dirname, "cise2019/build")));
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, '/cise2019/public/index.html'), function(err) {
+  res.sendFile(path.join(__dirname, '/cise2019/build'), function(err) {
     if (err) {
       res.status(500).send(err)
     }
