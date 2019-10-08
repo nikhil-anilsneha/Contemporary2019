@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import "./Register.css";
-import Login from "./Login";
 import { Modal, PopoverTitle } from "react-bootstrap";
 import axios from "axios";
-
-
 
 class App extends Component {
   constructor(props) {

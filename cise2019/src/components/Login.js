@@ -3,6 +3,11 @@ import { Modal, Button, Row, Col, Form } from "react-bootstrap";
 import "./Login.css";
 import axios from "axios";
 
+window.globalFirstName = "";
+window.globalLastName = "";
+window.globalEmail = "";
+window.globalPassword = "";
+
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
@@ -12,13 +17,7 @@ export class Login extends Component {
     super(props);
 
     this.state = {
-      // firstName: null,
-      // lastName: null,
-      // emailForLogin: null,
-      // passwordForLogin: null,
       isPasswordSeen: false,
-      // emailFromDB: null,
-      // passwordFromDB: null,
       users: [],
       validUser: false,
       word: "show",
@@ -30,8 +29,6 @@ export class Login extends Component {
       //   passwordForLogin: ""
       // }
     };
-    // this.updateStateEmail=this.updateStateEmail.bind(this);
-    // this.updateStatePassword=this.updateStatePassword.bind(this);
   }
 
   userGet(e) {
@@ -56,6 +53,10 @@ export class Login extends Component {
         if (this.state.users.data[i].email === checkEmail) {
           if (this.state.users.data[i].password === checkPassword) {
             this.setState({ validUser: true });
+            window.globalFirstName = JSON.stringify(this.state.users.data[i].first_name);
+            window.globalLastName = JSON.stringify(this.state.users.data[i].last_name);
+            window.globalEmail = JSON.stringify(this.state.users.data[i].email);
+            window.globalPassword = JSON.stringify(this.state.users.data[i].password);
             good = true;
             break;
           } else {
@@ -67,15 +68,16 @@ export class Login extends Component {
       }
       if (good === true) {
         console.log("login successful");
-        alert("login successful");
+        alert("Hello "+window.globalFirstName+"!. Your login is successful.");
+        this.setState({addModal:false});
       } else {
-        console.log("login fail");
-        alert("login fail");
+        console.log("login failed.");
+        this.setState({ addModal: true });
+        alert("login failed.");
       }
       console.log(this.state.validUser);
-      this.setState({addModal:false});
+      
     });
-    
   }
   
 
@@ -158,3 +160,4 @@ export class Login extends Component {
 }
 
 export default Login;
+
