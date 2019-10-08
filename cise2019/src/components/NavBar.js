@@ -26,9 +26,10 @@ export default class Navbar extends Component {
                 <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
                 <li><Link to={'/Home.js'} className="nav-link">Browse</Link></li>
                 <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
+                
               </ul>
               <ul className="navbar-right mr-auto">
-                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
+              <li><Link to={'/C.js'} className="nav-link">Cart</Link></li>
                 <li>
                   <Link to={"/Login.js"} className="nav-link">
                     <Login></Login>
