@@ -67,8 +67,10 @@ export class Login extends Component {
       }
       if (good === true) {
         console.log("login successful");
+        alert("You have successfully logged in")
       } else {
         console.log("login fail");
+        alert("You have failed to logged in")
       }
       console.log(this.state.validUser);
     });
