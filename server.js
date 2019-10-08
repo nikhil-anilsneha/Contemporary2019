@@ -10,6 +10,14 @@ var app=express();
 
 app.use(express.static(path.join(__dirname, "cise2019/build")));
 
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, '/cise2019/public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
 let pool = mysql.createPool({
   connectionLimit: 10,
   multipleStatements: true,
