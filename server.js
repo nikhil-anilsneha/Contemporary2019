@@ -2,9 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql");
 const path = require("path");
+const bodyParser = require("body-parser");
 const port = process.env.PORT || 3000;
 
-const app=express();
+
+var app=express();
 
 app.use(express.static(path.join(__dirname, "cise2019/build")));
 
@@ -17,7 +19,10 @@ let pool = mysql.createPool({
   database: "heroku_25a635bc8a152af"
 });
 
+
+
 app.use(cors());
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.send("go to /tree");
@@ -65,10 +70,56 @@ app.get("/tips", (req, res) => {
   });
 }); 
 
-app.get("*",(req,res)=>{
-  res.sendFile(path.join(__dirname + "/cise2019/build/index.html"));
-})
+app.get("/user_detail", (req, res) => {
+  pool.getConnection(function(err, conn) {
+    if (err) {
+      res.send("Error occured");
+    } else {
+      const sql2 = "SELECT * FROM user_detail";
+      conn.query(sql2, function(err2, records, fields) {
+        if (!err2) {
+          res.json({
+            data: records
+          });
+        }
+        conn.release();
+      });
+    }
+  });
+});
+
+app.post("/user_detail", (req, res) => {
+  pool.getConnection(function(err, conn) {
+    if (err) {
+      res.send("Error occured");
+    } else {
+      var data = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        password: req.body.password
+      };
+      var sql = "INSERT INTO user_detail SET ?";
+      conn.query(sql, data, function(err2, records, fields) {
+        if (!err2) {
+          console.log(records);
+          res.send({
+            status: "Data sukses diinput!",
+            no: null,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            password: req.body.password
+          });
+        }
+        conn.release();
+      });
+    }
+  });
+});
+
 
 app.listen(port, () => {
   console.log("tree server listening on port 3000");
 });
+
