@@ -27,17 +27,19 @@ render(){
                 <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
               </ul>
               <ul className="navbar-right mr-auto">
-                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li>
+                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li><br/>
                 <li>
                   <Link to={"/Login.js"} className="nav-link">
                     <Login></Login>
                   </Link>
                 </li>
+                <br/>
                 <li>
                   <Link to={"/Register.js"} className="nav-link">
                     <Register></Register>
                   </Link>
                 </li>
+                <br/>
               </ul>
             </nav>
             <br/>

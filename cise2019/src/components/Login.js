@@ -67,11 +67,15 @@ export class Login extends Component {
       }
       if (good === true) {
         console.log("login successful");
+        alert("login successful");
       } else {
         console.log("login fail");
+        alert("login fail");
       }
       console.log(this.state.validUser);
+      this.setState({addModal:false});
     });
+    
   }
   
 
@@ -127,15 +131,15 @@ export class Login extends Component {
                   show/hide password
                 </button>
               </div>
-              <div className="formButton">
+              <div className="clickLogin">
                 <button onClick={this.userGet.bind(this)}>Login</button>
               </div>
-              <div className="formButton">
+              <div className="clickLogin">
                 <button onClick={() => this.setState({ addModal: false })}>
                   Cancel
                 </button>
               </div>
-              <div className="formButton">
+              <div className="clickLogin">
                 <button onClick={() => this.setState({ addModal: false })}>
                   <b>Have no account?</b>
                 </button>

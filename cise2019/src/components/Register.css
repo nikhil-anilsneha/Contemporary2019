@@ -106,14 +106,14 @@
     display: relative;
   }
   
-  .firstName {
-    margin-left: 5%;
-    margin-right: 1%;
+  .firstNameBox {
+    margin-left: 2%;
+    margin-right: 2%;
   }
   
-  .lastName {
-    margin-left: 1%;
-    margin-right: 5%;
+  .lastNameBox {
+    margin-left: 2%;
+    margin-right: 2%;
   }
   
   .firstName,
@@ -126,8 +126,8 @@
     margin-bottom: 15px;
   }
   
-  .firstName,
-  .lastName {
+  .firstNameBox,
+  .lastNameBox {
     width: 44%;
   }
   
@@ -219,6 +219,27 @@
     margin-bottom: 0.25em;
   }
 
+  .homeButton {
+    width: 110%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    font-size: 1em;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .homeButton button {
+    background-color: yellowgreen;
+    color: black;
+    border: 2px solid white;
+    width: 100%;
+    margin-top: 0em;
+    padding: 8px 0px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0em;
+  }
 
 
   

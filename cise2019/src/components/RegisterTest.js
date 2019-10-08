@@ -22,6 +22,7 @@ class App extends Component {
   userPost(e) {
     e.preventDefault();
     var url = "/user_detail";
+    this.setState({visible:false});
     axios
       .post(url, {
         first_name: this.inputfirstName.value,
@@ -31,15 +32,16 @@ class App extends Component {
       })
       .then(function(response) {
         console.log(response);
+        
       })
       .catch(function(error) {
         console.log(error);
       });
+      
     this.inputfirstName.value = "";
     this.inputlastName.value = "";
     this.inputemail.value = "";
     this.inputpassword.value = "";
-    this.setState=({visible:false})
   }
 
   userGet(e) {
@@ -72,11 +74,11 @@ class App extends Component {
             <div>
               <h1>Create Account</h1>
               <form noValidate>
-                <div className="fd">
+                <div className="firstNameBox">
                   <label htmlFor="firstName">First Name</label>
                   <input
-                    className="fc"
-                    placeholder="First Name"
+                    className="firstName"
+                    placeholder="firstName"
                     type="text"
                     // name="firstName"
                     noValidate
@@ -87,12 +89,12 @@ class App extends Component {
                     <span className="errorMessage">{formErrors.firstName}</span>
                   )} */}
                 </div>
-                <div className="lastName">
+                <div className="lastNameBox">
                   <label htmlFor="lastName">Last Name</label>
                   <input
                     // className={formErrors.lastName.length > 0 ? "error" : null}
-                    className="fc"
-                    placeholder="Last Name"
+                    className="lastName"
+                    placeholder="lastName"
                     type="text"
                     name="lastName"
                     noValidate
@@ -107,7 +109,7 @@ class App extends Component {
                   <label htmlFor="email">Email</label>
                   <input
                     // className={formErrors.email.length > 0 ? "error" : null}
-                    className="fc"
+                    className="email"
                     placeholder="Email"
                     type="email"
                     name="email"
@@ -123,7 +125,7 @@ class App extends Component {
                   <label htmlFor="password">Password</label>
                   <input
                     // className={formErrors.password.length > 0 ? "error" : null}
-                    className="fc"
+                    className="password"
                     placeholder="Password"
                     type="password"
                     name="password"
@@ -135,14 +137,14 @@ class App extends Component {
                     <span className="errorMessage">{formErrors.password}</span>
                   )} */}
                 </div>
-                <div className="formButton">
+                <div className="createAccount">
                   <button type="submit"
                   onClick={this.userPost.bind(this)}
                   >
                     <b>Create Account</b>
                   </button>
                 </div>
-                <div className="formButton">
+                <div className="createAccount">
                   <button
                     type="button"
                     onClick={() => this.setState({ visible: false })}
@@ -150,7 +152,7 @@ class App extends Component {
                     Already Have An Account
                   </button>
                 </div>
-                <div className="formButton">
+                <div className="createAccount">
                   <button
                     type="button"
                     onClick={() => this.setState({ visible: false })}
