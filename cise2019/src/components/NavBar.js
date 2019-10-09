@@ -48,7 +48,7 @@ export default class Navbar extends Component {
                 <Route path='/Home.js' component={Home}/>
                 <Route path='/ContactPage.js' component={Contact} />
                 <Route path = '/C.js' component={Cart} />
-                <Route path='/Checkout.js' component={Checkout}/>
+                <Route path='./Checkout.js' component={Checkout}/>
                 <Route path='/Login.js' component={Login}/>
                 <Route path="/tips/:tipsId" component={SingleTip} />
                 <Route path="/tips.js" component={Tips}/>
