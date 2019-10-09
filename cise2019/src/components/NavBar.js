@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import HomePage from './HomePage.js';
@@ -19,23 +20,46 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="container">
-          <Router>
-            <div className="navigation">
-             <nav className="navbar navbar-expand-lg navbar-light">
+        <Router>
+          <div className="navigation">
+            <nav className="navbar navbar-expand-lg navbar-light">
               <ul className="navbar-nav mr-auto">
-                <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
-                <li><Link to={'/Home.js'} className="nav-link">Browse</Link></li>
-                <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
-                
+                <li>
+                  <Link to={"/HomePage.js"} className="nav-link">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/Home.js"} className="nav-link">
+                    Browse
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/ContactPage.js"} className="nav-link">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/Profile.js"} className="nav-link">
+                    Profile
+                  </Link>
+                </li>
               </ul>
               <ul className="navbar-right mr-auto">
-              <li><Link to={'/C.js'} className="nav-link">Cart</Link></li>
+                <li>
+                  <Link to={"/C.js"} className="nav-link">
+                    View Cart
+                  </Link>
+                </li>
+                <br />
                 <li>
                   <Link to={"/Login.js"} className="nav-link">
                     <Login></Login>
                   </Link>
                 </li>
+                <br />
                 <li>
+
                   <Link to={"/RegisterTest.js"} className="nav-link">
                     <RegisterTest></RegisterTest>
                   </Link>
@@ -61,7 +85,8 @@ export default class Navbar extends Component {
             </Switch>
           </div>
           </Router>  
+
       </div>
-    )
+    );
   }
 }
