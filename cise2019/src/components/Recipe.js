@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './cartHome.css'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 //import { addShipping } from './actions/cartActions'
 
 class Recipe extends Component {
