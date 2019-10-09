@@ -3,20 +3,23 @@ import './Checkout.css'
 import AshTree from './AshTree.js'
 import { Link } from 'react-router-dom'
 
-class Checkout extends Component {
+class specialCheckout extends Component {
   constructor() {
     super();
   }
 
   render() {
     return (
-      <div className="">
+      <div>
+        <div className="payrow">
           <div className="col-75">
             <div className="containerpay">
               <form action="/action_page.php">
+
                 <div className="payrow">
                   <div className="col-50">
                     <h3>Billing Address</h3>
+                    { alert("This is a checkout page for the item you have selected to purchase which has an ongoing offer!!")}
                     <label for="fname"><i className="fa fa-user"></i> Full Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="John M. Doe" />
                     <label for="email"><i className="fa fa-envelope"></i> Email</label>
@@ -62,10 +65,12 @@ class Checkout extends Component {
                 <label >
                   <h5 className="shipbill"><input type="checkbox" /> Shipping address same as billing</h5>
                 </label>
+                <Link to="/tips.js"><button className="paybtn" onClick={paid}>Submit</button></Link>
               </form>
-              <Link to="/tips.js"><button type="button" className="btn-lg btn-success btn-block" onClick={paid}>Submit</button></Link>
             </div>
           </div>
+
+        </div>
       </div>
     );
     function paid() {
@@ -75,4 +80,4 @@ class Checkout extends Component {
   }
 }
 
-export default Checkout;
+export default specialCheckout;

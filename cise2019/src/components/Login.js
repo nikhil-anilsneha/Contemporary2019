@@ -64,6 +64,7 @@ export class Login extends Component {
         console.log("login failed.");
         this.setState({ addModal: true });
         alert("Login Failed.");
+
       }
       console.log(this.state.validUser);
       

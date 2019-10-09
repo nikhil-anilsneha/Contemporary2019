@@ -8,7 +8,7 @@ class Home extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            filter: 0
+            myList: this.props.items
         }
         var itemList;
         this.change.bind(this);
@@ -20,138 +20,60 @@ class Home extends Component {
 
 
     render() {
-        if (this.state.filter === 0) {
-            this.itemList = this.props.items.map(item => {
-                return (
-                    <div className="gridcontainer" key={item.id}>
-                        <div className="col-sm-12">
-                            <div className="img-responsive">
-                                <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150" /></Link>
-                            </div>
-                            <div>
-                                <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
-                                <button to="/" className="btn-success btn-floating halfway-fab waves-effect waves-light red" onClick={() => { this.handleClick(item.id) }}><i className="material-icons">add</i></button>
-                                <div className="card-content">
-                                    <p><b>Price: ${item.price}</b></p>
-                                </div>
-                            </div>
+        this.itemList = this.state.myList.map(item => {
+            return (
+                <div className="gridcontainer" key={item.id}>
+                    <div className="col-sm-12">
+                        <div className="img-responsive">
+                            <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150" /></Link>
                         </div>
-                    </div>
-                )
-            })
-        }
-        if (this.state.filter === 1) {
-            this.itemList = this.props.hardWoodItems.map(item => {
-                return (
-                    <div className="gridcontainer" key={item.id}>
-                        <div className="col-sm-12">
-                            <div className="img-responsive">
-                                <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150" /></Link>
-                            </div>
-                            <div>
-                                <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
-                                <button to="/" onClick={() => { this.handleClick(item.id) }}><i className="material-icons">add</i></button>
-                            </div>
+                        <div>
+                            <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
+                            <button to="/" className="btn-success btn-floating halfway-fab waves-effect waves-light red" onClick={() => { this.handleClick(item.id) }}><i className="material-icons">add</i></button>
                             <div className="card-content">
                                 <p><b>Price: ${item.price}</b></p>
                             </div>
                         </div>
                     </div>
-                )
-            })
-        }
-        if (this.state.filter === 2) {
-            this.itemList = this.props.FruitItems.map(item => {
-                return (
-                    <div className="gridcontainer" key={item.id}>
-                        <div className="col-sm-12">
-                            <div className="img-responsive">
-                                <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150" /></Link>
-                            </div>
-                            <div>
-                                <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
-                                <button to="/" className="btn-success btn-floating halfway-fab waves-effect waves-light red" onClick={() => { this.handleClick(item.id) }}><i className="material-icons">add</i></button>
-                                <div className="card-content">
-                                    <p><b>Price: ${item.price}</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                )
-            })
-        }
-        if (this.state.filter === 3) {
-            this.itemList = this.props.PalmItems.map(item => {
-                return (
-                    <div className="gridcontainer" key={item.id}>
-                        <div className="col-sm-12">
-                            <div className="img-responsive">
-                                <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150" /></Link>
-                            </div>
-                            <div>
-                                <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
-                                <button to="/" className="btn-success btn-floating halfway-fab waves-effect waves-light red" onClick={() => { this.handleClick(item.id) }}><i className="material-icons">add</i></button>
-                                <div className="card-content">
-                                    <p><b>Price: ${item.price}</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                )
-            })
-        }
-        if (this.state.filter === 4) {
-            this.itemList = this.props.NZNativeItems.map(item => {
-                return (
-                    <div className="gridcontainer" key={item.id}>
-                        <div className="col-sm-12">
-                            <div className="img-responsive">
-                                <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150" /></Link>
-                            </div>
-                            <div>
-                                <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
-                                <button to="/" className="btn-success btn-floating halfway-fab waves-effect waves-light red" onClick={() => { this.handleClick(item.id) }}><i className="material-icons">add</i></button>
-                                <div className="card-content">
-                                    <p><b>Price: ${item.price}</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                )
-            })
-        }
-        if (this.state.filter === 5) {
-            this.itemList = this.props.ToolItems.map(item => {
-                return (
-                    <div className="gridcontainer" key={item.id}>
-                        <div className="col-sm-12">
-                            <div className="img-responsive">
-                                <Link to={`/tree/${item.id}`}> <img src={item.img} alt={item.title} width="150" height="150" /></Link>
-                            </div>
-                            <div>
-                                <span className="card-title"><Link to={`/tree/${item.id}`}>{item.title}</Link></span>
-                                <button to="/" className="btn-success btn-floating halfway-fab waves-effect waves-light red" onClick={() => { this.handleClick(item.id) }}><i className="material-icons">add</i></button>
-                                <div className="card-content">
-                                    <p><b>Price: ${item.price}</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                )
-            })
-        }
+                </div>
+            )
+        })
 
         return (
             <div className="container-fluid">
                 <h1>Our Items</h1>
                 <form action="/action_page.php">
                     <div className="btn-group">
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(0)}>All</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(1)}>Hardwood</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(2)}>Fruit</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(3)}>Palm</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(4)}>NZ Native</button>
-                        <button type="button" className="btn btn-primary" onClick={() => this.change(5)}>Tools</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.items)}>All</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.hardWoodItems)}>Hardwood</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.FruitItems)}>Fruit</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.PalmItems)}>Palm</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.NZNativeItems)}>NZ Native</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.ToolItems)}>Tools</button>
+
+                    </div>
+                </form>
+                <br></br>
+                <form action="/action_page.php">
+                    <div className="btn-group">
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.CheapItems)}>$50 and Less</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.MediumCostItems)}>$51-$100</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.HighCostItems)}>$100 and more</button>
+
+                    </div>
+                </form>
+                <br></br>
+                <form action="/action_page.php">
+                    <div className="btn-group">
+                    <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.ThreePlusItems)}>3m+ Trees</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.OneToTwoItems)}>1-2m Trees</button>
+                    </div>
+                </form>
+                <br></br>
+                <form action="/action_page.php">
+                    <div className="btn-group">
+                    <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.HighSunItems)}>High Sunlight Requirement</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.PartialShadeItems)}>Partial Sunlight Requirement</button>
                     </div>
                 </form>
                 <div className="row">
@@ -161,8 +83,8 @@ class Home extends Component {
 
         )
     }
-    change(filterNo) {
-        this.setState({ filter: filterNo })
+    change(listToRender) {
+        this.setState({myList: listToRender})
     }
 }
 
@@ -173,7 +95,14 @@ const mapStateToProps = (state) => {
         FruitItems: state.FruitItems,
         PalmItems: state.PalmItems,
         NZNativeItems: state.NZNativeItems,
-        ToolItems: state.ToolItems
+        ToolItems: state.ToolItems,
+        CheapItems: state.CheapItems,
+        ThreePlusItems : state.ThreePlusItems,
+        OneToTwoItems : state.OneToTwoItems,
+        HighSunItems : state.HighSunItems,
+        PartialShadeItems : state.PartialShadeItems,
+        MediumCostItems : state.MediumCostItems,
+        HighCostItems : state.HighCostItems
     }
 }
 const mapDispatchToProps = (dispatch) => {
