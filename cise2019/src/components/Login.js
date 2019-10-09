@@ -58,12 +58,12 @@ export class Login extends Component {
       }
       if (good === true) {
         console.log("login successful");
-        alert("Hello "+window.globalFirstName+"!. Your login is successful.");
+        alert("Hello "+window.globalFirstName+"! Your Login is Successful.");
         this.setState({addModal:false});
       } else {
         console.log("login failed.");
         this.setState({ addModal: true });
-        alert("login failed.");
+        alert("Login Failed.");
       }
       console.log(this.state.validUser);
       
