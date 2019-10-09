@@ -13,7 +13,8 @@ import Recipe from './Recipe.js';
 import AshTree from './AshTree.js';
 import TreeAll from './TreeAll.js';
 import SpecialCheckout from './specialCheckout.js';
-import RegisterTest from './RegisterTest';
+import RegisterTest from './RegisterTest.js';
+import Profile from './Profile.js';
 import '../index.css';
 
 export default class Navbar extends Component {
@@ -74,7 +75,8 @@ export default class Navbar extends Component {
                 <Route path='/ContactPage.js' component={Contact} />
                 <Route path = '/C.js' component={Cart} />
                 <Route path='/Recipe.js' component={Recipe}/>
-                <Route path='/Login.js' component={Login}/>
+                {/*<Route path='/Login.js' component={Login}/>*/}
+                <Route path='Profile.js' component={Profile}/>
                 <Route path="/tips/:tipsId" component={SingleTip} />
                 <Route path="/tips.js" component={Tips}/>
                 <Route path ='/TreeAll.js' component ={TreeAll}/>
