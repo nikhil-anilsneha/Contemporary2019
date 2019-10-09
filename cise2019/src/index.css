@@ -91,14 +91,8 @@ h2 {
   font-size: 18px;
 }
 
-.navbar-nav {
-  margin-top:0vw;
-
-}
-
 .navbar-right {
-  margin-left: 53%;
-  margin-top: 1%;
+  margin-left: 78%; 
 }
 
 .sign-up {
@@ -122,11 +116,6 @@ h2 {
   height: 2vw;
 }
 
-.plants-tools {
-  display: flex;
-  text-align: center;
-}
-
 .plants-tools-images {
   width: 90%;
   height: 95%;
@@ -147,7 +136,6 @@ margin-left: 13%;
 }
 
 .cus{
-  margin-left: 7%;
   margin-bottom: -2.5%;
   font-weight: bold;
   text-align: center;
