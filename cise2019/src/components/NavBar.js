@@ -1,72 +1,89 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import HomePage from './HomePage.js';
-import Contact from './ContactPage.js';
-import Cart from './C.js';
-import Home from './Home.js';
-import Tips from './tips.js';
-import Checkout from './Checkout.js';
-import Login from './Login.js';
-import SingleTip from './SingleTip';
-import AshTree from './AshTree.js';
-import TreeAll from './TreeAll.js';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import HomePage from "./HomePage.js";
+import Contact from "./ContactPage.js";
+import Cart from "./C.js";
+import Home from "./Home.js";
+import Tips from "./tips.js";
+import Checkout from "./Checkout.js";
+import Login from "./Login.js";
+import SingleTip from "./SingleTip";
+import AshTree from "./AshTree.js";
+import TreeAll from "./TreeAll.js";
 // import Register from './Register';
-import Register from './RegisterTest.js';
-import Profile from './Profile.js';
-import '../index.css';
-
+import RegisterTest from "./RegisterTest.js";
+import Profile from "./Profile.js";
+import "../index.css";
 
 export default class Navbar extends Component {
-render(){
+  render() {
     return (
       <div className="container">
-          <Router>
-            <div className="navigation">
-             <nav className="navbar navbar-expand-lg navbar-light">
+        <Router>
+          <div className="navigation">
+            <nav className="navbar navbar-expand-lg navbar-light">
               <ul className="navbar-nav mr-auto">
-                <li><Link to={'/HomePage.js'} className="nav-link">Home</Link></li>
-                <li><Link to={'/Home.js'} className="nav-link">Browse</Link></li>
-                <li><Link to={'/ContactPage.js'} className="nav-link">Contact</Link></li>
-                <li><Link to={'/Profile.js'} className="nav-link">Profile</Link></li>
-              </ul>
-              <ul className="navbar-middle mr-auto">
-                <h3>{window.globalFirstName}</h3>
+                <li>
+                  <Link to={"/HomePage.js"} className="nav-link">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/Home.js"} className="nav-link">
+                    Browse
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/ContactPage.js"} className="nav-link">
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link to={"/Profile.js"} className="nav-link">
+                    Profile
+                  </Link>
+                </li>
               </ul>
               <ul className="navbar-right mr-auto">
-                <li><Link to={'/C.js'} className="nav-link">View Cart</Link></li><br/>
+                <li>
+                  <Link to={"/C.js"} className="nav-link">
+                    View Cart
+                  </Link>
+                </li>
+                <br />
                 <li>
                   <Link to={"/Login.js"} className="nav-link">
                     <Login></Login>
                   </Link>
                 </li>
-                <br/>
+                <br />
                 <li>
                   <Link to={"/Register.js"} className="nav-link">
-                    <Register></Register>
+                    <RegisterTest></RegisterTest>
                   </Link>
                 </li>
-                <br/>
+                <br />
               </ul>
             </nav>
-            <br/>
+            <br />
             <Switch>
-                <Route exact path='/' component={HomePage} />
-                <Route path='/HomePage.js' component={HomePage}/>
-                <Route path='/ContactPage.js' component={Contact} />
-                <Route path = '/Home.js' component={Home} />
-                <Route path = '/C.js' component={Cart} />
-                <Route path='/tips.js' component={Tips}/>
-                <Route path='/Checkout.js' component={Checkout}/>
-                {/* <Route path='/Login.js' component={Login}/> */}
-                <Route path='/Profile.js' component={Profile}/>
-                <Route path="/tips/:tipsId" component={SingleTip} />
-                <Route path = '/Checkout.js' component={Checkout}/>
-                <Route path ='/TreeAll.js' component ={TreeAll}/>
-                <Route path ="/tree/:treeId" component={AshTree} />
+              <Route exact path="/" component={HomePage} />
+              <Route path="/HomePage.js" component={HomePage} />
+              <Route path="/ContactPage.js" component={Contact} />
+              <Route path="/Home.js" component={Home} />
+              <Route path="/C.js" component={Cart} />
+              <Route path="/tips.js" component={Tips} />
+              <Route path="/Checkout.js" component={Checkout} />
+              {/* <Route path='/Login.js' component={Login}/> */}
+              <Route path="/Profile.js" component={Profile} />
+              <Route path="/tips/:tipsId" component={SingleTip} />
+              <Route path="/Checkout.js" component={Checkout} />
+              <Route path="/TreeAll.js" component={TreeAll} />
+              <Route path="/tree/:treeId" component={AshTree} />
             </Switch>
           </div>
-          </Router>  
+        </Router>
       </div>
-    )
-}
+    );
   }
+}

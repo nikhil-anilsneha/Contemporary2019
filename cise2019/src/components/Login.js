@@ -8,10 +8,6 @@ window.globalLastName = "";
 window.globalEmail = "";
 window.globalPassword = "";
 
-const emailRegex = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
-
 export class Login extends Component {
   constructor(props) {
     super(props);
@@ -22,12 +18,6 @@ export class Login extends Component {
       validUser: false,
       word: "show",
       addModal: false
-      // formErrors: {
-      //   // firstName: "",
-      //   // lastName: "",
-      //   emailForLogin: "",
-      //   passwordForLogin: ""
-      // }
     };
   }
 
@@ -88,11 +78,6 @@ export class Login extends Component {
     });
   };
 
-
-  goHome() {}
-
-  goRegister() {}
-
   render() {
     const { users } = this.state;
     const { formErrors } = this.state;
@@ -110,14 +95,10 @@ export class Login extends Component {
               <div className="emailForLogin">
                 <label htmlFor="EmailForLogin">Email</label>
                 <input
-                  // className={
-                  //   formErrors.emailForLogin.length > 0 ? "error" : null
-                  // }
                   placeholder="email address"
                   type="text"
                   name="Email"
                   ref={inEmail => (this.inputEmail = inEmail)}
-                  // onChange={this.updateStateEmail}
                 />
               </div>
               <div className="passwordForLogin">
@@ -127,7 +108,6 @@ export class Login extends Component {
                   type={isPasswordSeen ? "text" : "password"}
                   name="password"
                   ref={inPassword => (this.inputPassword = inPassword)}
-                  // onChange={this.updateStatePassword}
                 />
                 <button className="showHide" onClick={this.ShowHide}>
                   show/hide password

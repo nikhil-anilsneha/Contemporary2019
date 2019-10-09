@@ -2,6 +2,27 @@ import React, { Component } from "react";
 import "./Register.css";
 import { Modal, PopoverTitle } from "react-bootstrap";
 import axios from "axios";
+import {Link, Router, Redirect} from 'react-router-dom';
+
+const emailRegex = RegExp(
+  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
+
+const formValid = ({ formErrors, ...rest }) => {
+  let valid = true;
+
+  // validate form errors being empty
+  Object.values(formErrors).forEach(val => {
+    val.length > 0 && (valid = false);
+  });
+
+  // validate the form was filled out
+  Object.values(rest).forEach(val => {
+    val === null && (valid = false);
+  });
+
+  return valid;
+};
 
 class App extends Component {
   constructor(props) {
@@ -11,6 +32,11 @@ class App extends Component {
       user: [],
       userprofile: "No Log In",   
       visible: false,
+      formErrors: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: ""}
     };
     
   }
@@ -19,8 +45,10 @@ class App extends Component {
   userPost(e) {
     e.preventDefault();
     var url = "/user_detail";
-    this.setState({visible:false});
-    axios
+    
+    if(formValid(this.state)){
+      this.setState({visible:false});
+      axios
       .post(url, {
         first_name: this.inputfirstName.value,
         last_name: this.inputlastName.value,
@@ -29,16 +57,28 @@ class App extends Component {
       })
       .then(function(response) {
         console.log(response);
-        
+        alert("Register Successful!")
+        this.goHome(this);
       })
       .catch(function(error) {
         console.log(error);
       });
-      
+    }
+    else{
+      alert("Invalid Registration! Check Errors!")
+      this.setState({visible:true});
+    }
+     
     this.inputfirstName.value = "";
     this.inputlastName.value = "";
     this.inputemail.value = "";
     this.inputpassword.value = "";
+  }
+
+  goHome = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/HomePage' />
+    }
   }
 
   userGet(e) {
@@ -54,11 +94,37 @@ class App extends Component {
 
   handleChange = e => {
     e.preventDefault();
-    
+    const { name, value } = e.target;
+    let formErrors = { ...this.state.formErrors };
+
+    switch (name) {
+      case "firstName":
+        formErrors.firstName =
+          value.length < 2 ? "Minimum 2 Characters Required" : {};
+        break;
+      case "lastName":
+        formErrors.lastName =
+          value.length < 2 ? "Minimum 2 Characters Required" : {};
+        break;
+      case "email":
+        formErrors.email = emailRegex.test(value)
+          ? {}
+          : "Invalid Email Address";
+        break;
+      case "password":
+        formErrors.password =
+          value.length < 6 ? "Minimum 6 Characters Required" : {};
+        break;
+      default:
+        break;
+    }
+      this.setState({ formErrors, [name]: value }, () => console.log(this.state));
   };
 
 
+
   render() {
+    const { formErrors } = this.state;
 
     return (
       <>
@@ -71,73 +137,71 @@ class App extends Component {
             <div>
               <h1>Create Account</h1>
               <form noValidate>
-                <div className="firstNameBox">
+                <div className="firstName">
                   <label htmlFor="firstName">First Name</label>
                   <input
-                    className="firstName"
-                    placeholder="firstName"
+                    className={formErrors.firstName.length > 0 ? "error" : null}
+                    placeholder="First Name"
                     type="text"
-                    // name="firstName"
+                    name="firstName"
                     noValidate
                     ref={infirstName => (this.inputfirstName = infirstName)}
-                    // onChange={this.handleChange}
+                    onChange={this.handleChange}
                   />
-                  {/* {formErrors.firstName.length > 0 && (
+                  {formErrors.firstName.length > 0 && (
                     <span className="errorMessage">{formErrors.firstName}</span>
-                  )} */}
+                  )}
                 </div>
-                <div className="lastNameBox">
+                <div className="lastName">
                   <label htmlFor="lastName">Last Name</label>
                   <input
-                    // className={formErrors.lastName.length > 0 ? "error" : null}
-                    className="lastName"
-                    placeholder="lastName"
+                    className={formErrors.lastName.length > 0 ? "error" : null}
+                    placeholder="Last Name"
                     type="text"
                     name="lastName"
                     noValidate
                     ref={inlastName => (this.inputlastName = inlastName)}
-                    // onChange={this.handleChange}
+                    onChange={this.handleChange}
                   />
-                  {/* {formErrors.lastName.length > 0 && (
+                  {formErrors.lastName.length > 0 && (
                     <span className="errorMessage">{formErrors.lastName}</span>
-                  )} */}
+                  )}
                 </div>
                 <div className="email">
                   <label htmlFor="email">Email</label>
                   <input
-                    // className={formErrors.email.length > 0 ? "error" : null}
-                    className="email"
+                    className={formErrors.email.length > 0 ? "error" : null}
                     placeholder="Email"
                     type="email"
                     name="email"
                     noValidate
                     ref={inemail => (this.inputemail = inemail)}
-                    // onChange={this.handleChange}
+                    onChange={this.handleChange}
                   />
-                  {/* {formErrors.email.length > 0 && (
+                  {formErrors.email.length > 0 && (
                     <span className="errorMessage">{formErrors.email}</span>
-                  )} */}
+                  )}
                 </div>
                 <div className="password">
                   <label htmlFor="password">Password</label>
                   <input
-                    // className={formErrors.password.length > 0 ? "error" : null}
-                    className="password"
+                    className={formErrors.password.length > 0 ? "error" : null}
                     placeholder="Password"
                     type="password"
                     name="password"
                     noValidate
                     ref={inpassword => (this.inputpassword = inpassword)}
-                    // onChange={this.handleChange}
+                    onChange={this.handleChange}
                   />
-                  {/* {formErrors.password.length > 0 && (
+                  {formErrors.password.length > 0 && (
                     <span className="errorMessage">{formErrors.password}</span>
-                  )} */}
+                  )}
                 </div>
                 <div className="createAccount">
                   <button type="submit"
                   onClick={this.userPost.bind(this)}
                   >
+                    {/* <Link to="./HomePage.js">alert("Register Successful!")</Link> */}
                     <b>Create Account</b>
                   </button>
                 </div>
@@ -146,6 +210,7 @@ class App extends Component {
                     type="button"
                     onClick={() => this.setState({ visible: false })}
                   >
+                    
                     Already Have An Account
                   </button>
                 </div>
