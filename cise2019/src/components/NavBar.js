@@ -8,6 +8,7 @@ import Tips from './tips.js';
 import Checkout from './Checkout.js';
 import Login from './Login.js';
 import SingleTip from './SingleTip';
+import Recipe from './Recipe.js';
 import AshTree from './AshTree.js';
 import TreeAll from './TreeAll.js';
 import SpecialCheckout from './specialCheckout.js';
@@ -48,7 +49,7 @@ export default class Navbar extends Component {
                 <Route path='/Home.js' component={Home}/>
                 <Route path='/ContactPage.js' component={Contact} />
                 <Route path = '/C.js' component={Cart} />
-                <Route path='./Checkout.js' component={Checkout}/>
+                <Route path='/Recipe.js' component={Recipe}/>
                 <Route path='/Login.js' component={Login}/>
                 <Route path="/tips/:tipsId" component={SingleTip} />
                 <Route path="/tips.js" component={Tips}/>
@@ -56,6 +57,7 @@ export default class Navbar extends Component {
                 <Route path ='/specialCheckout.js' component ={SpecialCheckout}/>
                 <Route path ="/tree/:treeId" component={AshTree} />
                 <Route path="./RegisterTest.js" component={RegisterTest}/>
+                <Route path='/Checkout.js' component = {Checkout}/>
             </Switch>
           </div>
           </Router>  

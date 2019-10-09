@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './cartHome.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
 //import { addShipping } from './actions/cartActions'
 
 class Recipe extends Component {
@@ -56,7 +54,7 @@ class Recipe extends Component {
                     <b>Total:$ {this.props.total} </b>
                 </div>
                 <div className="checkout">
-                    <button><Link to="./Checkout.js"><h5>Checkout</h5></Link></button>
+                    <button><a href="./Checkout.js"><h5>Checkout</h5></a></button>
                 </div>
             </div>
         )
