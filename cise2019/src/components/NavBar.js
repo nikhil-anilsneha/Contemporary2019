@@ -15,7 +15,7 @@ import SpecialCheckout from './specialCheckout.js';
 import RegisterTest from './RegisterTest.js';
 import Profile from './Profile.js';
 import '../index.css';
-import Checkout1 from '/Checkout.js';
+import Checkout1 from './Checkout1.js';
 
 export default class Navbar extends Component {
   render() {
@@ -83,7 +83,7 @@ export default class Navbar extends Component {
                 <Route path ='/specialCheckout.js' component ={SpecialCheckout}/>
                 <Route path ="/tree/:treeId" component={AshTree} />
                 <Route path="/RegisterTest.js" component={RegisterTest}/>
-                <Route path="/Checkout.js" component={Checkout1}/>
+                <Route path="/Checkout1.js" component={Checkout1}/>
             </Switch>
           </div>
           </Router>  

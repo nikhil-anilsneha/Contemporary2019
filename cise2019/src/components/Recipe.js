@@ -54,7 +54,7 @@ class Recipe extends Component {
                     <b>Total:$ {this.props.total} </b>
                 </div>
                 <div className="checkout">
-                    <button><a href="./Checkout.js"><h5>Checkout</h5></a></button>
+                    <button><a href="./Checkout1.js"><h5>Checkout</h5></a></button>
                 </div>
             </div>
         )
