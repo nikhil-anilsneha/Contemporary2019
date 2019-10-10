@@ -14,8 +14,8 @@ import TreeAll from './TreeAll.js';
 import SpecialCheckout from './specialCheckout.js';
 import RegisterTest from './RegisterTest.js';
 import Profile from './Profile.js';
-import Checkout from './Checkout.js';
 import '../index.css';
+import Checkout from './Checkout.js';
 
 export default class Navbar extends Component {
   render() {
@@ -79,11 +79,11 @@ export default class Navbar extends Component {
                 <Route path='/Profile.js' component={Profile}/>
                 <Route path="/tips/:tipsId" component={SingleTip} />
                 <Route path="/tips.js" component={Tips}/>
+                <Route path="/Checkout.js" component={Checkout}/>
                 <Route path ='/TreeAll.js' component ={TreeAll}/>
                 <Route path ='/specialCheckout.js' component ={SpecialCheckout}/>
                 <Route path ="/tree/:treeId" component={AshTree} />
                 <Route path="./RegisterTest.js" component={RegisterTest}/>
-                <Route path='/Checkout.js' component = {Checkout}/>
             </Switch>
           </div>
           </Router>  
