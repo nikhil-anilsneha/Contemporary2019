@@ -6,7 +6,6 @@ import axios from "axios";
 window.globalFirstName = "";
 window.globalLastName = "";
 window.globalEmail = "";
-window.globalPassword = "";
 
 export class Login extends Component {
   constructor(props) {
@@ -46,7 +45,6 @@ export class Login extends Component {
             window.globalFirstName = JSON.stringify(this.state.users.data[i].first_name);
             window.globalLastName = JSON.stringify(this.state.users.data[i].last_name);
             window.globalEmail = JSON.stringify(this.state.users.data[i].email);
-            window.globalPassword = JSON.stringify(this.state.users.data[i].password);
             good = true;
             break;
           } else {
