@@ -4,10 +4,12 @@ import { Modal, PopoverTitle } from "react-bootstrap";
 import axios from "axios";
 import {Link, Router, Redirect} from 'react-router-dom';
 
+//define sample email to check the email input valid or not
 const emailRegex = RegExp(
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
+//Error handling for users submit register without putting anything
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;
 
@@ -24,6 +26,7 @@ const formValid = ({ formErrors, ...rest }) => {
   return valid;
 };
 
+//Constructor
 class App extends Component {
   constructor(props) {
     super(props);
@@ -41,7 +44,9 @@ class App extends Component {
     
   }
 
-
+  //when user create accoount, 
+  //get all user details and save into database and 
+  //display register successful or not if inputs are vailid.
   userPost(e) {
     e.preventDefault();
     var url = "/user_detail";
@@ -58,7 +63,6 @@ class App extends Component {
       .then(function(response) {
         console.log(response);
         alert("Register Successful!")
-        this.goHome(this);
       })
       .catch(function(error) {
         console.log(error);
@@ -75,12 +79,9 @@ class App extends Component {
     this.inputpassword.value = "";
   }
 
-  goHome = () => {
-    if (this.state.redirect) {
-      return <Redirect to='/HomePage' />
-    }
-  }
-
+  //backup function if I need to get the information from database
+  //It is not used in sprint two but 
+  //if I have to do user story about "forget password", I have to use this one.
   userGet(e) {
     e.preventDefault();
     var url = "/user_detail";
@@ -92,6 +93,8 @@ class App extends Component {
     });
   }
 
+  //When user putting inputs in register form,
+  //checking invalid inputs or not.
   handleChange = e => {
     e.preventDefault();
     const { name, value } = e.target;
@@ -128,6 +131,8 @@ class App extends Component {
 
     return (
       <>
+        {/* When we click register button on the navigation bar,
+        it set "visible" state to true and pop up the register from. */}
         {this.state.visible === true ? (
           <Modal
             show={() => this.setState({ visible: true })}

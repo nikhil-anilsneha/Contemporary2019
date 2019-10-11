@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//Display user details after successful login
 export default class Profile extends Component {
   render() {
     return (

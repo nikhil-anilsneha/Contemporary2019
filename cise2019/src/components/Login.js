@@ -3,10 +3,12 @@ import { Modal, Button, Row, Col, Form } from "react-bootstrap";
 import "./Login.css";
 import axios from "axios";
 
+//Global variables to be used in profile
 window.globalFirstName = "";
 window.globalLastName = "";
 window.globalEmail = "";
 
+//Constructor
 export class Login extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +22,8 @@ export class Login extends Component {
     };
   }
 
+  //To get the user details from database and check the input email and password are valid or not.
+  //To show alert message that the login is valid or not.
   userGet(e) {
     e.preventDefault();
     var url = "/user_detail";
@@ -70,6 +74,7 @@ export class Login extends Component {
   }
   
 
+  //To show and hide password
   ShowHide = () => {
     const { isPasswordSeen } = this.state;
     this.setState({
@@ -83,6 +88,8 @@ export class Login extends Component {
     const { isPasswordSeen } = this.state;
     return (
       <>
+        {/* When we click login button on the navigation bar,
+        it set "addModal" state to true and pop up the login. */}
         {this.state.addModal === true ? (
           <Modal
             show={() => this.setState({ addModal: true })}
