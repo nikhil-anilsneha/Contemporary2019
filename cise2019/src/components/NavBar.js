@@ -1,20 +1,21 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import HomePage from "./HomePage.js";
-import Contact from "./ContactPage.js";
-import Cart from "./C.js";
-import Home from "./Home.js";
-import Tips from "./tips.js";
-import Checkout from "./Checkout.js";
-import Login from "./Login.js";
-import SingleTip from "./SingleTip";
-import Recipe from "./Recipe.js";
-import AshTree from "./AshTree.js";
-import TreeAll from "./TreeAll.js";
-import SpecialCheckout from "./specialCheckout.js";
-import RegisterTest from "./RegisterTest.js";
-import Profile from "./Profile.js";
-import "../index.css";
+
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import HomePage from './HomePage.js';
+import Contact from './ContactPage.js';
+import Cart from './C.js';
+import Home from './Home.js';
+import Tips from './tips.js';
+import Login from './Login.js';
+import SingleTip from './SingleTip';
+import Recipe from './Recipe.js';
+import AshTree from './AshTree.js';
+import TreeAll from './TreeAll.js';
+import SpecialCheckout from './specialCheckout.js';
+import RegisterTest from './RegisterTest.js';
+import Profile from './Profile.js';
+import Checkout from './Checkout.js';
+import '../index.css';
 
 export default class Navbar extends Component {
   render() {
