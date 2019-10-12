@@ -10,12 +10,10 @@ class Checkout extends Component {
 
   render() {
     return (
-      <div>
-        <div className="payrow">
+      <div className="">
           <div className="col-75">
             <div className="containerpay">
               <form action="/action_page.php">
-
                 <div className="payrow">
                   <div className="col-50">
                     <h3>Billing Address</h3>
@@ -64,12 +62,10 @@ class Checkout extends Component {
                 <label >
                   <h5 className="shipbill"><input type="checkbox" /> Shipping address same as billing</h5>
                 </label>
-                <Link to="/tips.js"><button className="paybtn" onClick={paid}>Submit</button></Link>
               </form>
+              <Link to="/tips.js"><button type="button" className="btn-lg btn-success btn-block" onClick={paid}>Submit</button></Link>
             </div>
           </div>
-
-        </div>
       </div>
     );
     function paid() {
