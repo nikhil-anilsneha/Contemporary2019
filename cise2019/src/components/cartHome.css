@@ -32,3 +32,10 @@
 .card-title {
     text-align: center;
 }
+
+.container-fluid h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+}

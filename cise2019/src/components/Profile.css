@@ -1,0 +1,11 @@
+.profileContainer h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+}
+
+.profileName h3 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
