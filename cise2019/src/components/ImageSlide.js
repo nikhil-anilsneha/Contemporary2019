@@ -7,8 +7,8 @@ const ImageSlide = ({ image }) => {
     backgroundRepeat: 'no-repeat',
     width: '100'
   }
-  
+
   return <div className="slide" style={styles}></div>
-  }
+}
 
 export default ImageSlide;

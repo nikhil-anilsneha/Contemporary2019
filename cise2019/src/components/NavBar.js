@@ -24,6 +24,7 @@ export default class Navbar extends Component {
         <Router>
           <div className="navigation">
             <nav className="navbar navbar-expand-lg navbar-light">
+              {/* nav bar links that go on the left hand side */}
               <ul className="navbar-nav mr-auto">
                 <li>
                   <Link to={"/HomePage.js"} className="nav-link">
@@ -46,6 +47,7 @@ export default class Navbar extends Component {
                   </Link>
                 </li>
               </ul>
+              {/* nav bar links that go on the right hand side */}
               <ul className="navbar-right mr-auto">
                 <li>
                   <Link to={"/C.js"} className="nav-link">
@@ -60,34 +62,32 @@ export default class Navbar extends Component {
                 </li>
                 <br />
                 <li>
-
                   <Link to={"/RegisterTest.js"} className="nav-link">
                     <RegisterTest></RegisterTest>
                   </Link>
                 </li>
               </ul>
             </nav>
-            <br/>
+            <br />
             <Switch>
-                <Route exact path='/' component={HomePage} />
-                <Route path='/HomePage.js' component={HomePage}/>
-                <Route path='/Home.js' component={Home}/>
-                <Route path='/ContactPage.js' component={Contact} />
-                <Route path = '/C.js' component={Cart} />
-                <Route path='/Recipe.js' component={Recipe}/>
-                <Route path='/Login.js' component={Login}/>
-                <Route path='/Profile.js' component={Profile}/>
-                <Route path="/tips/:tipsId" component={SingleTip} />
-                <Route path="/tips.js" component={Tips}/>
-                <Route path ='/TreeAll.js' component ={TreeAll}/>
-                <Route path ='/specialCheckout.js' component ={SpecialCheckout}/>
-                <Route path ="/tree/:treeId" component={AshTree} />
-                <Route path="./RegisterTest.js" component={RegisterTest}/>
-                <Route path='/Checkout.js' component = {Checkout}/>
+              {/* all the different routes of this web app*/}
+              <Route exact path='/' component={HomePage} />
+              <Route path='/HomePage.js' component={HomePage} />
+              <Route path='/Home.js' component={Home} />
+              <Route path='/ContactPage.js' component={Contact} />
+              <Route path='/C.js' component={Cart} />
+              <Route path='/Recipe.js' component={Recipe} />
+              <Route path='/Profile.js' component={Profile} />
+              <Route path="/tips/:tipsId" component={SingleTip} />
+              <Route path="/tips.js" component={Tips} />
+              <Route path='/TreeAll.js' component={TreeAll} />
+              <Route path='/specialCheckout.js' component={SpecialCheckout} />
+              <Route path="/tree/:treeId" component={AshTree} />
+              <Route path="./RegisterTest.js" component={RegisterTest} />
+              <Route path='/Checkout.js' component={Checkout} />
             </Switch>
           </div>
-          </Router>  
-
+        </Router>
       </div>
     );
   }

@@ -12,7 +12,7 @@ class Recipe extends Component {
             this.props.subtractShipping()
     }
 
-        //handles normal delivery
+    //handles normal delivery
     handleChecked = (e) => {
         if (this.props.totalItem >= 10) {
             alert("As you have more than 10 items, delivery is free! (Does not apply to express delivery)")
@@ -52,11 +52,11 @@ class Recipe extends Component {
             //shipping options and total cost
             <div className="container-fluid">
                 <div className="collection2">
-                        <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked} />Shipping(+$6)
+                    <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked} />Shipping(+$6)
                         <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked3} />Express Shipping(+$69)
                         <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked2} />Pickup At Mt Eden(+$0)
                         <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked2} />Pickup At East Tamaki(+$0)
-                        <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked2} />Pickup At Albany(+$0)<br/>
+                        <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked2} />Pickup At Albany(+$0)<br />
                     <b>Total:$ {this.props.total} </b>
                 </div>
                 <div className="checkout">
@@ -66,7 +66,6 @@ class Recipe extends Component {
         )
     }
 }
-
 
 const mapStateToProps = (state) => {
     return {

@@ -25,6 +25,7 @@ export default class AshTree extends Component {
     this.getTrees();
   }
 
+  //gets all the trees from the database and stores it in the tree array
   getTrees = _ => {
     fetch("/tree/")
       .then(response => response.json())
@@ -32,6 +33,7 @@ export default class AshTree extends Component {
       .catch(err => console.error(err));
   };
 
+  //gets the image for each tree and tool based on the tree_id
   getImage(tree_id) {
     if (tree_id === 1) {
       return (
@@ -113,6 +115,7 @@ export default class AshTree extends Component {
     return tree_id
   }
 
+  //displays the name, price and description for the tools (shovel, rake & potting mix) based on the tree_id
   renderTool = ({ tree_id, tree_name, tree_price, tree_description }) => (
     <div key={tree_id}>
       <div class="tree-name">
@@ -133,18 +136,19 @@ export default class AshTree extends Component {
         </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Tool Description</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_description}</p>
-        </div>        
+        </div>
       </div>
     </div>
   );
 
+  //displays the name, type, price, conditions, maintenance, height, growth, origin and relevant facts for each tree based on the tree_id
   renderProduct = ({ tree_id, tree_name, tree_type, tree_price, tree_description, tree_condition, tree_soil, tree_sun, tree_feeding, tree_watering, tree_pruning, tree_height, tree_growth, tree_origin, tree_flowers, tree_berries, tree_uses, tree_type_info }) => (
     <div key={tree_id}>
       <div class="tree-name">
@@ -202,117 +206,118 @@ export default class AshTree extends Component {
           </div>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_sun}</p>
         </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Maintenance Requirements</p>
         </div>
 
-          <div class = "header-name">
-            <p>Feeding</p>
-          </div>
+        <div class="header-name">
+          <p>Feeding</p>
+        </div>
 
-          <div class = "header-content">
-            <p>{tree_feeding}</p>
-          </div>
+        <div class="header-content">
+          <p>{tree_feeding}</p>
+        </div>
 
-          <div class = "header-name">
-            <p>Watering</p>
-          </div>
+        <div class="header-name">
+          <p>Watering</p>
+        </div>
 
-          <div class = "header-content">
-            <p>{tree_watering}</p>
-          </div>
+        <div class="header-content">
+          <p>{tree_watering}</p>
+        </div>
 
-          <div class = "header-name">
-            <p>Pruning</p>
-          </div>
+        <div class="header-name">
+          <p>Pruning</p>
+        </div>
 
-          <div class = "header-content">
-            <p>{tree_pruning}</p>
-          </div>
+        <div class="header-content">
+          <p>{tree_pruning}</p>
+        </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Maximum Height of Mature Tree</p>
-          <div class = "header-name-sub">
+          <div class="header-name-sub">
             <p>(Less than 1m, 1-2m, 2-3m, Greater than 3m)</p>
           </div>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_height}</p>
         </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Growth Rate</p>
-          <div class = "header-name-sub">
+          <div class="header-name-sub">
             <p>(Slow/Medium/Fast)</p>
           </div>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_growth}</p>
         </div>
       </div>
 
-      <div class = "header">
-          <div class = "header-name">
-            <p>Origin</p>
-          </div>
+      <div class="header">
+        <div class="header-name">
+          <p>Origin</p>
+        </div>
 
-          <div class = "header-content">
-            <p>{tree_origin}</p>
-          </div>
+        <div class="header-content">
+          <p>{tree_origin}</p>
+        </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Relevant Facts</p>
         </div>
 
-        <div class = "header-name">
+        <div class="header-name">
           <p>Flowers</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_flowers}</p>
         </div>
 
-        <div class = "header-name">
+        <div class="header-name">
           <p>Berries</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_berries}</p>
         </div>
 
-        <div class = "header-name">
+        <div class="header-name">
           <p>Uses</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_uses}</p>
         </div>
 
-        <div class = "header-name">
+        <div class="header-name">
           <p>Type</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_type_info}</p>
         </div>
       </div>
     </div>
   );
 
+  //displays the trees from tree_id 1 to 8, if the tree_id is 9 or greater we display the tools & equipment
   render() {
     const { tree } = this.state;
     if (this.state.tree_id < 9) {

@@ -65,14 +65,14 @@ class Home extends Component {
                 <br></br>
                 <form action="/action_page.php">
                     <div className="btn-group">
-                    <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.ThreePlusItems)}>3m+ Trees</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.ThreePlusItems)}>3m+ Trees</button>
                         <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.OneToTwoItems)}>1-2m Trees</button>
                     </div>
                 </form>
                 <br></br>
                 <form action="/action_page.php">
                     <div className="btn-group">
-                    <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.HighSunItems)}>High Sunlight Requirement</button>
+                        <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.HighSunItems)}>High Sunlight Requirement</button>
                         <button type="button" className="btn btn-primary" onClick={() => this.change(this.props.PartialShadeItems)}>Partial Sunlight Requirement</button>
                     </div>
                 </form>
@@ -84,7 +84,7 @@ class Home extends Component {
         )
     }
     change(listToRender) {
-        this.setState({myList: listToRender})
+        this.setState({ myList: listToRender })
     }
 }
 
@@ -97,12 +97,12 @@ const mapStateToProps = (state) => {
         NZNativeItems: state.NZNativeItems,
         ToolItems: state.ToolItems,
         CheapItems: state.CheapItems,
-        ThreePlusItems : state.ThreePlusItems,
-        OneToTwoItems : state.OneToTwoItems,
-        HighSunItems : state.HighSunItems,
-        PartialShadeItems : state.PartialShadeItems,
-        MediumCostItems : state.MediumCostItems,
-        HighCostItems : state.HighCostItems
+        ThreePlusItems: state.ThreePlusItems,
+        OneToTwoItems: state.OneToTwoItems,
+        HighSunItems: state.HighSunItems,
+        PartialShadeItems: state.PartialShadeItems,
+        MediumCostItems: state.MediumCostItems,
+        HighCostItems: state.HighCostItems
     }
 }
 const mapDispatchToProps = (dispatch) => {
