@@ -8,6 +8,12 @@ window.globalFirstName = "";
 window.globalLastName = "";
 window.globalEmail = "";
 
+// function redirect()
+// {
+//   var url = "/HomePage.js";
+//   window.location(url);
+// }
+
 //Constructor
 export class Login extends Component {
   constructor(props) {
@@ -62,6 +68,7 @@ export class Login extends Component {
         console.log("login successful");
         alert("Hello "+window.globalFirstName+"! Your Login is Successful.");
         this.setState({addModal:false});
+        window.location.href="http://localhost:3001/HomePage.js";
       } else {
         console.log("login failed.");
         this.setState({ addModal: true });
