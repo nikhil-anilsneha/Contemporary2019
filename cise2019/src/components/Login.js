@@ -61,6 +61,7 @@ export class Login extends Component {
         console.log("login successful");
         alert("Hello " + window.globalFirstName + "! Your Login is Successful.");
         this.setState({ addModal: false });
+        window.location.href="/HomePage.js";
       } else {
         console.log("login failed.");
         this.setState({ addModal: true });
