@@ -3,7 +3,6 @@ import { Modal, Button, Row, Col, Form } from "react-bootstrap";
 import "./Login.css";
 import axios from "axios";
 
-//Global variables to be used in profile
 window.globalFirstName = "";
 window.globalLastName = "";
 window.globalEmail = "";
@@ -146,3 +145,4 @@ export class Login extends Component {
 }
 
 export default Login;
+
