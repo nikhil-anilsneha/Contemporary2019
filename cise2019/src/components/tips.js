@@ -22,12 +22,15 @@ export default class GardenTips extends Component {
 
   renderProduct = ({ tips_id, tips_title, tips_description }) => (
     <div key={tips_id}>
-      <Link to={`/tips/${tips_id}`}>{tips_title}</Link>
+      <h3><Link to={`/tips/${tips_id}`}>{tips_title}</Link></h3>
     </div>
   );
 
   render() {
     const { tips } = this.state;
-    return <div>{tips.map(this.renderProduct) }</div>;
+    return <div>
+    <h1>Gardening Tips</h1>
+    <br/>
+    {tips.map(this.renderProduct) }</div>;
   }
 }

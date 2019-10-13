@@ -1,34 +1,64 @@
-h1 {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-    font-style: italic;
-    text-align: center;
-    /* margin-left: 50%; */
-
+.tree-name {
+  width: 100%;
+  border-bottom: 0.0625em solid silver;
+  /* padding-top: 0.95em; / / need this for spacing when you have an underline */
+  /* padding-bottom: 2.95em; / / need this for spacing when you have an underline */
+  padding: 0.95em; /* if no underline, uncomment this line */
+  /* margin-left: 5%; */
 }
 
-h2 {
+.tree-name h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  /* margin: 0; */
+  font-weight: bold;
   text-align: center;
-  margin-left: 50%;
+  font-size: 4em; /* try 5em or 6em */
+  /* text-decoration: underline; */
+  /* text-underline-position: under; */
 }
 
-p {
-  /* margin-left: 50%; */
-  text-align: center;
-  padding: 1%;
-  
+.tree-image {
+  padding: 0.95%;
+  /* margin-left: 10%; */
 }
 
 img {
-  margin-right: 50%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: 0.0625em solid black; /* 1px = 0.0625em */
 }
 
-.button {
-  margin: auto;
-  display: block;
+.header {
+  width: 100%;
+  border-top: 0.0625em solid silver;
+  /* border-bottom: 0.0625em solid silver; */
+  /* margin-left: 5%; */
+  padding: 0.95em;
+}
+
+.header-name p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+.header-content p {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 1%;
+  margin-bottom: 0;
+  /* width: 50%; */
+  /* height: 50%; */
+  /* margin-left: 25%; */
+}
+
+.header-name-sub p {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0;
 }

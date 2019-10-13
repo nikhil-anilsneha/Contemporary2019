@@ -1,0 +1,41 @@
+.gridcontainer {
+    padding: 1%;
+    border: 1px solid black;
+    background-color: lightgray;
+    margin-left:  10%;
+    margin-top:10%;
+}
+.radButton{
+    margin-left:10%
+}
+.browseCard {
+    margin-top: 10%;
+}
+
+.ourItems{
+    margin-left: 5%;
+    margin-bottom: -7.5%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 4em;
+}
+
+.center {
+    margin-left: 5%;
+}
+
+.checkout{
+    margin-top: 2%;
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.container-fluid h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+}

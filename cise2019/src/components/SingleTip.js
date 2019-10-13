@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './tree.css'
 
 export default class SingleTip extends Component {
 
@@ -20,9 +21,41 @@ export default class SingleTip extends Component {
           .catch(err => console.error(err));
       };
     
-      renderProduct = ({ tips_id, tips_title, tips_description }) => (
+      renderProduct = ({ tips_id, tips_title, tips_description, tips_sun, tips_soil, tips_maintenance }) => (
         <div key={tips_id}>
-          {tips_title} <br/> {tips_description}
+          <div class = "tree-name">
+            <h1>{tips_title}</h1>
+          </div>
+
+          <div class = "header">
+            <div class = "header-name">
+              <p>Sunlight Requirements</p>
+            </div>
+
+            <div class = "header-content">
+              <p>{tips_sun}</p>
+            </div>        
+          </div>
+
+          <div class = "header">
+            <div class = "header-name">
+              <p>Soil Requirements</p>
+            </div>
+
+            <div class = "header-content">
+              <p>{tips_soil}</p>
+            </div>        
+          </div>
+
+          <div class = "header">
+            <div class = "header-name">
+              <p>Maintenance Tips</p>
+            </div>
+
+            <div class = "header-content">
+              <p>{tips_maintenance}</p>
+            </div>        
+          </div>
         </div>
       );
     

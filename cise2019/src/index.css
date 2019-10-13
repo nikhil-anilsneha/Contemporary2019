@@ -15,15 +15,23 @@ code {
 
 .container {
   width: 100%;
+ 
+}
+
+.navcontainer {
+  margin-left: 12%
 }
 
 .banner {
-  height: 7vw;
+  height: 100%;
   position: relative;
+  
 }
 
 .maindiv {
   text-align: center;
+  float: center;
+  background-color: white;
 }
 
 .text {
@@ -35,8 +43,7 @@ code {
   position: relative;
   margin: 0 auto;
   height: 50vh;
-  width:150vh;
-  margin-left:-20vh;
+  width:159vh; /* was 150vh */
   overflow: hidden;
   white-space: nowrap;
 }
@@ -78,19 +85,29 @@ h2 {
   color: white;
 }
 
+a.nav-link {
+  color: rgba(0, 0, 0, 0.5);
+  /* color: black; */
+}
+
+a.nav-link:hover {
+  color: black;
+}
+
 .navbar-nav li,  .navbar-right li {
   display: inline-block;
   padding: 5px;
-  font-size: 18px;
+  font-size: 120%;
 }
 
 .navbar-nav {
-  margin-top:0vw;
+  display: contents !important;
 }
 
 .navbar-right {
-  margin-left: 53%;
+  margin-left: 55%; 
   margin-top: 1%;
+  display: flex;
 }
 
 .sign-up {
@@ -112,13 +129,6 @@ h2 {
   margin-bottom: initial;
   background-color: yellowgreen;
   height: 2vw;
-  width: 76vw;
-  margin-left:-8%;
-}
-
-.plants-tools {
-  display: flex;
-  text-align: center;
 }
 
 .plants-tools-images {
@@ -128,16 +138,23 @@ h2 {
 
 table {
 font-size: 150%;
-margin-left: 12%;
 }
 
-.carousel-links th {
+.carousel-links th{
 padding: 2%;
+margin-left: 0%;
 }
 
 .contact-details {
 font-size: 150%;
-margin-left: 8%;
+margin-left: 13%;
+}
+
+.cus{
+  margin-bottom: -2.5%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4em;
 }
 
 .contact-details p {
@@ -150,8 +167,17 @@ padding: 3%;
 }
 
 @media only screen and (max-width: 600px) {
-.slider {
-  display: none;
-}
+  .slider {
+    display: none;
+  }
+
+  .navbar {
+    display: inline-block;
+  }
+
+  .navbar-nav, .navbar-right {
+    display: contents;
+  }
+
 }
 

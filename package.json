@@ -17,9 +17,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "cd cise2019 && npm install && npm run build",
-    "server": "node server.js"
+    "server": "node server.js",
+    "heroku-postbuild": "cd cise2019 && npm ci && npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
