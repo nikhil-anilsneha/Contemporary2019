@@ -25,6 +25,7 @@ export default class AshTree extends Component {
     this.getTrees();
   }
 
+  //gets all the trees from the database and stores it in the tree array
   getTrees = _ => {
     fetch("/tree/")
       .then(response => response.json())
@@ -32,6 +33,7 @@ export default class AshTree extends Component {
       .catch(err => console.error(err));
   };
 
+  //gets the image for each tree and tool based on the tree_id
   getImage(tree_id) {
     if (tree_id === 1) {
       return (
@@ -113,6 +115,7 @@ export default class AshTree extends Component {
     return tree_id
   }
 
+  //displays the name, price and description for the tools (shovel, rake & potting mix) based on the tree_id
   renderTool = ({ tree_id, tree_name, tree_price, tree_description }) => (
     <div key={tree_id}>
       <div class="tree-name">
@@ -145,6 +148,7 @@ export default class AshTree extends Component {
     </div>
   );
 
+  //displays the name, type, price, conditions, maintenance, height, growth, origin and relevant facts for each tree based on the tree_id
   renderProduct = ({ tree_id, tree_name, tree_type, tree_price, tree_description, tree_condition, tree_soil, tree_sun, tree_feeding, tree_watering, tree_pruning, tree_height, tree_growth, tree_origin, tree_flowers, tree_berries, tree_uses, tree_type_info }) => (
     <div key={tree_id}>
       <div class="tree-name">
@@ -313,6 +317,7 @@ export default class AshTree extends Component {
     </div>
   );
 
+  //displays the trees from tree_id 1 to 8, if the tree_id is 9 or greater we display the tools & equipment
   render() {
     const { tree } = this.state;
     if (this.state.tree_id < 9) {

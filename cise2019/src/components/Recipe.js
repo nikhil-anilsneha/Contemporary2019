@@ -67,7 +67,6 @@ class Recipe extends Component {
     }
 }
 
-
 const mapStateToProps = (state) => {
     return {
         addedItems: state.addedItems,
