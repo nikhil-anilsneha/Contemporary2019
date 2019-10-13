@@ -63,7 +63,7 @@ class App extends Component {
       .then(function(response) {
         console.log(response);
         alert("Register Successful!")
-        window.location.href="http://localhost:3001/HomePage.js";
+        window.location.href="/HomePage.js";
       })
       .catch(function(error) {
         console.log(error);
