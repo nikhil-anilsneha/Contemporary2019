@@ -3,37 +3,27 @@ import { Modal, Button, Row, Col, Form } from "react-bootstrap";
 import "./Login.css";
 import axios from "axios";
 
-const emailRegex = RegExp(
-  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-);
+//Global variables to be used in profile
+window.globalFirstName = "";
+window.globalLastName = "";
+window.globalEmail = "";
 
+//Constructor
 export class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      // firstName: null,
-      // lastName: null,
-      // emailForLogin: null,
-      // passwordForLogin: null,
       isPasswordSeen: false,
-      // emailFromDB: null,
-      // passwordFromDB: null,
       users: [],
       validUser: false,
       word: "show",
       addModal: false
-      // formErrors: {
-      //   // firstName: "",
-      //   // lastName: "",
-      //   emailForLogin: "",
-      //   passwordForLogin: ""
-      // }
     };
-    // this.updateStateEmail=this.updateStateEmail.bind(this);
-    // this.updateStatePassword=this.updateStatePassword.bind(this);
   }
 
+  //To get the user details from database and check the input email and password are valid or not.
+  //To show alert message that the login is valid or not.
   userGet(e) {
     e.preventDefault();
     var url = "/user_detail";
@@ -56,6 +46,9 @@ export class Login extends Component {
         if (this.state.users.data[i].email === checkEmail) {
           if (this.state.users.data[i].password === checkPassword) {
             this.setState({ validUser: true });
+            window.globalFirstName = JSON.stringify(this.state.users.data[i].first_name);
+            window.globalLastName = JSON.stringify(this.state.users.data[i].last_name);
+            window.globalEmail = JSON.stringify(this.state.users.data[i].email);
             good = true;
             break;
           } else {
@@ -67,16 +60,21 @@ export class Login extends Component {
       }
       if (good === true) {
         console.log("login successful");
-        alert("You have successfully logged in!")
+        alert("Hello "+window.globalFirstName+"! Your Login is Successful.");
+        this.setState({addModal:false});
       } else {
-        console.log("login fail");
-        alert("You have failed to log in!")
+        console.log("login failed.");
+        this.setState({ addModal: true });
+        alert("Login Failed.");
+
       }
       console.log(this.state.validUser);
+      
     });
   }
   
 
+  //To show and hide password
   ShowHide = () => {
     const { isPasswordSeen } = this.state;
     this.setState({
@@ -84,17 +82,14 @@ export class Login extends Component {
     });
   };
 
-
-  goHome() {}
-
-  goRegister() {}
-
   render() {
     const { users } = this.state;
     const { formErrors } = this.state;
     const { isPasswordSeen } = this.state;
     return (
       <>
+        {/* When we click login button on the navigation bar,
+        it set "addModal" state to true and pop up the login. */}
         {this.state.addModal === true ? (
           <Modal
             show={() => this.setState({ addModal: true })}
@@ -106,14 +101,10 @@ export class Login extends Component {
               <div className="emailForLogin">
                 <label htmlFor="EmailForLogin">Email</label>
                 <input
-                  // className={
-                  //   formErrors.emailForLogin.length > 0 ? "error" : null
-                  // }
                   placeholder="email address"
                   type="text"
                   name="Email"
                   ref={inEmail => (this.inputEmail = inEmail)}
-                  // onChange={this.updateStateEmail}
                 />
               </div>
               <div className="passwordForLogin">
@@ -123,21 +114,20 @@ export class Login extends Component {
                   type={isPasswordSeen ? "text" : "password"}
                   name="password"
                   ref={inPassword => (this.inputPassword = inPassword)}
-                  // onChange={this.updateStatePassword}
                 />
                 <button className="showHide" onClick={this.ShowHide}>
                   show/hide password
                 </button>
               </div>
-              <div className="formButton">
+              <div className="clickLogin">
                 <button onClick={this.userGet.bind(this)}>Login</button>
               </div>
-              <div className="formButton">
+              <div className="clickLogin">
                 <button onClick={() => this.setState({ addModal: false })}>
                   Cancel
                 </button>
               </div>
-              <div className="formButton">
+              <div className="clickLogin">
                 <button onClick={() => this.setState({ addModal: false })}>
                   <b>Have no account?</b>
                 </button>
