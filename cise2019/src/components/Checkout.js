@@ -10,6 +10,7 @@ class Checkout extends Component {
 
   render() {
     return (
+      //Form for user to fill when proceeding with checkout
       <div className="">
           <div className="col-75">
             <div className="containerpay">

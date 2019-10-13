@@ -12,6 +12,7 @@ import Item11 from '../images/PottingMix.jpg';
 import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING, SUB_SHIPPING } from '../actions/action-types/cart-actions'
 
 const initState = {
+    //stores all items/filters used in the web application
     items: [
         {id:1,title:'Ash', price:50,img:Item1,type:'Hardwood'},
         {id:2,title:'Oak', price:60,img: Item2,type:'Hardwood'},

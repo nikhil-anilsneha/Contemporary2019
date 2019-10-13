@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './Checkout.css'
-import AshTree from './AshTree.js'
 import { Link } from 'react-router-dom'
 
 class specialCheckout extends Component {
@@ -10,6 +9,7 @@ class specialCheckout extends Component {
 
   render() {
     return (
+      //Checkout page for one click purchases
       <div>
         <div className="payrow">
           <div className="col-75">

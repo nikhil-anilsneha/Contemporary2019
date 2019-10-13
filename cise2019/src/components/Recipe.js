@@ -12,6 +12,7 @@ class Recipe extends Component {
             this.props.subtractShipping()
     }
 
+        //handles normal delivery
     handleChecked = (e) => {
         if (this.props.totalItem >= 10) {
             alert("As you have more than 10 items, delivery is free! (Does not apply to express delivery)")
@@ -25,6 +26,8 @@ class Recipe extends Component {
             }
         }
     }
+
+    //handles pickup
     handleChecked2 = (e) => {
         if (this.props.checked === 1) {
             this.props.substractShipping();
@@ -33,6 +36,8 @@ class Recipe extends Component {
             this.props.subExpress();
         }
     }
+
+    //handles special delivery
     handleChecked3 = (e) => {
         if (this.props.checked === 0) {
             this.props.addExpress();
@@ -44,15 +49,14 @@ class Recipe extends Component {
 
     render() {
         return (
+            //shipping options and total cost
             <div className="container-fluid">
                 <div className="collection2">
-                    <form action="/action_page.php">
-                        <input type="radio" name="del" ref="shipping" onChange={this.handleChecked} />Shipping(+$6)
-                        <input type="radio" name="del" ref="shipping" onChange={this.handleChecked3} />Express Shipping(+$69)
-                        <input type="radio" name="del" ref="shipping" onChange={this.handleChecked2} />Pickup At Location 1(+$0)<br />
-                        <input type="radio" name="del" ref="shipping" onChange={this.handleChecked2} />Pickup At Location 2(+$0)<br />
-                        <input type="radio" name="del" ref="shipping" onChange={this.handleChecked2} />Pickup At Location 3(+$0)<br />
-                    </form>
+                        <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked} />Shipping(+$6)
+                        <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked3} />Express Shipping(+$69)
+                        <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked2} />Pickup At Mt Eden(+$0)
+                        <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked2} />Pickup At East Tamaki(+$0)
+                        <input type="radio" name="del" className="options" ref="shipping" onChange={this.handleChecked2} />Pickup At Albany(+$0)<br/>
                     <b>Total:$ {this.props.total} </b>
                 </div>
                 <div className="checkout">
@@ -75,6 +79,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        //all functions used in this class
         addShipping: () => { dispatch({ type: 'ADD_SHIPPING' }) },
         substractShipping: () => { dispatch({ type: 'SUB_SHIPPING' }) },
         addExpress: () => { dispatch({ type: 'EXP_SHIPPINGA' }) },
