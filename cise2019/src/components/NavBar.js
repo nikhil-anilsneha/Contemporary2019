@@ -77,7 +77,6 @@ export default class Navbar extends Component {
               <Route path='/ContactPage.js' component={Contact} />
               <Route path='/C.js' component={Cart} />
               <Route path='/Recipe.js' component={Recipe} />
-              <Route path='/Login.js' component={Login} />
               <Route path='/Profile.js' component={Profile} />
               <Route path="/tips/:tipsId" component={SingleTip} />
               <Route path="/tips.js" component={Tips} />
