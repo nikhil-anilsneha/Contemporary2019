@@ -59,8 +59,8 @@ export class Login extends Component {
       }
       if (good === true) {
         console.log("login successful");
-        alert("Hello "+window.globalFirstName+"! Your Login is Successful.");
-        this.setState({addModal:false});
+        alert("Hello " + window.globalFirstName + "! Your Login is Successful.");
+        this.setState({ addModal: false });
       } else {
         console.log("login failed.");
         this.setState({ addModal: true });
@@ -68,10 +68,10 @@ export class Login extends Component {
 
       }
       console.log(this.state.validUser);
-      
+
     });
   }
-  
+
 
   //To show and hide password
   ShowHide = () => {

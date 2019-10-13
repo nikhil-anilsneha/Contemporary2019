@@ -13,6 +13,7 @@ export default class GardenTips extends Component {
     this.getTips();
   }
 
+  //gets all the tips from the database and stores it in the tips array
   getTips = _ => {
     fetch("/tips")
       .then(response => response.json())
@@ -20,7 +21,8 @@ export default class GardenTips extends Component {
       .catch(err => console.error(err));
   };
 
-  renderProduct = ({ tips_id, tips_title, tips_description }) => (
+  //displays the title of the tip as a clickable link
+  renderProduct = ({ tips_id, tips_title}) => (
     <div key={tips_id}>
       <h3><Link to={`/tips/${tips_id}`}>{tips_title}</Link></h3>
     </div>
@@ -29,8 +31,8 @@ export default class GardenTips extends Component {
   render() {
     const { tips } = this.state;
     return <div>
-    <h1>Gardening Tips</h1>
-    <br/>
-    {tips.map(this.renderProduct) }</div>;
+      <h1>Gardening Tips</h1>
+      <br />
+      {tips.map(this.renderProduct)}</div>;
   }
 }

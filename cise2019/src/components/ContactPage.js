@@ -10,6 +10,7 @@ export default class ContactPage extends Component {
         <br></br>
         <br></br>
         <div className="row">
+          {/* contact details for the three different branches of TreeCo*/}
           <div className="col-sm-4">
             <p>
               <h3>Tree Co Mt Eden</h3>

@@ -133,14 +133,14 @@ export default class AshTree extends Component {
         </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Tool Description</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_description}</p>
-        </div>        
+        </div>
       </div>
     </div>
   );
@@ -202,111 +202,111 @@ export default class AshTree extends Component {
           </div>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_sun}</p>
         </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Maintenance Requirements</p>
         </div>
 
-          <div class = "header-name">
-            <p>Feeding</p>
-          </div>
+        <div class="header-name">
+          <p>Feeding</p>
+        </div>
 
-          <div class = "header-content">
-            <p>{tree_feeding}</p>
-          </div>
+        <div class="header-content">
+          <p>{tree_feeding}</p>
+        </div>
 
-          <div class = "header-name">
-            <p>Watering</p>
-          </div>
+        <div class="header-name">
+          <p>Watering</p>
+        </div>
 
-          <div class = "header-content">
-            <p>{tree_watering}</p>
-          </div>
+        <div class="header-content">
+          <p>{tree_watering}</p>
+        </div>
 
-          <div class = "header-name">
-            <p>Pruning</p>
-          </div>
+        <div class="header-name">
+          <p>Pruning</p>
+        </div>
 
-          <div class = "header-content">
-            <p>{tree_pruning}</p>
-          </div>
+        <div class="header-content">
+          <p>{tree_pruning}</p>
+        </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Maximum Height of Mature Tree</p>
-          <div class = "header-name-sub">
+          <div class="header-name-sub">
             <p>(Less than 1m, 1-2m, 2-3m, Greater than 3m)</p>
           </div>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_height}</p>
         </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Growth Rate</p>
-          <div class = "header-name-sub">
+          <div class="header-name-sub">
             <p>(Slow/Medium/Fast)</p>
           </div>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_growth}</p>
         </div>
       </div>
 
-      <div class = "header">
-          <div class = "header-name">
-            <p>Origin</p>
-          </div>
+      <div class="header">
+        <div class="header-name">
+          <p>Origin</p>
+        </div>
 
-          <div class = "header-content">
-            <p>{tree_origin}</p>
-          </div>
+        <div class="header-content">
+          <p>{tree_origin}</p>
+        </div>
       </div>
 
-      <div class = "header">
-        <div class = "header-name">
+      <div class="header">
+        <div class="header-name">
           <p>Relevant Facts</p>
         </div>
 
-        <div class = "header-name">
+        <div class="header-name">
           <p>Flowers</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_flowers}</p>
         </div>
 
-        <div class = "header-name">
+        <div class="header-name">
           <p>Berries</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_berries}</p>
         </div>
 
-        <div class = "header-name">
+        <div class="header-name">
           <p>Uses</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_uses}</p>
         </div>
 
-        <div class = "header-name">
+        <div class="header-name">
           <p>Type</p>
         </div>
 
-        <div class = "header-content">
+        <div class="header-content">
           <p>{tree_type_info}</p>
         </div>
       </div>

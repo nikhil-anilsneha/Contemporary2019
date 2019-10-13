@@ -19,7 +19,7 @@ class specialCheckout extends Component {
                 <div className="payrow">
                   <div className="col-50">
                     <h3>Billing Address</h3>
-                    { alert("This is a checkout page for the item you have selected to purchase which has an ongoing offer!!")}
+                    {alert("This is a checkout page for the item you have selected to purchase which has an ongoing offer!!")}
                     <label for="fname"><i className="fa fa-user"></i> Full Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="John M. Doe" />
                     <label for="email"><i className="fa fa-envelope"></i> Email</label>

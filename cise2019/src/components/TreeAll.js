@@ -27,6 +27,6 @@ export default class tree extends Component {
 
   render() {
     const { tree } = this.state;
-    return <div>{tree.map(this.renderProduct) }</div>;
+    return <div>{tree.map(this.renderProduct)}</div>;
   }
 }

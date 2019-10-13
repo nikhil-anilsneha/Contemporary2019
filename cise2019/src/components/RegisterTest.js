@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Register.css";
 import { Modal, PopoverTitle } from "react-bootstrap";
 import axios from "axios";
-import {Link, Router, Redirect} from 'react-router-dom';
+import { Link, Router, Redirect } from 'react-router-dom';
 
 //define sample email to check the email input valid or not
 const emailRegex = RegExp(
@@ -33,15 +33,16 @@ class App extends Component {
 
     this.state = {
       user: [],
-      userprofile: "No Log In",   
+      userprofile: "No Log In",
       visible: false,
       formErrors: {
         firstName: "",
         lastName: "",
         email: "",
-        password: ""}
+        password: ""
+      }
     };
-    
+
   }
 
   //when user create accoount, 
@@ -50,29 +51,29 @@ class App extends Component {
   userPost(e) {
     e.preventDefault();
     var url = "/user_detail";
-    
-    if(formValid(this.state)){
-      this.setState({visible:false});
+
+    if (formValid(this.state)) {
+      this.setState({ visible: false });
       axios
-      .post(url, {
-        first_name: this.inputfirstName.value,
-        last_name: this.inputlastName.value,
-        email: this.inputemail.value,
-        password: this.inputpassword.value
-      })
-      .then(function(response) {
-        console.log(response);
-        alert("Register Successful!")
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+        .post(url, {
+          first_name: this.inputfirstName.value,
+          last_name: this.inputlastName.value,
+          email: this.inputemail.value,
+          password: this.inputpassword.value
+        })
+        .then(function (response) {
+          console.log(response);
+          alert("Register Successful!")
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
-    else{
+    else {
       alert("Invalid Registration! Check Errors!")
-      this.setState({visible:true});
+      this.setState({ visible: true });
     }
-     
+
     this.inputfirstName.value = "";
     this.inputlastName.value = "";
     this.inputemail.value = "";
@@ -121,7 +122,7 @@ class App extends Component {
       default:
         break;
     }
-      this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
   };
 
 
@@ -204,7 +205,7 @@ class App extends Component {
                 </div>
                 <div className="createAccount">
                   <button type="submit"
-                  onClick={this.userPost.bind(this)}
+                    onClick={this.userPost.bind(this)}
                   >
                     {/* <Link to="./HomePage.js">alert("Register Successful!")</Link> */}
                     <b>Create Account</b>
@@ -215,7 +216,7 @@ class App extends Component {
                     type="button"
                     onClick={() => this.setState({ visible: false })}
                   >
-                    
+
                     Already Have An Account
                   </button>
                 </div>

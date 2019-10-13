@@ -33,7 +33,7 @@ class Cart extends Component {
                             <div className="item-desc">
                                 <span className="title"><h4>{item.title}</h4></span>
                                 <p>{item.desc}</p>
-                                <p><b><h5>Price: ${item.price}</h5></b></p> 
+                                <p><b><h5>Price: ${item.price}</h5></b></p>
                                 <p>
                                     <b><h5>Quantity: {item.quantity}</h5></b>
                                 </p>
@@ -53,7 +53,7 @@ class Cart extends Component {
             (
                 <p><h5>Nothing</h5></p>
             )
-            //shows items in cart
+        //shows items in cart
         return (
             <div className="container-fluid">
                 <div className="cart">
