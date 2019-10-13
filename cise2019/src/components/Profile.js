@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Profile.css';
 
+//Display user details after successful login
 export default class Profile extends Component {
   render() {
     return (
