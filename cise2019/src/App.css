@@ -138,3 +138,7 @@ input.error {
   font-weight: lighter;
 }
 
+footer {
+  background-color: yellowgreen;
+  font-weight: bold;
+}

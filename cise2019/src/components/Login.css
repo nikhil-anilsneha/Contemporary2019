@@ -163,3 +163,34 @@
     border: 2px solid #fff;
     width: 20%;
   }
+
+  .homeButton {
+    width: 110%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    font-size: 1em;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .homeButton button {
+    background-color: yellowgreen;
+    color: rgba(0, 0, 0, 0.5);
+    /* color: black; */
+    border: none;
+    width: 100%;
+    margin-top: 0em;
+    padding: 8px 0px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0em;
+  }
+
+  .homeButton button:focus {
+    outline: none;
+  }
+
+  .homeButton button:hover {
+    color: black;
+  }
